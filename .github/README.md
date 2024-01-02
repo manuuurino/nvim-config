@@ -39,7 +39,7 @@ git clone https://github.com/AstroNvim/AstroNvim "${XDG_CONFIG_HOME:-${HOME}/.co
 ### Clone my configuration
 
 ```shell
-git clone https://github.com/manuuurino/astronvim_config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
+git clone https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
 ```
 
 ### Try it in a docker container
@@ -54,7 +54,7 @@ git clone https://github.com/manuuurino/astronvim_config "${XDG_CONFIG_HOME:-${H
 docker run -w /root -it --rm alpine:edge sh -uelic '
   apk add bash git lua nodejs npm lazygit bottom python3 go neovim ripgrep alpine-sdk gzip cargo --update
   git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-  git clone https://github.com/manuuurino/astronvim_config ~/.config/nvim/lua/user
+  git clone https://github.com/manuuurino/nvim-config ~/.config/nvim/lua/user
   nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
   nvim && bash
 '
