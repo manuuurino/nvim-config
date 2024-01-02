@@ -80,9 +80,12 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
 			"LinArcX/telescope-env.nvim",
+			"ThePrimeagen/git-worktree.nvim",
 		},
 		opts = function()
 			require("telescope").load_extension("env")
+			require("telescope").load_extension("git_worktree")
+
 			return {
 				defaults = {
 					layout_config = {
@@ -93,6 +96,22 @@ local plugins = {
 				},
 			}
 		end,
+		keys = {
+			{
+				"<leader>gw",
+				function()
+					require("telescope").extensions.git_worktree.git_worktrees()
+				end,
+				desc = "Switch git worktree",
+			},
+			{
+				"<leader>gW",
+				function()
+					require("telescope").extensions.git_worktree.create_git_worktree()
+				end,
+				desc = "Create new git worktree",
+			},
+		},
 	},
 	-- TEST: buffer completion doesnt work on all files? need to test later.
 	{
