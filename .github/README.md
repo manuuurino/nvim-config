@@ -26,8 +26,8 @@ sudo pacman -S
 ### Make a backup of your current nvim and shared folder
 
 ```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim" "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim.backup"
+mv "${XDG_DATA_HOME:-${HOME}/.local/share}/nvim" "${XDG_DATA_HOME:-${HOME}/.local/share}/nvim.backup"
 ```
 
 ### Clone AstroNvim
@@ -39,7 +39,7 @@ git clone https://github.com/AstroNvim/AstroNvim "${XDG_CONFIG_HOME:-${HOME}/.co
 ### Clone my configuration
 
 ```shell
-git clone https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
+git clone --branch https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
 ```
 
 ### Try it in a docker container
@@ -54,7 +54,7 @@ git clone https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/
 docker run -w /root -it --rm alpine:edge sh -uelic '
   apk add bash git lua nodejs npm lazygit bottom python3 go neovim ripgrep alpine-sdk gzip cargo --update
   git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-  git clone https://github.com/manuuurino/nvim-config ~/.config/nvim/lua/user
+  git clone --branch astronvim-v3/main https://github.com/manuuurino/nvim-config ~/.config/nvim/lua/user
   nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
   nvim && bash
 '
