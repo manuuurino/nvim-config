@@ -39,7 +39,7 @@ git clone https://github.com/AstroNvim/AstroNvim "${XDG_CONFIG_HOME:-${HOME}/.co
 ### Clone my configuration
 
 ```shell
-git clone --branch https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
+git clone --branch astronvim-v3/main https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
 ```
 
 ### Try it in a docker container
