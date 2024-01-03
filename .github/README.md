@@ -38,6 +38,12 @@ mv "${XDG_DATA_HOME:-${HOME}/.local/share}/astronvim_v4" "${XDG_DATA_HOME:-${HOM
 git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/astronvim_v4"
 ```
 
+### Installing spells
+
+```shell
+NVIM_APPNAME=astronvim_v4 nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
+```
+
 ### Try it in a docker container
 
 > Not all lsp, formatters and linters are supported in the docker container.
@@ -48,7 +54,7 @@ git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config "
 docker run -w /root -it --rm alpine:edge sh -uelic '
   apk add bash git lua nodejs npm lazygit bottom python3 go neovim ripgrep alpine-sdk gzip cargo --update
   git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config ~/.config/astronvim_v4/
-  nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
+  NVIM_APPNAME=astronvim_v4 nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
   NVIM_APPNAME=astronvim_v4 nvim && bash
 '
 ```
@@ -58,3 +64,4 @@ docker run -w /root -it --rm alpine:edge sh -uelic '
 ```shell
 NVIM_APPNAME=astronvim_v4 nvim
 ```
+
