@@ -28,8 +28,6 @@ return {
 		foldenable = true,
 		foldmethod = "manual",
 		fillchars = {
-			eob = " ",
-			fold = " ",
 			foldopen = icons.expander_expanded,
 			foldsep = icons.expander_separator,
 			foldclose = icons.expander_collapsed,
