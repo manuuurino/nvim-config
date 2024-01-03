@@ -1,11 +1,10 @@
--- customize mason plugins
 ---@type LazySpec
 local plugins = {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		---@param opts MasonLspconfigSettings
 		opts = function(_, opts)
-			---@diagnostic disable-next-line
+			---@diagnostic disable-next-line: inject-field
 			opts.ensure_installed =
 				require("astronvim.utils").list_insert_unique(
 					opts.ensure_installed,

@@ -9,7 +9,7 @@ local plugins = {
 		-- Check supported formatters and linters
 		-- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 		-- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
-		---@diagnostic disable-next-line
+		---@diagnostic disable-next-line: inject-field
 		config.sources = {
 			null_ls.builtins.formatting.deno_fmt.with({
 				disabled_filetypes = { "markdown" },

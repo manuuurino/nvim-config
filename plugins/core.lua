@@ -65,7 +65,7 @@ local plugins = {
 	{
 		"nvim-treesitter",
 		---@type TSConfig
-		---@diagnostic disable-next-line
+		---@diagnostic disable-next-line: missing-fields
 		opts = {
 			incremental_selection = {
 				enable = true,

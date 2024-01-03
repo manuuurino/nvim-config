@@ -26,7 +26,6 @@ local plugins = {
 		cmd = "UndotreeToggle",
 		event = "User AstroFile",
 		keys = {
-			---@diagnostic disable-next-line
 			{
 				"<leader>fu",
 				"<cmd>UndotreeToggle<CR>",
@@ -225,7 +224,7 @@ local plugins = {
 		"lukas-reineke/indent-blankline.nvim",
 		event = "User AstroFile",
 		---@type ibl.indent_options
-		---@diagnostic disable-next-line
+		---@diagnostic disable-next-line: missing-fields
 		opts = {
 			indent = {
 				char = icons.scope_symbol,
