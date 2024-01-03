@@ -1,6 +1,4 @@
 local is_tty = require("user.utils.helper").is_tty
-local when_else = require("user.utils.helper").when_else
-
 return {
 	-- Configure AstroNvim updates
 	updater = {
@@ -23,7 +21,7 @@ return {
 	-- Set colorscheme to use
 	-- colorscheme = "astrodark",
 	-- TODO: search for a tty colorscheme else evening looks ok too
-	colorscheme = when_else(is_tty(), "industry", "kanagawa-wave"),
+	colorscheme = is_tty() and "industry" or "kanagawa-wave",
 
 	-- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
 	diagnostics = {
