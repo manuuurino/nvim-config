@@ -1,4 +1,3 @@
--- You can simply override any internal plugins using Lazy, here are some example operations:
 return {
 	-- customize alpha options
 	-- {

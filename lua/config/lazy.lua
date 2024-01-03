@@ -10,12 +10,11 @@ require("lazy").setup({
 	spec = {
 		-- TODO: change `branch="v4"` to `version="^4"` on release
 		{ "AstroNvim/AstroNvim", branch = "v4", import = "astronvim.plugins" },
-		-- AstroCommunity: import any community modules here
 		-- TODO: Remove branch v4 on release
-		-- { "AstroNvim/astrocommunity", branch = "v4" },
-		-- { import = "astrocommunity.pack.lua" },
-		-- import/override with your plugins
-		{ import = "plugins" },
+		{ "AstroNvim/astrocommunity", branch = "v4" },
+		{ import = "plugins.astronvim" },
+		{ import = "plugins.astrocommunity" },
+		{ import = "plugins.user" },
 	},
 	install = { colorscheme = { "astrodark", "habamax" } },
 	performance = {
