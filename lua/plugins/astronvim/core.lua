@@ -1,68 +1,34 @@
 return {
-	-- customize alpha options
-	-- {
-	--   "goolord/alpha-nvim",
-	--   opts = function(_, opts)
-	--     -- customize the dashboard header
-	--     opts.section.header.val = {
-	--       " █████  ███████ ████████ ██████   ██████",
-	--       "██   ██ ██         ██    ██   ██ ██    ██",
-	--       "███████ ███████    ██    ██████  ██    ██",
-	--       "██   ██      ██    ██    ██   ██ ██    ██",
-	--       "██   ██ ███████    ██    ██   ██  ██████",
-	--       " ",
-	--       "    ███    ██ ██    ██ ██ ███    ███",
-	--       "    ████   ██ ██    ██ ██ ████  ████",
-	--       "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-	--       "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-	--       "    ██   ████   ████   ██ ██      ██",
-	--     }
-	--     return opts
-	--   end,
-	-- },
+	{
+		"goolord/alpha-nvim",
+		dependencies = "AstroNvim/astroui",
+		opts = function(_, opts)
+			local dashboard = require("alpha.themes.dashboard")
+			local get_icon = require("astroui").get_icon
 
-	-- You can disable default plugins as follows:
-	-- { "max397574/better-escape.nvim", enabled = false },
+			---@param keybind string
+			---@param icon string
+			---@param title string
+			local button = function(keybind, icon, title)
+				local shortcut = keybind:gsub("%s", ""):gsub("LDR", "<Leader>")
+				return dashboard.button(
+					keybind,
+					get_icon(icon, 2, true) .. title,
+					shortcut
+				)
+			end
 
-	-- You can also easily customize additional setup of plugins that is outside of the plugin's setup call
-	-- {
-	--   "L3MON4D3/LuaSnip",
-	--   config = function(plugin, opts)
-	--     require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-	--     -- add more custom luasnip configuration such as filetype extend or custom snippets
-	--     local luasnip = require "luasnip"
-	--     luasnip.filetype_extend("javascript", { "javascriptreact" })
-	--   end,
-	-- },
-	-- {
-	--   "windwp/nvim-autopairs",
-	--   config = function(plugin, opts)
-	--     require "plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call
-	--     -- add more custom autopairs configuration such as custom rules
-	--     local npairs = require "nvim-autopairs"
-	--     local Rule = require "nvim-autopairs.rule"
-	--     local cond = require "nvim-autopairs.conds"
-	--     npairs.add_rules(
-	--       {
-	--         Rule("$", "$", { "tex", "latex" })
-	--           -- don't add a pair if the next character is %
-	--           :with_pair(cond.not_after_regex "%%")
-	--           -- don't add a pair if  the previous character is xxx
-	--           :with_pair(
-	--             cond.not_before_regex("xxx", 3)
-	--           )
-	--           -- don't move right when repeat character
-	--           :with_move(cond.none())
-	--           -- don't delete if the next character is xx
-	--           :with_del(cond.not_after_regex "xx")
-	--           -- disable adding a newline when you press <cr>
-	--           :with_cr(cond.none()),
-	--       },
-	--       -- disable for .vim files, but it work for another filetypes
-	--       Rule("a", "a", "-vim")
-	--     )
-	--   end,
-	-- },
+			opts.section.buttons.val = {
+				button("LDR S l", "LastSession", "Last Session"),
+				button("LDR f o", "Recents", "Recents opened files"),
+				button("LDR S f", "FindRecentSession", "Find Recent sessions"),
+				button("LDR f p", "Project", "Open Project"),
+				button("LDR p c", "Config", "Config"),
+			}
+
+			return opts
+		end,
+	},
 	{
 		"echasnovski/mini.indentscope",
 		event = "User AstroFile",

@@ -14,6 +14,12 @@ return {
 
 				CharTab = "——»",
 				CharSpace = "·",
+
+				Config = "",
+				Project = "󰸕",
+				LastSession = "",
+				Recents = "",
+				FindRecentSession = "",
 			}
 
 			local text_icons = {
