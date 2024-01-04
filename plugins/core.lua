@@ -235,12 +235,6 @@ local plugins = {
 		end,
 	},
 	{
-		"L3MON4D3/LuaSnip",
-		dependencies = {
-			"honza/vim-snippets",
-		},
-	},
-	{
 		"mfussenegger/nvim-dap",
 		dependencies = {
 			{ "theHamsta/nvim-dap-virtual-text", config = true },
