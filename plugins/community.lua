@@ -180,7 +180,17 @@ add({
 })
 
 add({
-	-- { import = "astrocommunity.git.git-blame-nvim" },
+	{ import = "astrocommunity.git.blame-nvim" },
+	{
+		"FabijanZulj/blame.nvim",
+		keys = {
+			{
+				"<leader>gB",
+				"<cmd>ToggleBlame<cr>",
+				desc = "Toggle git blame",
+			},
+		},
+	},
 })
 
 add({
