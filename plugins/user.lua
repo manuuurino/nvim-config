@@ -255,6 +255,12 @@ local plugins = {
 		"echasnovski/mini.indentscope",
 		event = "User AstroFile",
 		opts = {
+			draw = {
+				delay = 0,
+				animation = function()
+					return 0
+				end,
+			},
 			symbol = icons.scope_symbol,
 			options = { try_as_border = true },
 		},
