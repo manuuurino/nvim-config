@@ -136,7 +136,7 @@ local plugins = {
 		-- credits: https://github.com/AstroNvim/astrocommunity/blob/6f3ce1b6349a29975cbd1af8427f7a52aaef936d/lua/astrocommunity/completion/codeium-vim/init.lua
 		"Exafunction/codeium.vim",
 		event = "User AstroFile",
-		cond = is_on_glibc(),
+		cond = not vim.g.codeium_native_plugin and is_on_glibc(),
 		config = function()
 			require("astronvim.utils").set_mappings({
 				i = {
@@ -185,19 +185,27 @@ local plugins = {
 			})
 		end,
 	},
-	-- {
-	-- 	-- NOTE: only gives suggestions through nvim-cmp now, maybe the author will change it.
-	-- 	"Exafunction/codeium.nvim",
-	-- 	event = "User AstroFile",
-	-- 	dependencies = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"hrsh7th/nvim-cmp",
-	-- 	},
-	-- 	cond = is_on_glibc(),
-	-- 	config = function()
-	-- 		require("codeium").setup({})
-	-- 	end,
-	-- },
+	{
+		-- NOTE: only gives suggestions through nvim-cmp now, maybe the author will change it.
+		"Exafunction/codeium.nvim",
+		event = "User AstroFile",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+			{
+				"onsails/lspkind.nvim",
+				opts = {
+					symbol_map = {
+						Codeium = "",
+					},
+				},
+			},
+		},
+		cond = vim.g.codeium_native_plugin and is_on_glibc(),
+		config = function(_, opts)
+			require("codeium").setup(opts)
+		end,
+	},
 	{
 		"folke/todo-comments.nvim",
 		event = "User AstroFile",

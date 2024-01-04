@@ -33,5 +33,6 @@ return {
 		icons_enabled = not is_tty(), -- disable icons in the UI
 		resession_enabled = true, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
 		inlay_hints_enabled = false, -- enable or disable LSP inlay hints on startup (Neovim v0.10 only)
+		codeium_native_plugin = false, -- the native plugin doesnt support virtual text yet
 	},
 }

@@ -130,7 +130,6 @@ local plugins = {
 		},
 		opts = function(_, opts)
 			local cmp = require("cmp")
-			local lspkind_status_ok, lspkind = pcall(require, "lspkind")
 
 			---@type cmp.ConfigSchema
 			local config = {
@@ -175,17 +174,6 @@ local plugins = {
 						"abbr",
 						"menu",
 					},
-					format = lspkind_status_ok
-							and lspkind.cmp_format({
-								mode = "symbol",
-								maxwidth = 50,
-								ellipsis_char = "...",
-								symbol_map = {
-									-- NOTE: only through codeium.nvim, the native plugin for neovim
-									-- Codeium = "",
-								},
-							})
-						or nil,
 					sorting = {},
 					priority_weight = 1,
 					comparators = {
