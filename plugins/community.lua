@@ -141,6 +141,10 @@ add({
 })
 
 add({
+	{ import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+})
+
+add({
 	{ import = "astrocommunity.diagnostics.trouble-nvim" },
 })
 

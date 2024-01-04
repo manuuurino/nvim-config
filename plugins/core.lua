@@ -205,12 +205,6 @@ local plugins = {
 		end,
 	},
 	{
-		"mfussenegger/nvim-dap",
-		dependencies = {
-			{ "theHamsta/nvim-dap-virtual-text", config = true },
-		},
-	},
-	{
 		"nvim-neo-tree/neo-tree.nvim",
 		opts = {
 			default_component_configs = {
