@@ -117,35 +117,24 @@ local plugins = {
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
-			"saadparwaiz1/cmp_luasnip",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-emoji",
 			"hrsh7th/cmp-calc",
-			"hrsh7th/cmp-nvim-lua",
 			"hrsh7th/cmp-cmdline",
 			"lukas-reineke/cmp-under-comparator",
 			"chrisgrieser/cmp-nerdfont",
 		},
 		opts = function(_, opts)
 			local cmp = require("cmp")
+			local is_available = require("astronvim.utils").is_available
 
 			---@type cmp.ConfigSchema
 			local config = {
-				window = {
-					documentation = {
-						max_width = 60,
-					},
-				},
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp", priority = 1000 },
-					{ name = "nvim_lua", priority = 900 },
-					{
-						-- NOTE: only through codeium.nvim, the native plugin for neovim
+					is_available("codeium.nvim") and {
 						name = "codeium",
 						priority = 800,
-					},
+					} or nil,
 					{ -- credits: https://github.com/catgoose/nvim/blob/279618115977b652eff339d627eeab3c616347a2/lua/plugins/cmp.lua#L70-L78
 						name = "luasnip",
 						group_index = 1,
@@ -167,14 +156,8 @@ local plugins = {
 					{ name = "calc", priority = 100 },
 					{ name = "buffer", keyword_length = 2 },
 				}),
+				---@diagnostic disable-next-line: missing-fields
 				formatting = {
-					expandable_indicator = true,
-					fields = {
-						"kind",
-						"abbr",
-						"menu",
-					},
-					sorting = {},
 					priority_weight = 1,
 					comparators = {
 						cmp.config.compare.offset,
