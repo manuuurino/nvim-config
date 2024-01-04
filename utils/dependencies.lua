@@ -9,10 +9,10 @@ function M.has_excecutable(executable)
 	if not is_installed then
 		vim.api.nvim_create_autocmd("UIEnter", {
 			callback = function()
-				vim.notify_once(
-					executable .. " is not installed",
-					vim.log.levels.WARN
-				)
+				-- stylua: ignore
+				vim.notify_once(executable .. " is not installed", vim.log.levels.WARN, {
+					title = "Dependencies",
+				})
 			end,
 		})
 	end
