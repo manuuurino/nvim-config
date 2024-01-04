@@ -15,7 +15,7 @@ return {
 				},
 				H = {
 					function()
-						require("atsrocore.buffer").nav(
+						require("astrocore.buffer").nav(
 							-(vim.v.count > 0 and vim.v.count or 1)
 						)
 					end,
