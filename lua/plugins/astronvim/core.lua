@@ -1,7 +1,9 @@
+---@type LazySpec
 return {
 	{
 		"goolord/alpha-nvim",
 		dependencies = "AstroNvim/astroui",
+		---@param opts table
 		opts = function(_, opts)
 			local dashboard = require("alpha.themes.dashboard")
 			local get_icon = require("astroui").get_icon
@@ -32,7 +34,7 @@ return {
 	{
 		"echasnovski/mini.indentscope",
 		event = "User AstroFile",
-		-- -@type ibl.indent_options
+		---@param opts table
 		opts = function(_, opts)
 			opts.symbol = require("astroui").get_icon("IndentScope")
 		end,

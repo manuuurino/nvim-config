@@ -1,22 +1,21 @@
+---@type LazySpec
 return {
 	-- use mason-lspconfig to configure LSP installations
 	{
 		"williamboman/mason-lspconfig.nvim",
-		-- overrides `require("mason-lspconfig").setup(...)`
+		---@param opts MasonLspconfigSettings
 		opts = function(_, opts)
-			-- add more things to the ensure_installed table protecting against community packs modifying it
+			---@diagnostic disable-next-line: inject-field
 			opts.ensure_installed =
 				require("astrocore").list_insert_unique(opts.ensure_installed, {
 					-- "lua_ls",
 				})
 		end,
 	},
-	-- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
 	{
 		"jay-babu/mason-null-ls.nvim",
-		-- overrides `require("mason-null-ls").setup(...)`
+		---@param opts MasonNullLsSettings
 		opts = function(_, opts)
-			-- add more things to the ensure_installed table protecting against community packs modifying it
 			opts.ensure_installed =
 				require("astrocore").list_insert_unique(opts.ensure_installed, {
 					-- "prettier",
@@ -26,9 +25,8 @@ return {
 	},
 	{
 		"jay-babu/mason-nvim-dap.nvim",
-		-- overrides `require("mason-nvim-dap").setup(...)`
+		---@param opts MasonNvimDapSettings
 		opts = function(_, opts)
-			-- add more things to the ensure_installed table protecting against community packs modifying it
 			opts.ensure_installed =
 				require("astrocore").list_insert_unique(opts.ensure_installed, {
 					-- "python",
