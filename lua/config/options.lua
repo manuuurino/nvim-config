@@ -19,4 +19,4 @@ opt.spelllang = { "en_us", "de_de" }
 
 -- global options from astronvim:
 g.mapleader = " "
--- g.icons_enabled = not is_tty() -- disable icons in the UI
+g.icons_enabled = not is_tty() -- disable icons in the UI
