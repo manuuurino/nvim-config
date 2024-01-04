@@ -113,7 +113,6 @@ local plugins = {
 			},
 		},
 	},
-	-- TEST: buffer completion doesnt work on all files? need to test later.
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
