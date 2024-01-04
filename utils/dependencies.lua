@@ -22,6 +22,7 @@ end
 
 ---@return boolean
 function M.is_on_glibc()
+	-- PERF: this is slow
 	local result = vim.fn.system("ldd --version")
 	return result:match("GNU libc") ~= nil
 end
