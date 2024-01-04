@@ -42,6 +42,12 @@ git clone https://github.com/AstroNvim/AstroNvim "${XDG_CONFIG_HOME:-${HOME}/.co
 git clone --branch astronvim-v3/main https://github.com/manuuurino/nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
 ```
 
+### Installing spells
+
+```shell
+nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
+```
+
 ### Try it in a docker container
 
 > Some languages wont work, and it is expected, because they require some
