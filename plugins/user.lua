@@ -156,7 +156,6 @@ local plugins = {
 					},
 					["<c-p>"] = {
 						function()
-							print("hello")
 							return vim.fn["codeium#CycleCompletions"](-1)
 						end,
 						desc = "Codeium previous suggestion",
