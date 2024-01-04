@@ -1,11 +1,22 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/AstroNvim/AstroNvim/blob/main/lua/astronvim/options.lua
--- Add any additional options here
+local is_tty = require("util.helper").is_tty
 
--- vim.opt.relativenumber = true -- sets vim.opt.relativenumber
--- vim.opt.number = true -- sets vim.opt.number
--- vim.opt.spell = false -- sets vim.opt.spell
--- vim.opt.signcolumn = "auto" -- sets vim.opt.signcolumn to auto
--- vim.opt.wrap = false -- sets vim.opt.wrap
+local opt = vim.opt
+local g = vim.g
 
--- vim.g.mapleader = " " -- sets vim.g.mapleader
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.list = true -- render charaters
+opt.expandtab = false -- use tabs instead of spaces
+opt.clipboard = "" -- no clipboard sharing
+-- opt.completeopt = "menu,menuone,noselect,noinsert"
+opt.foldcolumn = "auto:3" -- show at least 3 fold lines
+
+-- NOTE:
+-- if you dont have the spells, you have to let neovim download them.
+-- run this command `nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"`
+opt.spell = true
+opt.spelllang = { "en_us", "de_de" }
+
+-- global options from astronvim:
+g.mapleader = " "
+-- g.icons_enabled = not is_tty() -- disable icons in the UI
