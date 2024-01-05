@@ -11,9 +11,8 @@ return {
 		event = "User AstroFile",
 		---@param opts ibl.indent_options
 		opts = function(_, opts)
-				-- stylua: ignore
-				---@diagnostic disable-next-line
-				opts.indent.tab_char = require("astroui").get_icon("IndentScope")
+			---@diagnostic disable-next-line
+			opts.indent.tab_char = require("astroui").get_icon("IndentScope")
 			---@diagnostic disable-next-line
 			opts.indent.char = require("astroui").get_icon("IndentScope")
 		end,
