@@ -1,7 +1,16 @@
 ---@type LazySpec
 return {
 	"nvim-neo-tree/neo-tree.nvim",
-	dependencies = "AstroNvim/astroui",
+	dependencies = {
+		"AstroNvim/astroui",
+		{
+			"AstroNvim/astrocore",
+			opts = function(_, opts)
+				local maps = opts.mappings
+				maps.n["<Leader>o"] = false
+			end,
+		},
+	},
 	opts = function(_, opts)
 		local get_icon = require("astroui").get_icon
 
