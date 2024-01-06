@@ -24,18 +24,6 @@ local mappings = {
 			desc = "Previous buffer",
 		},
 
-		["<leader>b"] = { name = "Buffers" },
-		["<leader>bD"] = {
-			function()
-				require("astronvim.utils.status").heirline.buffer_picker(
-					function(bufnr)
-						require("astronvim.utils.buffer").close(bufnr)
-					end
-				)
-			end,
-			desc = "Pick to close",
-		},
-
 		-- credits: https://github.com/t1gu1/astrovim-config/blob/5a1d7bd4933f8192de027071d62f953b4c831af3/mappings.lua#L74-L77
 		["<leader>pc"] = {
 			function()
