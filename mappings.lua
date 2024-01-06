@@ -82,9 +82,6 @@ local mappings = {
 			desc = "Set CWD",
 		},
 
-		-- quick save and quit
-		["<C-s>"] = { ":w!<cr>", desc = "Save and quit" }, -- change description but the same command
-
 		["<leader>fp"] = {
 			"<cmd>Telescope projects<CR>",
 			desc = "Open Projects",
