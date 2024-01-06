@@ -2,6 +2,8 @@
 -- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
 -- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 -- TODO: could replace neo-tree with this https://github.com/kevinhwang91/rnvimr
+-- TODO: https://github.com/aznhe21/actions-preview.nvim
+-- TODO: do i need this? https://github.com/gpanders/editorconfig.nvim
 
 local is_on_glibc = require("user.utils.dependencies").is_on_glibc
 local icons = require("user.icons")
@@ -40,7 +42,6 @@ local plugins = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
 		},
-		event = "VeryLazy", -- NOTE: keybinds need to be registered
 		cmd = {
 			"ChatGPT",
 			"ChatGPTActAs",
@@ -59,76 +60,71 @@ local plugins = {
 			-- 	.. ' | map(select(.name == "api key"))'
 			-- 	.. " | .[0].value'",
 		},
-		config = function(_, opts)
-			require("chatgpt").setup(opts)
+		init = function(_)
+			local prefix = "<leader>a"
 
-			--TODO: use astronvim keymap setting
-			local wk = require("which-key")
-			wk.register({
-				["<leader>a"] = {
+			local key_mappings = {
+				[prefix] = {
 					name = "ChatGPT",
-					c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
-					e = {
-						"<cmd>ChatGPTEditWithInstruction<CR>",
-						"Edit with instruction",
-						mode = { "n", "v" },
-					},
-					g = {
-						"<cmd>ChatGPTRun grammar_correction<CR>",
-						"Grammar Correction",
-						mode = { "n", "v" },
-					},
-					t = {
-						"<cmd>ChatGPTRun translate<CR>",
-						"Translate",
-						mode = { "n", "v" },
-					},
-					k = {
-						"<cmd>ChatGPTRun keywords<CR>",
-						"Keywords",
-						mode = { "n", "v" },
-					},
-					d = {
-						"<cmd>ChatGPTRun docstring<CR>",
-						"Docstring",
-						mode = { "n", "v" },
-					},
-					a = {
-						"<cmd>ChatGPTRun add_tests<CR>",
-						"Add Tests",
-						mode = { "n", "v" },
-					},
-					o = {
-						"<cmd>ChatGPTRun optimize_code<CR>",
-						"Optimize Code",
-						mode = { "n", "v" },
-					},
-					s = {
-						"<cmd>ChatGPTRun summarize<CR>",
-						"Summarize",
-						mode = { "n", "v" },
-					},
-					f = {
-						"<cmd>ChatGPTRun fix_bugs<CR>",
-						"Fix Bugs",
-						mode = { "n", "v" },
-					},
-					x = {
-						"<cmd>ChatGPTRun explain_code<CR>",
-						"Explain Code",
-						mode = { "n", "v" },
-					},
-					r = {
-						"<cmd>ChatGPTRun roxygen_edit<CR>",
-						"Roxygen Edit",
-						mode = { "n", "v" },
-					},
-					l = {
-						"<cmd>ChatGPTRun code_readability_analysis<CR>",
-						"Code Readability Analysis",
-						mode = { "n", "v" },
-					},
 				},
+				[prefix .. "e"] = {
+					"<cmd>ChatGPTEditWithInstruction<CR>",
+					desc = "Edit with instruction",
+				},
+				[prefix .. "g"] = {
+					"<cmd>ChatGPTRun grammar_correction<CR>",
+					desc = "Grammar Correction",
+				},
+				[prefix .. "t"] = {
+					"<cmd>ChatGPTRun translate<CR>",
+					desc = "Translate",
+				},
+				[prefix .. "k"] = {
+					"<cmd>ChatGPTRun keywords<CR>",
+					desc = "Keywords",
+				},
+				[prefix .. "d"] = {
+					"<cmd>ChatGPTRun docstring<CR>",
+					desc = "Docstring",
+				},
+				[prefix .. "a"] = {
+					"<cmd>ChatGPTRun add_tests<CR>",
+					desc = "Add Tests",
+				},
+				[prefix .. "o"] = {
+					"<cmd>ChatGPTRun optimize_code<CR>",
+					desc = "Optimize Code",
+				},
+				[prefix .. "s"] = {
+					"<cmd>ChatGPTRun summarize<CR>",
+					desc = "Summarize",
+				},
+				[prefix .. "f"] = {
+					"<cmd>ChatGPTRun fix_bugs<CR>",
+					desc = "Fix Bugs",
+				},
+				[prefix .. "x"] = {
+					"<cmd>ChatGPTRun explain_code<CR>",
+					desc = "Explain Code",
+				},
+				[prefix .. "r"] = {
+					"<cmd>ChatGPTRun roxygen_edit<CR>",
+					desc = "Roxygen Edit",
+				},
+				[prefix .. "l"] = {
+					"<cmd>ChatGPTRun code_readability_analysis<CR>",
+					desc = "Code Readability Analysis",
+				},
+			}
+
+			require("astronvim.utils").set_mappings({
+				n = vim.tbl_deep_extend("force", key_mappings, {
+					[prefix .. "c"] = {
+						"<cmd>ChatGPT<CR>",
+						desc = "ChatGPT",
+					},
+				}),
+				v = key_mappings,
 			})
 		end,
 	},
