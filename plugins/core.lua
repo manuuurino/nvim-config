@@ -268,35 +268,43 @@ local plugins = {
 					set_buf_foldlevel(foldlevel)
 				end
 
+				local fold_more = function()
+					local count = vim.v.count
+					if count == 0 then count = 1 end
+					change_buf_foldlevel_by(-count)
+				end
+
+				local fold_less = function()
+					local count = vim.v.count
+					if count == 0 then count = 1 end
+					change_buf_foldlevel_by(count)
+				end
+
+				local fold_set_level = function()
+					local fold_level = tonumber(vim.fn.input("Foldlevel: "))
+
+					if fold_level ~= nil then
+						set_buf_foldlevel(fold_level)
+					else
+						vim.notify(
+							"No foldlevel given to set!",
+							vim.log.levels.WARN
+						)
+					end
+				end
+
 				require("astronvim.utils").set_mappings({
 					n = {
 						["zm"] = {
-							function()
-								local count = vim.v.count
-								if count == 0 then count = 1 end
-								change_buf_foldlevel_by(-count)
-							end,
+							fold_more,
 							desc = "fold more",
 						},
 						["zr"] = {
-							function()
-								local count = vim.v.count
-								if count == 0 then count = 1 end
-								change_buf_foldlevel_by(count)
-							end,
+							fold_less,
 							desc = "Fold less",
 						},
 						["zS"] = {
-							function()
-								if vim.v.count == 0 then
-									vim.notify(
-										"No foldlevel given to set!",
-										vim.log.levels.WARN
-									)
-								else
-									set_buf_foldlevel(vim.v.count)
-								end
-							end,
+							fold_set_level,
 							desc = "UFO: Set Foldlevel",
 						},
 					},
