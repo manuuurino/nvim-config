@@ -5,8 +5,8 @@ local icons = {
 	expander_collapsed = "",
 	expander_expanded = "",
 	expander_separator = "│",
-	folded_symbol = "󰁂",
-	tab_char = "▸—»",
+	folded_symbol = "",
+	tab_char = "——→",
 	space_char = "·",
 }
 
