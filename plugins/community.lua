@@ -24,10 +24,6 @@ local extend_tbl = astronvim_utils.extend_tbl
 -- seperating into sections so it is more readable
 
 add({
-	{ import = "astrocommunity.bars-and-lines.vim-illuminate" },
-})
-
-add({
 	{ import = "astrocommunity.code-runner.sniprun" },
 	{
 		"michaelb/sniprun",
