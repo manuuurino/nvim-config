@@ -1,6 +1,6 @@
 # AstroNvim
 
-My [AstroNvim](https://github.com/AstroNvim/AstroNvim) configuration Based on
+My [AstroNvim](https://github.com/AstroNvim/AstroNvim) configuration based on
 the user configuration template.
 
 ## Preview
