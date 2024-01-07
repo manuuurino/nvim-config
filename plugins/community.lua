@@ -24,13 +24,6 @@ local extend_tbl = astronvim_utils.extend_tbl
 -- seperating into sections so it is more readable
 
 add({
-	{ import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
-	{
-		"m4xshen/smartcolumn.nvim",
-		opts = {
-			colorcolumn = "120",
-		},
-	},
 	{ import = "astrocommunity.bars-and-lines.vim-illuminate" },
 })
 
