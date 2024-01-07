@@ -18,6 +18,14 @@ local icons = {
 	folded_symbol = "...",
 	tab_char = "──→",
 	space_char = "·",
+
+	fix_icon = "F ",
+	todo_icon = "T ",
+	hack_icon = "H ",
+	warn_icon = "W ",
+	perf_icon = "P ",
+	note_icon = "N ",
+	test_icon = "T ",
 }
 
 return icons

@@ -8,6 +8,14 @@ local icons = {
 	folded_symbol = "",
 	tab_char = "——→",
 	space_char = "·",
+
+	fix_icon = " ",
+	todo_icon = " ",
+	hack_icon = " ",
+	warn_icon = " ",
+	perf_icon = " ",
+	note_icon = " ",
+	test_icon = "⏲ ",
 }
 
 return icons

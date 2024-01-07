@@ -206,20 +206,64 @@ local plugins = {
 		"folke/todo-comments.nvim",
 		event = "User AstroFile",
 		cmd = { "TodoTrouble", "TodoTelescope", "TodoLocList", "TodoQuickFix" },
-		opts = function()
-			require("astronvim.utils").set_mappings({
-				n = {
-					["<leader>xt"] = {
-						"<cmd>TodoTrouble<cr>",
-						desc = "Todo trouble",
-					},
-					["<leader>fT"] = {
-						"<cmd>TodoTelescope<cr>",
-						desc = "Todo telescope",
-					},
+		---@param opts TodoOptions
+		opts = function(_, opts)
+			---@diagnostic disable-next-line: inject-field
+			opts.keywords = {
+				FIX = {
+					icon = icons.fix_icon,
+					color = "error",
+					alt = { "FIXME", "BUG", "FIXIT", "ISSUE" },
 				},
+				TODO = {
+					icon = icons.todo_icon,
+					color = "info",
+				},
+				HACK = {
+					icon = icons.hack_icon,
+					color = "warning",
+				},
+				WARN = {
+					icon = icons.warn_icon,
+					color = "warning",
+					alt = { "WARNING", "XXX" },
+				},
+				PERF = {
+					icon = icons.perf_icon,
+					alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" },
+				},
+				NOTE = {
+					icon = icons.note_icon,
+					color = "hint",
+					alt = { "INFO" },
+				},
+				TEST = {
+					icon = icons.test_icon,
+					color = "test",
+					alt = { "TESTING", "PASSED", "FAILED" },
+				},
+			}
+		end,
+		init = function(_)
+			local is_available = require("astronvim.utils").is_available
+
+			local key_mappings = {
+				["<leader>fT"] = {
+					"<cmd>TodoTelescope<cr>",
+					desc = "Todo telescope",
+				},
+			}
+
+			if is_available("trouble-nvim") then
+				key_mappings["<leader>xt"] = {
+					"<cmd>TodoTrouble<cr>",
+					desc = "Todo trouble",
+				}
+			end
+
+			require("astronvim.utils").set_mappings({
+				n = key_mappings,
 			})
-			return {}
 		end,
 	},
 	-- credits: https://github.com/LazyVim/LazyVim/blob/879e29504d43e9f178d967ecc34d482f902e5a91/lua/lazyvim/plugins/ui.lua#L214-L275
