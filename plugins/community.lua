@@ -19,6 +19,7 @@ local is_on_alpine = dependencies.is_on_alpine
 
 local astronvim_utils = require("astronvim.utils")
 local set_mappings = astronvim_utils.set_mappings
+local extend_tbl = astronvim_utils.extend_tbl
 
 -- seperating into sections so it is more readable
 
@@ -31,6 +32,46 @@ add({
 		},
 	},
 	{ import = "astrocommunity.bars-and-lines.vim-illuminate" },
+})
+
+add({
+	{ import = "astrocommunity.code-runner.sniprun" },
+	{
+		"michaelb/sniprun",
+		opts = {
+			display = {
+				"Terminal",
+			},
+		},
+		init = function(_)
+			local prefix = "<leader>R"
+
+			local key_mappings = {
+				[prefix] = {
+					name = "SnipRun",
+				},
+			}
+
+			set_mappings({
+				n = extend_tbl(key_mappings, {
+					[prefix .. "r"] = {
+						function()
+							require("sniprun").run("w")
+						end,
+						desc = "run file",
+					},
+				}),
+				v = extend_tbl(key_mappings, {
+					[prefix .. "r"] = {
+						function()
+							require("sniprun").run("v")
+						end,
+						desc = "run selection",
+					},
+				}),
+			})
+		end,
+	},
 })
 
 add({
