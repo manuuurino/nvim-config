@@ -164,7 +164,6 @@ add({
 
 add({
 	{ import = "astrocommunity.color.headlines-nvim" },
-	{ import = "astrocommunity.color.headlines-nvim" },
 })
 
 add({
