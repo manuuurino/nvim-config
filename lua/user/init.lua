@@ -14,4 +14,5 @@ return {
 			},
 		},
 	},
+	{ import = "user.highlights" },
 }
