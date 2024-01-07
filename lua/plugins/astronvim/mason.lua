@@ -1,7 +1,4 @@
-<<<<<<<< HEAD:lua/user/mason.lua
 ---@type LazySpec
-========
->>>>>>>> astronvim-v4/main:lua/plugins/astronvim/mason.lua
 return {
 	-- use mason-lspconfig to configure LSP installations
 	{

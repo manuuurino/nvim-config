@@ -1,7 +1,4 @@
-<<<<<<<< HEAD:lua/user/lsp.lua
 ---@type LazySpec
-========
->>>>>>>> astronvim-v4/main:lua/plugins/astronvim/lsp.lua
 return {
 	"AstroNvim/astrolsp",
 	---@type AstroLSPOpts
