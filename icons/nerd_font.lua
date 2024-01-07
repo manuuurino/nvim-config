@@ -16,6 +16,12 @@ local icons = {
 	perf_icon = " ",
 	note_icon = " ",
 	test_icon = "⏲ ",
+
+	config = "",
+	project = "󰸕",
+	last_session = "",
+	recents = "",
+	find_recent_session = "",
 }
 
 return icons

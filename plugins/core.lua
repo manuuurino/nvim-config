@@ -1,5 +1,4 @@
 local icons = require("user.icons")
-local is_tty = require("user.utils.helper").is_tty
 
 local astronvim_utils = require("astronvim.utils")
 local is_available = astronvim_utils.is_available
@@ -44,22 +43,17 @@ local plugins = {
 				"    ██   ████   ████   ██ ██      ██",
 			}
 
-			local astro_alpha_button = require("astronvim.utils").alpha_button
-
-			---@param keybind string
-			---@param icon string
-			---@param title string
-			local button = function(keybind, icon, title)
-				icon = is_tty() and "*" or icon
-				return astro_alpha_button(keybind, icon .. title)
-			end
+			local button = require("astronvim.utils").alpha_button
 
 			opts.section.buttons.val = {
-				button("LDR S l", "", "  Last Session  "),
-				button("LDR f o", "󰈙", "  Recents  "),
-				button("LDR S f", "", "  Find Recent sessions"),
-				button("LDR f p", "", "  Open Project  "),
-				button("LDR p c", "", "  Config  "),
+				button("LDR S l", icons.last_session .. "  Last Session  "),
+				button("LDR f o", icons.recents .. "  Recents  "),
+				button(
+					"LDR S f",
+					icons.find_recent_session .. "  Find Recent sessions"
+				),
+				button("LDR f p", icons.project .. "  Open Project  "),
+				button("LDR p c", icons.config .. "  Config  "),
 			}
 
 			return opts
