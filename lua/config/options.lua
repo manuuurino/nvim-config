@@ -20,3 +20,8 @@ o.spelllang = { "en_us", "de_de" }
 g.mapleader = " "
 g.icons_enabled = not is_tty() -- disable icons in the UI
 g.codeium_native_plugin = false -- the native plugin doesnt support virtual text yet
+
+if vim.g.neovide then
+	o.guifont = "SauceCodePro Nerd Font:h7"
+	g.neovide_scale_factor = 1.0
+end
