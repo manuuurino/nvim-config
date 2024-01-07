@@ -27,18 +27,25 @@ return {
 			},
 		},
 	},
-	opts = function(_, opts)
-		require("telescope").load_extension("env")
-		require("telescope").load_extension("git_worktree")
-
-		return vim.tbl_deep_extend("force", opts, {
-			defaults = {
-				layout_config = {
-					horizontal = {
-						prompt_position = "bottom",
-					},
+	opts = {
+		defaults = {
+			sorting_strategy = "descending",
+			-- layout_strategy = "vertical",
+			layout_config = {
+				horizontal = {
+					prompt_position = "bottom",
+				},
+				vertical = {
+					height = 0.9,
+					preview_cutoff = 40,
+					prompt_position = "bottom",
+					width = 0.8,
 				},
 			},
-		})
+		},
+	},
+	init = function(_)
+		require("telescope").load_extension("env")
+		require("telescope").load_extension("git_worktree")
 	end,
 }
