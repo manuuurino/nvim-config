@@ -366,6 +366,12 @@ local plugins = {
 			})
 		end,
 	},
+	{
+		"zeioth/garbage-day.nvim",
+		dependencies = "neovim/nvim-lspconfig",
+		event = "User AstroFile",
+		opts = {},
+	},
 }
 
 return plugins
