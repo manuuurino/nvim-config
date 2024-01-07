@@ -16,6 +16,7 @@ end
 local dependencies = require("user.utils.dependencies")
 local has_excecutable = dependencies.has_excecutable
 local is_on_alpine = dependencies.is_on_alpine
+local icons = require("user.icons")
 
 local astronvim_utils = require("astronvim.utils")
 local set_mappings = astronvim_utils.set_mappings
@@ -183,6 +184,14 @@ add({
 
 add({
 	{ import = "astrocommunity.diagnostics.trouble-nvim" },
+	{
+		"folke/trouble.nvim",
+		---@type TroubleOptions
+		opts = {
+			fold_open = icons.expander_expanded,
+			fold_closed = icons.expander_collapsed,
+		},
+	},
 })
 
 add({
