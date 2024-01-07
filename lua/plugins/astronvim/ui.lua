@@ -20,6 +20,14 @@ return {
 				LastSession = "",
 				Recents = "",
 				FindRecentSession = "",
+
+				FixIcon = "",
+				TodoIcon = "",
+				HackIcon = "",
+				WarnIcon = "",
+				PerfIcon = "",
+				NoteIcon = "",
+				TestIcon = "⏲",
 			}
 
 			--[[
@@ -41,6 +49,14 @@ return {
 
 				CharTab = "──→",
 				CharSpace = "·",
+
+				FixIcon = "F",
+				TodoIcon = "T",
+				HackIcon = "H",
+				WarnIcon = "W",
+				PerfIcon = "P",
+				NoteIcon = "N",
+				TestIcon = "T",
 			}
 
 			return vim.tbl_deep_extend("force", opts, {
