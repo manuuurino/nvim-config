@@ -1,3 +1,5 @@
+local is_available = require("astrocore").is_available
+
 ---@type LazySpec
 return {
 	"AstroNvim/astrocore",
@@ -30,8 +32,11 @@ return {
 							vim.fn.stdpath("config") .. "/lua/user/init.lua"
 						)
 						vim.cmd.cd("%:p:h")
-						-- HACK: without this, the path will not change. why though?
-						vim.cmd("Neotree")
+
+						if is_available("neo-tree.nvim") then
+							-- HACK: without this, the path will not change. why though?
+							vim.cmd("Neotree")
+						end
 					end,
 					desc = "Open AstroVim User Config",
 				},
@@ -60,10 +65,17 @@ return {
 					end,
 					desc = "Set CWD",
 				},
+
+				-- better increment/decrement
+				["+"] = { "g<C-a>", desc = "Increment number" },
+				["-"] = { "g<C-x>", desc = "Descrement number" },
 			},
-			t = {
-				-- setting a mapping to false will disable it
-				-- ["<esc>"] = false,
+			x = {
+				["<leader>y"] = { '"+y', desc = "Yank to system clipboard" },
+
+				-- better increment/decrement
+				["+"] = { "g<C-a>", desc = "Increment number" },
+				["-"] = { "g<C-x>", desc = "Descrement number" },
 			},
 		},
 	},
