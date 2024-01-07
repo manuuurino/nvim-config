@@ -1,7 +1,7 @@
 # AstroNvim
 **NOTE:** This is for AstroNvim v4+
 
-My [AstroNvim](https://github.com/AstroNvim/AstroNvim) configuration Based on
+My [AstroNvim](https://github.com/AstroNvim/AstroNvim) configuration based on
 the [user configuration template](https://github.com/AstroNvim/template).
 
 ## Preview
