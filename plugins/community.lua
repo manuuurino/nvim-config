@@ -17,6 +17,9 @@ local dependencies = require("user.utils.dependencies")
 local has_excecutable = dependencies.has_excecutable
 local is_on_alpine = dependencies.is_on_alpine
 
+local astronvim_utils = require("astronvim.utils")
+local set_mappings = astronvim_utils.set_mappings
+
 -- seperating into sections so it is more readable
 
 add({
@@ -224,6 +227,19 @@ add({
 add({
 	{ import = "astrocommunity.project.nvim-spectre" },
 	{ import = "astrocommunity.project.project-nvim" },
+	{
+		"ahmedkhalf/project.nvim",
+		init = function()
+			set_mappings({
+				n = {
+					["<leader>fp"] = {
+						"<cmd>Telescope projects<CR>",
+						desc = "Open Projects",
+					},
+				},
+			})
+		end,
+	},
 })
 
 add({

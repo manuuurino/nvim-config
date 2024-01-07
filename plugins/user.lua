@@ -8,32 +8,45 @@
 local is_on_glibc = require("user.utils.dependencies").is_on_glibc
 local icons = require("user.icons")
 
+local astronvim_utils = require("astronvim.utils")
+local is_available = astronvim_utils.is_available
+local set_mappings = astronvim_utils.set_mappings
+
 ---@type LazySpec
 local plugins = {
 	{
 		--TODO: add background color for tty
 		"nvim-treesitter/nvim-treesitter-context",
 		event = "User AstroFile",
-		keys = {
-			---@diagnostic disable-next-line id is used internally in lazy.nvim
-			{
-				"<leader>uT",
-				"<cmd>TSContextToggle<CR>",
-				desc = "Toggle treesitter context",
-			},
-		},
+		init = function(_)
+			local prefix = "<leader>u"
+
+			set_mappings({
+				n = {
+					[prefix .. "T"] = {
+						"<cmd>TSContextToggle<CR>",
+						desc = "Toggle treesitter context",
+					},
+				},
+			})
+		end,
 	},
 	{
 		"mbbill/undotree",
 		cmd = "UndotreeToggle",
 		event = "User AstroFile",
-		keys = {
-			{
-				"<leader>fu",
-				"<cmd>UndotreeToggle<CR>",
-				desc = "Find undotree",
-			},
-		},
+		init = function(_)
+			local prefix = "<leader>f"
+
+			set_mappings({
+				n = {
+					[prefix .. "u"] = {
+						"<cmd>UndotreeToggle<CR>",
+						desc = "Find undotree",
+					},
+				},
+			})
+		end,
 	},
 	{
 		"jackMort/ChatGPT.nvim",
@@ -117,7 +130,7 @@ local plugins = {
 				},
 			}
 
-			require("astronvim.utils").set_mappings({
+			set_mappings({
 				n = vim.tbl_deep_extend("force", key_mappings, {
 					[prefix .. "c"] = {
 						"<cmd>ChatGPT<CR>",
@@ -133,8 +146,23 @@ local plugins = {
 		"Exafunction/codeium.vim",
 		event = "User AstroFile",
 		cond = not vim.g.codeium_native_plugin and is_on_glibc(),
-		config = function()
-			require("astronvim.utils").set_mappings({
+		init = function(_)
+			local prefix = "<leader>u"
+
+			set_mappings({
+				n = {
+					[prefix .. "A"] = {
+						function()
+							if vim.g.codeium_enabled == true then
+								vim.cmd("CodeiumDisable")
+							else
+								vim.cmd("CodeiumEnable")
+							end
+						end,
+						desc = "Toggle Codeium active",
+						expr = true,
+					},
+				},
 				i = {
 					["<C-g>"] = {
 						function()
@@ -162,19 +190,6 @@ local plugins = {
 							return vim.fn["codeium#Clear"]()
 						end,
 						desc = "Codeium clear completions",
-						expr = true,
-					},
-				},
-				n = {
-					["<leader>uA"] = {
-						function()
-							if vim.g.codeium_enabled == true then
-								vim.cmd("CodeiumDisable")
-							else
-								vim.cmd("CodeiumEnable")
-							end
-						end,
-						desc = "Toggle Codeium active",
 						expr = true,
 					},
 				},
@@ -245,8 +260,6 @@ local plugins = {
 			}
 		end,
 		init = function(_)
-			local is_available = require("astronvim.utils").is_available
-
 			local key_mappings = {
 				["<leader>fT"] = {
 					"<cmd>TodoTelescope<cr>",
@@ -261,7 +274,7 @@ local plugins = {
 				}
 			end
 
-			require("astronvim.utils").set_mappings({
+			set_mappings({
 				n = key_mappings,
 			})
 		end,
@@ -334,13 +347,7 @@ local plugins = {
 	},
 	{
 		"echasnovski/mini.operators",
-		keys = {
-			{ "<leader>oe", desc = "Evaluate" },
-			{ "<leader>ox", desc = "Exchange" },
-			{ "<leader>om", desc = "Multiply" },
-			{ "<leader>or", desc = "Replace" },
-			{ "<leader>os", desc = "Sort" },
-		},
+		event = "User AstroFile",
 		opts = {
 			evaluate = { prefix = "<leader>oe" },
 			exchange = { prefix = "<leader>ox" },
@@ -348,6 +355,16 @@ local plugins = {
 			replace = { prefix = "<leader>or" },
 			sort = { prefix = "<leader>os" },
 		},
+		init = function(_)
+			set_mappings({
+				n = {
+					["<leader>o"] = {
+						name = "Text edit operators",
+						desc = "Text edit operators",
+					},
+				},
+			})
+		end,
 	},
 }
 

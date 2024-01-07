@@ -29,8 +29,11 @@ local mappings = {
 			function()
 				vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/user/init.lua")
 				vim.cmd.cd("%:p:h")
-				-- HACK: without this, the path will not change. why though?
-				vim.cmd("Neotree")
+
+				if is_available("neo-tree.nvim") then
+					-- HACK: without this, the path will not change. why though?
+					vim.cmd("Neotree")
+				end
 			end,
 			desc = "Open AstroVim User Config",
 		},
@@ -43,7 +46,6 @@ local mappings = {
 		["<C-i>"] = { "<C-i>zz", desc = "Jump forward" },
 		["n"] = { "nzzzv" },
 		["N"] = { "Nzzzv" },
-		["Q"] = { "nop" },
 
 		-- yank to system clipboard
 		["<leader>y"] = { '"+y', desc = "Yank to system clipboard" },
@@ -65,11 +67,6 @@ local mappings = {
 			end,
 			desc = "Set CWD",
 		},
-
-		["<leader>fp"] = {
-			"<cmd>Telescope projects<CR>",
-			desc = "Open Projects",
-		},
 	},
 	x = {
 		["<leader>y"] = { '"+y', desc = "Yank to system clipboard" },
@@ -79,12 +76,5 @@ local mappings = {
 		["-"] = { "g<C-x>", desc = "Descrement number" },
 	},
 }
-
-if is_available("mini.operators") then
-	mappings.n["<leader>o"] = {
-		name = "Text edit operators",
-		desc = "Text edit operators", -- overwrite astronvims mapping because it gets merged
-	}
-end
 
 return mappings

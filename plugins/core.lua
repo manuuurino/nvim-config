@@ -1,10 +1,13 @@
 local icons = require("user.icons")
 local is_tty = require("user.utils.helper").is_tty
 
+local astronvim_utils = require("astronvim.utils")
+local is_available = astronvim_utils.is_available
+local set_mappings = astronvim_utils.set_mappings
+local extend_tbl = astronvim_utils.extend_tbl
+
 ---@type LazySpec
 local plugins = {
-	{ "max397574/better-escape.nvim", enabled = false },
-
 	-- replacing null-ls with none-ls
 	{ "jose-elias-alvarez/null-ls.nvim", enabled = false },
 	{
@@ -80,38 +83,44 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
 			"LinArcX/telescope-env.nvim",
-			"ThePrimeagen/git-worktree.nvim",
-		},
-		opts = function()
-			require("telescope").load_extension("env")
-			require("telescope").load_extension("git_worktree")
+			{
+				"ThePrimeagen/git-worktree.nvim",
+				init = function(_)
+					local prefix = "<leader>g"
 
-			return {
-				defaults = {
-					layout_config = {
-						horizontal = {
-							prompt_position = "bottom",
+					set_mappings({
+						n = {
+
+							[prefix .. "w"] = {
+								function()
+									require("telescope").extensions.git_worktree.git_worktrees()
+								end,
+								desc = "Switch git worktree",
+							},
+							[prefix .. "W"] = {
+								function()
+									require("telescope").extensions.git_worktree.create_git_worktree()
+								end,
+								desc = "Create new git worktree",
+							},
 						},
+					})
+				end,
+			},
+		},
+		opts = {
+			defaults = {
+				layout_config = {
+					horizontal = {
+						prompt_position = "bottom",
 					},
 				},
-			}
-		end,
-		keys = {
-			{
-				"<leader>gw",
-				function()
-					require("telescope").extensions.git_worktree.git_worktrees()
-				end,
-				desc = "Switch git worktree",
-			},
-			{
-				"<leader>gW",
-				function()
-					require("telescope").extensions.git_worktree.create_git_worktree()
-				end,
-				desc = "Create new git worktree",
 			},
 		},
+		init = function(_)
+			require("telescope").load_extension("env")
+			require("telescope").load_extension("git_worktree")
+		end,
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -124,12 +133,14 @@ local plugins = {
 		},
 		opts = function(_, opts)
 			local cmp = require("cmp")
-			local is_available = require("astronvim.utils").is_available
 
 			---@type cmp.ConfigSchema
 			local config = {
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp", priority = 1000 },
+					{
+						name = "nvim_lsp",
+						priority = 1000,
+					},
 					is_available("codeium.nvim") and {
 						name = "codeium",
 						priority = 800,
@@ -149,11 +160,26 @@ local plugins = {
 						end,
 						priority = 500,
 					},
-					{ name = "emoji", priority = 400 },
-					{ name = "nerdfont", priority = 350 },
-					{ name = "path", priority = 250 },
-					{ name = "calc", priority = 100 },
-					{ name = "buffer", keyword_length = 2 },
+					{
+						name = "emoji",
+						priority = 400,
+					},
+					{
+						name = "nerdfont",
+						priority = 350,
+					},
+					{
+						name = "path",
+						priority = 250,
+					},
+					{
+						name = "calc",
+						priority = 100,
+					},
+					{
+						name = "buffer",
+						keyword_length = 2,
+					},
 				}),
 				---@diagnostic disable-next-line: missing-fields
 				formatting = {
@@ -179,7 +205,7 @@ local plugins = {
 				},
 			}
 
-			return require("astronvim.utils").extend_tbl(opts, config)
+			return extend_tbl(opts, config)
 		end,
 		---@param opts cmp.ConfigSchema
 		config = function(_, opts)
@@ -240,77 +266,6 @@ local plugins = {
 		cond = not vim.g.vscode,
 		---@param opts UfoConfig
 		opts = function(_, opts)
-			-- credits: https://github.com/kevinhwang91/nvim-ufo/issues/150
-			-- NOTE: this can also easily break and the fold level doesnt limit till the max nested of folds
-			do
-				-- Ensure our ufo foldlevel is set for the buffer
-				vim.api.nvim_create_autocmd("BufReadPre", {
-					callback = function()
-						vim.b["ufo_foldlevel"] = 0
-					end,
-				})
-
-				---@param num integer Set the fold level to this number
-				local set_buf_foldlevel = function(num)
-					vim.b["ufo_foldlevel"] = num
-					require("ufo").closeFoldsWith(num)
-				end
-
-				---@param num integer The amount to change the UFO fold level by
-				local change_buf_foldlevel_by = function(num)
-					local foldlevel = vim.b["ufo_foldlevel"] or 0
-					-- Ensure the foldlevel can't be set negatively
-					if foldlevel + num >= 0 then
-						foldlevel = foldlevel + num
-					else
-						foldlevel = 0
-					end
-					set_buf_foldlevel(foldlevel)
-				end
-
-				local fold_more = function()
-					local count = vim.v.count
-					if count == 0 then count = 1 end
-					change_buf_foldlevel_by(-count)
-				end
-
-				local fold_less = function()
-					local count = vim.v.count
-					if count == 0 then count = 1 end
-					change_buf_foldlevel_by(count)
-				end
-
-				local fold_set_level = function()
-					local fold_level = tonumber(vim.fn.input("Foldlevel: "))
-
-					if fold_level ~= nil then
-						set_buf_foldlevel(fold_level)
-					else
-						vim.notify(
-							"No foldlevel given to set!",
-							vim.log.levels.WARN
-						)
-					end
-				end
-
-				require("astronvim.utils").set_mappings({
-					n = {
-						["zm"] = {
-							fold_more,
-							desc = "fold more",
-						},
-						["zr"] = {
-							fold_less,
-							desc = "Fold less",
-						},
-						["zS"] = {
-							fold_set_level,
-							desc = "UFO: Set Foldlevel",
-						},
-					},
-				})
-			end
-
 			-- credits: https://github.com/kevinhwang91/nvim-ufo/blob/c6d88523f574024b788f1c3400c5d5b9bb1a0407/README.md?plain=1#L332-L358
 			local handler = function(virtText, lnum, endLnum, width, truncate)
 				local newVirtText = {}
@@ -346,6 +301,77 @@ local plugins = {
 			end
 			opts.fold_virt_text_handler = handler
 		end,
+		init = function(_)
+			-- credits: https://github.com/kevinhwang91/nvim-ufo/issues/150
+			-- NOTE: this can also easily break and the fold level doesnt limit till the max nested of folds
+			-- Ensure our ufo foldlevel is set for the buffer
+			vim.api.nvim_create_autocmd("BufReadPre", {
+				callback = function()
+					vim.b["ufo_foldlevel"] = 0
+				end,
+			})
+
+			---@param num integer Set the fold level to this number
+			local set_buf_foldlevel = function(num)
+				vim.b["ufo_foldlevel"] = num
+				require("ufo").closeFoldsWith(num)
+			end
+
+			---@param num integer The amount to change the UFO fold level by
+			local change_buf_foldlevel_by = function(num)
+				local foldlevel = vim.b["ufo_foldlevel"] or 0
+				-- Ensure the foldlevel can't be set negatively
+				if foldlevel + num >= 0 then
+					foldlevel = foldlevel + num
+				else
+					foldlevel = 0
+				end
+				set_buf_foldlevel(foldlevel)
+			end
+
+			local fold_more = function()
+				local count = vim.v.count
+				if count == 0 then count = 1 end
+				change_buf_foldlevel_by(-count)
+			end
+
+			local fold_less = function()
+				local count = vim.v.count
+				if count == 0 then count = 1 end
+				change_buf_foldlevel_by(count)
+			end
+
+			local fold_set_level = function()
+				local fold_level = tonumber(vim.fn.input("Foldlevel: "))
+
+				if fold_level ~= nil then
+					set_buf_foldlevel(fold_level)
+				else
+					vim.notify(
+						"No foldlevel given to set!",
+						vim.log.levels.WARN
+					)
+				end
+			end
+
+			set_mappings({
+				n = {
+					["zm"] = {
+						fold_more,
+						desc = "fold more",
+					},
+					["zr"] = {
+						fold_less,
+						desc = "Fold less",
+					},
+					["zS"] = {
+						fold_set_level,
+						desc = "UFO: Set Foldlevel",
+					},
+				},
+			})
+		end,
 	},
 }
+
 return plugins
