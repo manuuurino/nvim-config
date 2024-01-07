@@ -1,5 +1,4 @@
 -- TODO: customize statusbar, show stats? and diable lsp status, bcs noice; also show current venv
--- FIXME: cpp not working?
 
 ---@type LazySpec[]
 local community_plugins = {
@@ -198,7 +197,6 @@ add({
 	-- TODO: keymap toggle autosave, maybe also change behaviour?
 	-- { import = "astrocommunity.editing-support.auto-save-nvim" },
 
-	-- TODO: perhaps this is not needed with a custom pair?
 	{ import = "astrocommunity.editing-support.nvim-treesitter-endwise" },
 
 	{ import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
@@ -293,7 +291,6 @@ add({
 })
 
 add({
-	-- TODO: what kind of keybinds does it need?
 	{ import = "astrocommunity.split-and-window.windows-nvim" },
 })
 

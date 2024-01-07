@@ -20,7 +20,6 @@ return {
 
 	-- Set colorscheme to use
 	-- colorscheme = "astrodark",
-	-- TODO: search for a tty colorscheme else evening looks ok too
 	colorscheme = is_tty() and "industry" or "kanagawa-wave",
 
 	-- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on

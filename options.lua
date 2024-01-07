@@ -4,9 +4,8 @@ local icons = require("user.icons")
 
 return {
 	opt = {
-		-- NOTE:
-		-- if you dont have the spells, you have to let neovim download them.
-		-- run this command `nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"`
+		-- NOTE: if you dont have the spells, you have to let neovim download them.
+		--       run this command `nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"`
 		spell = true,
 		spelllang = "en_us,de_de",
 
