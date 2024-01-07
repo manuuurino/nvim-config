@@ -120,4 +120,3 @@
   "vim-ps1": { "branch": "master", "commit": "be5dce9cd15176c6b1ecd056a8ced93fc2f6efac" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
   "windows.nvim": { "branch": "main", "commit": "c7492552b23d0ab30325e90b56066ec51242adc8" }
-}
