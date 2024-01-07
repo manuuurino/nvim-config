@@ -15,6 +15,7 @@ require("lazy").setup({
 		{ import = "plugins.astronvim" },
 		{ import = "plugins.astrocommunity" },
 		{ import = "plugins.user" },
+		{ import = "user" },
 	},
 	install = { colorscheme = { "astrodark", "habamax" } },
 	performance = {
