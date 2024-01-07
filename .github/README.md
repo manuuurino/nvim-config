@@ -52,7 +52,7 @@ NVIM_APPNAME=astronvim_v4 nvim --clean -c "set spelllang=en_us,de_de spell" -c "
 
 ```shell
 docker run -w /root -it --rm alpine:edge sh -uelic '
-  apk add bash git lua nodejs npm lazygit bottom python3 go neovim ripgrep alpine-sdk gzip cargo --update
+  apk add bash git lua nodejs npm lazygit bottom python3 go neovim curl ripgrep alpine-sdk gzip cargo --update
   git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config ~/.config/astronvim_v4/
   NVIM_APPNAME=astronvim_v4 nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
   NVIM_APPNAME=astronvim_v4 nvim && bash
