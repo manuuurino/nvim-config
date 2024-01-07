@@ -3,7 +3,6 @@
 -- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 -- TODO: could replace neo-tree with this https://github.com/kevinhwang91/rnvimr
 -- TODO: https://github.com/aznhe21/actions-preview.nvim
--- TODO: do i need this? https://github.com/gpanders/editorconfig.nvim
 
 local is_on_glibc = require("user.utils.dependencies").is_on_glibc
 local icons = require("user.icons")
