@@ -68,11 +68,16 @@ return {
 			"hrsh7th/nvim-cmp",
 			{
 				"onsails/lspkind.nvim",
-				opts = {
-					symbol_map = {
-						Codeium = "",
-					},
-				},
+				dependencies = "AstroNvim/astroui",
+				opts = function(_, opts)
+					local get_icon = require("astroui").get_icon
+
+					return vim.tbl_deep_extend("force", opts, {
+						symbol_map = {
+							Codeium = get_icon("CmpKindCodeium"),
+						},
+					})
+				end,
 			},
 		},
 		cond = vim.g.codeium_native_plugin and is_on_glibc(),

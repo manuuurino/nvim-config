@@ -30,6 +30,8 @@ return {
 				PerfIcon = "",
 				NoteIcon = "",
 				TestIcon = "⏲",
+
+				CmpKindCodeium = "",
 			}
 
 			--[[
