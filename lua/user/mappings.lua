@@ -52,8 +52,9 @@ return {
 				["Q"] = { "nop" },
 
 				-- yank to system clipboard
-				["<leader>y"] = { '"+y', desc = "Yank to system clipboard" },
-				["<leader>Y"] = { '"+Y', desc = "Yank from system clipboard" },
+				["gy"] = { '"+y', desc = "Yank to system clipboard" },
+				["gp"] = { '"+p', desc = "Paste from system clipboard" },
+				["gP"] = { '"+P', desc = "Paste from system clipboard" },
 
 				["<leader>."] = {
 					function()
@@ -71,7 +72,9 @@ return {
 				["-"] = { "g<C-x>", desc = "Descrement number" },
 			},
 			x = {
-				["<leader>y"] = { '"+y', desc = "Yank to system clipboard" },
+				["gy"] = { '"+y', desc = "Yank to system clipboard" },
+				["gp"] = { '"+p', desc = "Paste from system clipboard" },
+				["gP"] = { '"+P', desc = "Paste from system clipboard" },
 
 				-- better increment/decrement
 				["+"] = { "g<C-a>", desc = "Increment number" },
