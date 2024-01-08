@@ -1,5 +1,7 @@
 ---@type LazySpec
 return {
+	-- TODO: load colorschemes when they are needed, e.g. browsing the themes
+
 	{ import = "astrocommunity.colorscheme.catppuccin" },
 	{ "catppuccin/nvim", name = "catppuccin", event = "VeryLazy" },
 
