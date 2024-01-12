@@ -21,6 +21,23 @@ return {
 		},
 	},
 	{ import = "astrocommunity.editing-support.refactoring-nvim" },
+	{
+		"thepirmage/refactoring.nvim",
+		dependencies = {
+			"AstroNvim/astrocore",
+			---@param opts AstroCoreOpts
+			opts = function(_, opts)
+				local key_mappings = {
+					["<leader>r"] = { name = "Refactor" },
+				}
+
+				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {
+					n = key_mappings,
+					x = key_mappings,
+				})
+			end,
+		},
+	},
 	{ import = "astrocommunity.editing-support.suda-vim" },
 	{ import = "astrocommunity.editing-support.mini-splitjoin" },
 	{ import = "astrocommunity.editing-support.true-zen-nvim" },
