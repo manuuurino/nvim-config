@@ -9,7 +9,7 @@ return {
 			---@param opts AstroLSPOpts
 			opts = function(_, opts)
 				local key_mappings = {
-					["<leader>la"] = {
+					["<Leader>la"] = {
 						require("actions-preview").code_actions,
 						desc = "LSP code action",
 						cond = "testDocument/codeAction",
