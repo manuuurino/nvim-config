@@ -40,9 +40,18 @@ git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config "
 
 ### Installing spells
 
+> the spells are already included in the repository
+
 ```shell
-NVIM_APPNAME=astronvim_v4 nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
+mkdir -p "${XDG_CONFIG_HOME:-${HOME}/.config}/astronvim_v4/spell"
+wget -P "${XDG_CONFIG_HOME:-${HOME}/.config}/astronvim_v4/spell" \
+  https://ftp.nluug.nl/pub/vim/runtime/spell/en.utf-8.spl \
+  https://ftp.nluug.nl/pub/vim/runtime/spell/de.utf-8.spl
 ```
+
+#### choose a mirror
+
+https://www.vim.org/mirrors.php
 
 ### Try it in a docker container
 
@@ -54,7 +63,6 @@ NVIM_APPNAME=astronvim_v4 nvim --clean -c "set spelllang=en_us,de_de spell" -c "
 docker run -w /root -it --rm alpine:edge sh -uelic '
   apk add bash git lua nodejs npm lazygit bottom python3 go neovim curl ripgrep alpine-sdk gzip cargo --update
   git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config ~/.config/astronvim_v4/
-  NVIM_APPNAME=astronvim_v4 nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
   NVIM_APPNAME=astronvim_v4 nvim && bash
 '
 ```
