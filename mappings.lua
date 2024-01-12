@@ -1,5 +1,3 @@
-local is_available = require("astronvim.utils").is_available
-
 local mappings = {
 	n = {
 		["<leader>o"] = false,
@@ -27,15 +25,10 @@ local mappings = {
 		-- credits: https://github.com/t1gu1/astrovim-config/blob/5a1d7bd4933f8192de027071d62f953b4c831af3/mappings.lua#L74-L77
 		["<leader>pc"] = {
 			function()
-				vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/user/init.lua")
+				vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/user/")
 				vim.cmd.cd("%:p:h")
-
-				if is_available("neo-tree.nvim") then
-					-- HACK: without this, the path will not change. why though?
-					vim.cmd("Neotree")
-				end
 			end,
-			desc = "Open AstroVim User Config",
+			desc = "Open AstroNvim User Config",
 		},
 
 		-- credits: https://github.com/ThePrimeagen/init.lua/blob/97c039bb88d8bbbcc9b1e3d0dc716a2ba202c6d2/lua/theprimeagen/remap.lua
