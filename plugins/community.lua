@@ -214,7 +214,6 @@ add({
 	{ import = "astrocommunity.editing-support.refactoring-nvim" },
 	{
 		"thepirmage/refactoring.nvim",
-		opts = {},
 		init = function(_)
 			set_mappings({
 				n = {
