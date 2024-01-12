@@ -212,6 +212,20 @@ add({
 		},
 	},
 	{ import = "astrocommunity.editing-support.refactoring-nvim" },
+	{
+		"thepirmage/refactoring.nvim",
+		opts = {},
+		init = function(_)
+			set_mappings({
+				n = {
+					["<leader>r"] = { name = "Refactor" },
+				},
+				x = {
+					["<leader>r"] = { name = "Refactor" },
+				},
+			})
+		end,
+	},
 	{ import = "astrocommunity.editing-support.suda-vim" },
 	{ import = "astrocommunity.editing-support.mini-splitjoin" },
 	{ import = "astrocommunity.editing-support.true-zen-nvim" },
