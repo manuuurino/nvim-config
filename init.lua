@@ -1,4 +1,6 @@
 local is_tty = require("user.utils.helper").is_tty
+local is_available = require("astronvim.utils").is_available
+
 return {
 	-- Configure AstroNvim updates
 	updater = {
@@ -56,6 +58,28 @@ return {
 		servers = {
 			-- "pyright"
 		},
+
+		---@param client lsp.Client
+		---@param bufnr number
+		on_attach = function(client, bufnr)
+			-- override code action
+			if
+				is_available("actions-preview.nvim")
+				and client.supports_method("textDocument/codeAction")
+			then
+				local key_mappings = {
+					["<leader>la"] = {
+						require("actions-preview").code_actions,
+						desc = "LSP code action",
+					},
+				}
+
+				require("astronvim.utils").set_mappings({
+					n = key_mappings,
+					v = key_mappings,
+				}, { buffer = bufnr })
+			end
+		end,
 	},
 
 	-- Configure require("lazy").setup() options
