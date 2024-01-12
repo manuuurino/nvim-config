@@ -44,9 +44,18 @@ git clone --branch astronvim-v3/main https://github.com/manuuurino/nvim-config "
 
 ### Installing spells
 
+> the spells are already included in the repository
+
 ```shell
-nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
+mkdir -p "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/spell"
+wget -P "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/spell" \
+  https://ftp.nluug.nl/pub/vim/runtime/spell/en.utf-8.spl \
+  https://ftp.nluug.nl/pub/vim/runtime/spell/de.utf-8.spl
 ```
+
+#### choose a mirror
+
+https://www.vim.org/mirrors.php
 
 ### Try it in a docker container
 
@@ -58,10 +67,13 @@ nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
 
 ```shell
 docker run -w /root -it --rm alpine:edge sh -uelic '
-  apk add bash git lua nodejs npm lazygit bottom python3 go neovim ripgrep alpine-sdk gzip cargo --update
+  apk add bash git lua nodejs npm lazygit bottom python3 go neovim curl ripgrep alpine-sdk gzip cargo --update
   git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
   git clone --branch astronvim-v3/main https://github.com/manuuurino/nvim-config ~/.config/nvim/lua/user
-  nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"
+  mkdir -p "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/spell"
+  wget -P "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/spell" \
+    https://ftp.nluug.nl/pub/vim/runtime/spell/en.utf-8.spl \
+    https://ftp.nluug.nl/pub/vim/runtime/spell/de.utf-8.spl
   nvim && bash
 '
 ```

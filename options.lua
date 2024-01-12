@@ -6,8 +6,7 @@ return function(local_vim)
 	local o = local_vim.opt
 	local g = local_vim.g
 
-	-- NOTE: if you dont have the spells, you have to let neovim download them.
-	--       run this command `nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"`
+	-- NOTE: read the readme how to install a spell, under the section "Installing spells".
 	o.spell = true
 	o.spelllang = "en_us,de_de"
 
@@ -33,6 +32,8 @@ return function(local_vim)
 	g.icons_enabled = not is_tty() -- disable icons in the UI
 	g.resession_enabled = true -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
 	g.inlay_hints_enabled = false -- enable or disable LSP inlay hints on startup (Neovim v0.10 only)
+
+	-- global options for this config
 	g.codeium_native_plugin = false -- the native plugin doesnt support virtual text yet
 
 	if vim.g.neovide then
