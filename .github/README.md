@@ -62,8 +62,8 @@ https://www.vim.org/mirrors.php
 ```shell
 docker run -w /root -it --rm alpine:edge sh -uelic '
   apk add bash git lua nodejs npm lazygit bottom python3 go neovim curl ripgrep alpine-sdk gzip cargo --update
-  git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config ~/.config/astronvim_v4/
-  NVIM_APPNAME=astronvim_v4 nvim && bash
+  git clone --branch astronvim-v4/main https://github.com/manuuurino/nvim-config ~/.config/nvim/
+  nvim && bash
 '
 ```
 
