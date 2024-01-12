@@ -5,8 +5,11 @@ return {
 	opts = {
 		mappings = {
 			n = {
+				-- disable home screen
+				["h"] = false,
+
 				-- navigate buffer tabs with `H` and `L`
-				L = {
+				["L"] = {
 					function()
 						require("astrocore.buffer").nav(
 							vim.v.count > 0 and vim.v.count or 1
@@ -14,7 +17,7 @@ return {
 					end,
 					desc = "Next buffer",
 				},
-				H = {
+				["H"] = {
 					function()
 						require("astrocore.buffer").nav(
 							-(vim.v.count > 0 and vim.v.count or 1)
