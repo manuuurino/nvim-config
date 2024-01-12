@@ -42,15 +42,15 @@ local mappings = {
 		["N"] = { "Nzzzv" },
 
 		-- yank to system clipboard
-		["<leader>y"] = { '"+y', desc = "Yank to system clipboard" },
-		["<leader>Y"] = { '"+Y', desc = "Yank from system clipboard" },
-
 		["<leader>r"] = { name = "Refactor" },
 
 		-- credits: https://code.mehalter.com/AstroNvim_user/~files/91d8255ef1d901067621420b0e90e92f4ba8b0ee/mappings.lua?position=source-27.1-29.52-1
 		-- better increment/decrement
 		["-"] = { "<C-x>", desc = "Decrement number" },
 		["+"] = { "<C-a>", desc = "Increment number" },
+		["gy"] = { '"+y', desc = "Yank to system clipboard" },
+		["gp"] = { '"+p', desc = "Paste from system clipboard" },
+		["gP"] = { '"+P', desc = "Paste from system clipboard" },
 
 		["<leader>."] = {
 			function()
@@ -63,7 +63,10 @@ local mappings = {
 		},
 	},
 	x = {
-		["<leader>y"] = { '"+y', desc = "Yank to system clipboard" },
+		-- yank to system clipboard
+		["gy"] = { '"+y', desc = "Yank to system clipboard" },
+		["gp"] = { '"+p', desc = "Paste from system clipboard" },
+		["gP"] = { '"+P', desc = "Paste from system clipboard" },
 
 		-- better increment/decrement
 		["+"] = { "g<C-a>", desc = "Increment number" },
