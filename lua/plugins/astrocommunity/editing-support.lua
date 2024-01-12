@@ -22,7 +22,7 @@ return {
 	},
 	{ import = "astrocommunity.editing-support.refactoring-nvim" },
 	{
-		"thepirmage/refactoring.nvim",
+		"ThePrimeagen/refactoring.nvim",
 		dependencies = {
 			"AstroNvim/astrocore",
 			---@param opts AstroCoreOpts
