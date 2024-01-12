@@ -20,7 +20,7 @@ o.spelllang = { "en_us", "de_de" }
 g.mapleader = " "
 g.icons_enabled = not is_tty() -- disable icons in the UI
 
--- global option for this config
+-- global options for this config
 g.codeium_native_plugin = false -- the native plugin doesnt support virtual text yet
 
 if vim.g.neovide then
