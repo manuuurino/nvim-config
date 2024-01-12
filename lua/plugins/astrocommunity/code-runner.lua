@@ -12,7 +12,7 @@ return {
 			"AstroNvim/astrocore",
 			---@param opts AstroUIOpts
 			opts = function(_, opts)
-				local prefix = "<leader>R"
+				local prefix = "<Leader>R"
 
 				local key_mappings = {
 					[prefix] = {

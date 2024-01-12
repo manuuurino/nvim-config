@@ -1,7 +1,21 @@
 ---@type LazySpec
 return {
 	"goolord/alpha-nvim",
-	dependencies = "AstroNvim/astroui",
+	dependencies = {
+		"AstroNvim/astroui",
+		{
+			"AstroNvim/astrocore",
+			---@type AstroCoreOpts
+			opts = {
+				mappings = {
+					n = {
+						-- disable home screen
+						["<Leader>h"] = false,
+					},
+				},
+			},
+		},
+	},
 	---@param opts AstroUIOpts
 	opts = function(_, opts)
 		local dashboard = require("alpha.themes.dashboard")

@@ -43,7 +43,7 @@ return {
 						},
 					},
 					n = {
-						["<leader>uA"] = {
+						["<Leader>uA"] = {
 							function()
 								if vim.g.codeium_enabled == true then
 									vim.cmd("CodeiumDisable")

@@ -13,10 +13,10 @@ return {
 		end,
 	},
 	opts = {
-		evaluate = { prefix = "<leader>oe" },
-		exchange = { prefix = "<leader>ox" },
-		multiply = { prefix = "<leader>om" },
-		replace = { prefix = "<leader>or" },
-		sort = { prefix = "<leader>os" },
+		evaluate = { prefix = "<Leader>oe" },
+		exchange = { prefix = "<Leader>ox" },
+		multiply = { prefix = "<Leader>om" },
+		replace = { prefix = "<Leader>or" },
+		sort = { prefix = "<Leader>os" },
 	},
 }

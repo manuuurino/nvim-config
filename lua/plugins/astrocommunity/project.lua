@@ -8,7 +8,7 @@ return {
 			"AstroNvim/astrocore",
 			---@param opts AstroCoreOpts
 			opts = function(_, opts)
-				local prefix = "<leader>f"
+				local prefix = "<Leader>f"
 
 				local key_mappings = {
 					[prefix .. "p"] = {

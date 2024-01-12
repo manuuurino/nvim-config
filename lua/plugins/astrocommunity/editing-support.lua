@@ -28,7 +28,7 @@ return {
 			---@param opts AstroCoreOpts
 			opts = function(_, opts)
 				local key_mappings = {
-					["<leader>r"] = { name = "Refactor" },
+					["<Leader>r"] = { name = "Refactor" },
 				}
 
 				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {

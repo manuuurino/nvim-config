@@ -12,14 +12,14 @@ return {
 				local is_available = require("astrocore").is_available
 
 				local key_mappings = {
-					["<leader>fT"] = {
+					["<Leader>fT"] = {
 						"<cmd>TodoTelescope<cr>",
 						desc = "Todo telescope",
 					},
 				}
 
 				if is_available("trouble-nvim") then
-					key_mappings["<leader>xt"] = {
+					key_mappings["<Leader>xt"] = {
 						"<cmd>TodoTrouble<cr>",
 						desc = "Todo trouble",
 					}

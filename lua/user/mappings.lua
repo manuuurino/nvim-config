@@ -5,9 +5,6 @@ return {
 	opts = {
 		mappings = {
 			n = {
-				-- disable home screen
-				["h"] = false,
-
 				-- navigate buffer tabs with `H` and `L`
 				["L"] = {
 					function()
@@ -27,7 +24,7 @@ return {
 				},
 
 				-- credits: https://github.com/t1gu1/astrovim-config/blob/5a1d7bd4933f8192de027071d62f953b4c831af3/mappings.lua#L74-L77
-				["<leader>pc"] = {
+				["<Leader>pc"] = {
 					function()
 						vim.cmd.edit(vim.fn.stdpath("config"))
 						vim.cmd.cd("%:p:h")
@@ -50,7 +47,7 @@ return {
 				["gp"] = { '"+p', desc = "Paste from system clipboard" },
 				["gP"] = { '"+P', desc = "Paste from system clipboard" },
 
-				["<leader>."] = {
+				["<Leader>."] = {
 					function()
 						vim.cmd.cd("%:p:h")
 						vim.notify(

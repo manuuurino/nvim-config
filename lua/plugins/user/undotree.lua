@@ -8,7 +8,7 @@ return {
 		opts = {
 			mappings = {
 				n = {
-					["<leader>fu"] = {
+					["<Leader>fu"] = {
 						"<cmd>UndotreeToggle<CR>",
 						desc = "Find undotree",
 					},

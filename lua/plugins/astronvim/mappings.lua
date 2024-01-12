@@ -22,8 +22,8 @@ return {
 					desc = "Previous buffer",
 				},
 
-				["<leader>b"] = { desc = "Buffers" },
-				["<leader>bD"] = {
+				["<Leader>b"] = { desc = "Buffers" },
+				["<Leader>bD"] = {
 					function()
 						require("astroui.status.heirline").buffer_picker(
 							function(bufnr)

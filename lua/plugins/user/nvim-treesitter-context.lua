@@ -9,7 +9,7 @@ return {
 		opts = {
 			mappings = {
 				n = {
-					["<leader>uT"] = {
+					["<Leader>uT"] = {
 						"<cmd>TSContextToggle<CR>",
 						desc = "Toggle treesitter context",
 					},
