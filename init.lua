@@ -21,8 +21,8 @@ return {
 	},
 
 	-- Set colorscheme to use
-	-- colorscheme = "astrodark",
-	colorscheme = is_tty() and "industry" or "kanagawa-wave",
+	-- colorscheme = is_tty() and "industry"
+	-- 	or (is_available("kanagawa.nvim") and "kanagawa" or "astrodark"),
 
 	-- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
 	diagnostics = {
@@ -116,5 +116,9 @@ return {
 			--   ["~/%.config/foo/.*"] = "fooscript",
 			-- },
 		})
+
+		astronvim.default_colorscheme = is_tty() and "industry"
+			or (is_available("kanagawa.nvim") and "kanagawa" or "astrodark")
+		vim.cmd.colorscheme(astronvim.default_colorscheme)
 	end,
 }
