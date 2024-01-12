@@ -1,6 +1,7 @@
 local mappings = {
 	n = {
 		["<leader>o"] = false,
+		["<leader>h"] = false,
 
 		-- better buffer navigation
 		["]b"] = false,
