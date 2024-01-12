@@ -371,6 +371,27 @@ local plugins = {
 		event = "User AstroFile",
 		opts = {},
 	},
+	{
+		"aznhe21/actions-preview.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+		opts = {},
+		init = function(_)
+			local key_mappings = {
+				["<leader>la"] = {
+					require("actions-preview").code_actions,
+					desc = "LSP code action",
+					cond = "testDocument/codeAction",
+				},
+			}
+
+			set_mappings({
+				n = key_mappings,
+				v = key_mappings,
+			})
+		end,
+	},
 }
 
 return plugins
