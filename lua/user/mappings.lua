@@ -41,15 +41,8 @@ return {
 					-- credits: https://github.com/t1gu1/astrovim-config/blob/5a1d7bd4933f8192de027071d62f953b4c831af3/mappings.lua#L74-L77
 					["<leader>pc"] = {
 						function()
-							vim.cmd.edit(
-								vim.fn.stdpath("config") .. "/lua/user/init.lua"
-							)
+							vim.cmd.edit(vim.fn.stdpath("config"))
 							vim.cmd.cd("%:p:h")
-
-							if is_available("neo-tree.nvim") then
-								-- HACK: without this, the path will not change. why though?
-								vim.cmd("Neotree")
-							end
 						end,
 						desc = "Open AstroVim User Config",
 					},
