@@ -1,11 +1,12 @@
 ---@type LazySpec
 return {
 	"aznhe21/actions-preview.nvim",
+	event = "User AstroFile",
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
 		{
 			"AstroNvim/astrolsp",
-			---@param opts AstroLspOpts
+			---@param opts AstroLSPOpts
 			opts = function(_, opts)
 				local key_mappings = {
 					["<leader>la"] = {
@@ -15,7 +16,6 @@ return {
 					},
 				}
 
-				---@diagnostic disable-next-line: inject-field
 				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {
 					n = key_mappings,
 					v = key_mappings,

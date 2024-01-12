@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
 	"echasnovski/mini.operators",
+	event = "User AstroFile",
 	dependencies = {
 		"AstroNvim/astrocore",
 		-- HACK: this overrides the neo-tree mapping
