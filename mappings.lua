@@ -4,8 +4,6 @@ local mappings = {
 		["<leader>h"] = false,
 
 		-- better buffer navigation
-		["]b"] = false,
-		["[b"] = false,
 		["<S-l>"] = {
 			function()
 				require("astronvim.utils.buffer").nav(
@@ -42,12 +40,6 @@ local mappings = {
 		["N"] = { "Nzzzv" },
 
 		-- yank to system clipboard
-		["<leader>r"] = { name = "Refactor" },
-
-		-- credits: https://code.mehalter.com/AstroNvim_user/~files/91d8255ef1d901067621420b0e90e92f4ba8b0ee/mappings.lua?position=source-27.1-29.52-1
-		-- better increment/decrement
-		["-"] = { "<C-x>", desc = "Decrement number" },
-		["+"] = { "<C-a>", desc = "Increment number" },
 		["gy"] = { '"+y', desc = "Yank to system clipboard" },
 		["gp"] = { '"+p', desc = "Paste from system clipboard" },
 		["gP"] = { '"+P', desc = "Paste from system clipboard" },
@@ -61,6 +53,11 @@ local mappings = {
 			end,
 			desc = "Set CWD",
 		},
+
+		-- credits: https://code.mehalter.com/AstroNvim_user/~files/91d8255ef1d901067621420b0e90e92f4ba8b0ee/mappings.lua?position=source-27.1-29.52-1
+		-- better increment/decrement
+		["-"] = { "<C-x>", desc = "Decrement number" },
+		["+"] = { "<C-a>", desc = "Increment number" },
 	},
 	x = {
 		-- yank to system clipboard
