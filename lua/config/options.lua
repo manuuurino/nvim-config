@@ -11,8 +11,7 @@ o.clipboard = "" -- no clipboard sharing
 -- opt.completeopt = "menu,menuone,noselect,noinsert"
 o.foldcolumn = "auto:3" -- show at least 3 fold lines
 
--- NOTE:if you dont have the spells, you have to let neovim download them.
---      run this command `nvim --clean -c "set spelllang=en_us,de_de spell" -c "quit"`
+-- NOTE: read the readme how to install a spell, under the section "Installing spells".
 o.spell = true
 o.spelllang = { "en_us", "de_de" }
 

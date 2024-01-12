@@ -22,7 +22,7 @@ require("lazy").setup({
 
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
 		-- TODO: could replace neo-tree with this https://github.com/kevinhwang91/rnvimr
-		-- TODO: https://github.com/aznhe21/actions-preview.nvim
+		-- FIX: when showing the signature help, it will disappear after a second
 		{ import = "plugins.user" },
 
 		{ import = "user" },
