@@ -10,6 +10,7 @@ return {
 		},
 		dependencies = {
 			"AstroNvim/astrocore",
+			---@param opts AstroUIOpts
 			opts = function(_, opts)
 				local prefix = "<leader>R"
 
@@ -19,6 +20,7 @@ return {
 					},
 				}
 
+				---@diagnostic disable-next-line: inject-field
 				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {
 					n = vim.tbl_deep_extend("force", key_mappings, {
 						[prefix .. "r"] = {
@@ -37,8 +39,6 @@ return {
 						},
 					}),
 				})
-
-				return opts
 			end,
 		},
 	},

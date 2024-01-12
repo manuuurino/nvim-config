@@ -2,7 +2,7 @@
 return {
 	"goolord/alpha-nvim",
 	dependencies = "AstroNvim/astroui",
-	---@param opts table
+	---@param opts AstroUIOpts
 	opts = function(_, opts)
 		local dashboard = require("alpha.themes.dashboard")
 		local get_icon = require("astroui").get_icon
@@ -19,6 +19,7 @@ return {
 			)
 		end
 
+		---@diagnostic disable-next-line: undefined-field
 		opts.section.buttons.val = {
 			button("LDR S l", "LastSession", "Last Session"),
 			button("LDR f o", "Recents", "Recents opened files"),

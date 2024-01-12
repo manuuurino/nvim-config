@@ -2,7 +2,6 @@
 return {
 	"echasnovski/mini.indentscope",
 	event = "User AstroFile",
-	---@param opts table
 	opts = function(_, opts)
 		opts.symbol = require("astroui").get_icon("IndentScope")
 	end,

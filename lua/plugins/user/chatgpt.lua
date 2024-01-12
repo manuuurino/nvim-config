@@ -7,6 +7,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 		{
 			"AstroNvim/astrocore",
+			---@param opts AstroCoreOpts
 			opts = function(_, opts)
 				local prefix = "<leader>a"
 
@@ -64,6 +65,7 @@ return {
 					},
 				}
 
+				---@diagnostic disable-next-line: inject-field
 				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {
 					n = vim.tbl_deep_extend("force", key_mappings, {
 						[prefix .. "c"] = {
@@ -73,8 +75,6 @@ return {
 					}),
 					v = key_mappings,
 				})
-
-				return opts
 			end,
 		},
 	},
