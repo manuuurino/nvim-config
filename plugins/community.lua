@@ -315,9 +315,15 @@ add({
 		},
 		---@type NoiceConfig
 		opts = {
+			cmdline = {
+				view = "cmdline",
+			},
 			lsp = {
-				signature = { enabled = false },
-				hover = { enabled = false },
+				signature = { enabled = true },
+				hover = { enabled = true },
+			},
+			presets = {
+				lsp_doc_border = true,
 			},
 			-- credits: https://code.mehalter.com/AstroNvim_user/~files/b9d13b6af65fa7c6ec271063355b4625af93b52e/lua/plugins/noice.lua
 			routes = {
@@ -347,6 +353,38 @@ add({
 				}, -- skip yank notifications
 			},
 		},
+		init = function(_)
+			vim.g.lsp_handlers_enabled = false
+
+			local keymaps = {
+				["<c-f>"] = {
+					function()
+						if not require("noice.lsp").scroll(4) then
+							return "<c-f>"
+						end
+					end,
+					desc = "Scroll through lsp hover doc forwards",
+					expr = true,
+					silent = true,
+				},
+				["<c-b>"] = {
+					function()
+						if not require("noice.lsp").scroll(-4) then
+							return "<c-b>"
+						end
+					end,
+					desc = "Scroll through lsp hover doc backwards",
+					expr = true,
+					silent = true,
+				},
+			}
+
+			set_mappings({
+				n = keymaps,
+				i = keymaps,
+				s = keymaps,
+			})
+		end,
 	},
 })
 
