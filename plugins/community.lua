@@ -232,6 +232,10 @@ add({
 })
 
 add({
+	{ import = "astrocommunity.file-explorer.oil-nvim" },
+})
+
+add({
 	{ import = "astrocommunity.git.blame-nvim" },
 	{
 		"FabijanZulj/blame.nvim",
