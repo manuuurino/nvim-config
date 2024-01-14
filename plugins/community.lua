@@ -303,6 +303,7 @@ add({
 add({
 	{ import = "astrocommunity.utility.noice-nvim" },
 	{
+		-- TODO: add text icons
 		"folke/noice.nvim",
 		dependencies = {
 			-- credits: https://github.com/Uzaaft/nvim/blob/6a61a2269b860d392b0115cbf80b0d8ad414ad01/lua/plugins/init.lua#L12C2-L22

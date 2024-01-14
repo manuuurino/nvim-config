@@ -1,7 +1,7 @@
 -- TODO: might wanna install https://github.com/mg979/vim-visual-multi
 -- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
 -- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
--- TODO: could replace neo-tree with this https://github.com/kevinhwang91/rnvimr
+-- TODO: rework snippets; add basic bash script snippet
 
 local is_on_glibc = require("user.utils.dependencies").is_on_glibc
 local icons = require("user.icons")
