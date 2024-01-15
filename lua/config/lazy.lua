@@ -6,6 +6,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+-- TODO: structure it kinda like this: https://github.com/LunarVim/Launch.nvim/blob/0235c4b5f2d44c2e2fe025dc996dd79c68c73c84/init.lua
+--       so it will be easier to exclude imports, also each plugins should be in a file
+
 require("lazy").setup({
 	spec = {
 		-- TODO: change `branch="v4"` to `version="^4"` on release

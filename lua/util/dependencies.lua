@@ -3,6 +3,7 @@ local M = {}
 
 ---@param executable string
 ---@return boolean
+-- TODO: show what coudnt be installed
 function M.has_excecutable(executable)
 	local is_installed = vim.fn.executable(executable) == 1
 
