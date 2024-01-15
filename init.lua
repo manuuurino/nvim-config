@@ -79,6 +79,25 @@ return {
 					v = key_mappings,
 				}, { buffer = bufnr })
 			end
+
+			-- override rename
+			if
+				is_available("inc-rename.nvim")
+				and client.supports_method("textDocument/reanme")
+			then
+				require("astronvim.utils").set_mappings({
+					n = {
+						["<leader>lr"] = {
+							function()
+								require("inc_rename")
+								return ":IncRename " .. vim.fn.expand("<cword>")
+							end,
+							expr = true,
+							desc = "IncRename",
+						},
+					},
+				}, { buffer = bufnr })
+			end
 		end,
 	},
 
