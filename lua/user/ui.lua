@@ -75,6 +75,7 @@ return {
 			o.listchars:append({
 				tab = get_icon("CharTab"),
 				space = get_icon("CharSpace"),
+				trail = get_icon("CharSpace"),
 			})
 
 			o.fillchars:append({
