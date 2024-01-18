@@ -1,9 +1,9 @@
----@class utils.helper
 local M = {}
 
----@return boolean
-function M.is_tty()
-	return vim.env["TERM"] == "linux"
+---@param path string
+---@return LazySpec
+function M.spec(path)
+	return { import = path }
 end
 
 return M

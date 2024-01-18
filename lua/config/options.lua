@@ -1,4 +1,4 @@
-local is_tty = require("util.helper").is_tty
+local is_tty = require("util.checks").is_tty
 
 local o = vim.opt
 local g = vim.g

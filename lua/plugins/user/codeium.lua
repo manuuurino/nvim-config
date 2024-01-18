@@ -1,4 +1,4 @@
-local is_on_glibc = require("util.dependencies").is_on_glibc
+local is_on_glibc = require("util.checks").is_on_glibc
 
 ---@type LazySpec
 return {

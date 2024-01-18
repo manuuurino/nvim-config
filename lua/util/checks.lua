@@ -1,10 +1,9 @@
----@class utils.dependencies
 local M = {}
 
 ---@param executable string
 ---@return boolean
 -- TODO: show what coudnt be installed
-function M.has_excecutable(executable)
+function M.has(executable)
 	local is_installed = vim.fn.executable(executable) == 1
 
 	if not is_installed then
@@ -19,6 +18,11 @@ function M.has_excecutable(executable)
 	end
 
 	return is_installed
+end
+
+---@return boolean
+function M.is_tty()
+	return vim.env["TERM"] == "linux"
 end
 
 ---@return boolean
