@@ -92,7 +92,7 @@ require("lazy").setup({
 		spec("plugins.astrocommunity.utility.noice-nvim"),
 
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
-		-- TODO: could replace neo-tree with this https://github.com/kevinhwang91/rnvimr
+		-- TODO: could replace neo-tree and oil with this https://github.com/kevinhwang91/rnvimr
 
 		spec("plugins.user.actions-preview"),
 		spec("plugins.user.chatgpt"),
