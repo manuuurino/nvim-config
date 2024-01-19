@@ -27,20 +27,13 @@ lazy.setup({
 
 		spec("plugins.astronvim.alpha-nvim"),
 		spec("plugins.astronvim.astrotheme"),
-		spec("plugins.astronvim.colorscheme"),
 		spec("plugins.astronvim.gitsigns"),
-		spec("plugins.astronvim.highlights"),
-		spec("plugins.astronvim.lsp"),
-		spec("plugins.astronvim.mappings"),
-		spec("plugins.astronvim.mason"),
 		spec("plugins.astronvim.mini-indentscope"),
 		spec("plugins.astronvim.neo-tree"),
-		spec("plugins.astronvim.none-ls"),
 		spec("plugins.astronvim.nvim-cmp"),
 		spec("plugins.astronvim.nvim-treesitter"),
 		spec("plugins.astronvim.nvim-ufo"),
 		spec("plugins.astronvim.telescope"),
-		spec("plugins.astronvim.treesitter"),
 
 		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
@@ -112,12 +105,12 @@ lazy.setup({
 
 		spec("user.colorscheme"),
 		spec("user.astrocore"),
-		spec("user.lsp"),
+		spec("user.astrolsp"),
+		spec("user.astroui"),
 		spec("user.mappings"),
 		spec("user.mason"),
 		spec("user.none-ls"),
 		spec("user.treesitter"),
-		spec("user.ui"),
 
 		spec("user.highlights.astodark"),
 		spec("user.highlights.industry"),
