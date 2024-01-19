@@ -14,6 +14,7 @@ return {
 			null_ls.builtins.formatting.deno_fmt.with({
 				disabled_filetypes = { "markdown" },
 			}),
+			null_ls.builtins.formatting.stylua,
 		}
 		return config
 	end,

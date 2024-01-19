@@ -8,7 +8,7 @@ return {
 			---@diagnostic disable-next-line: inject-field
 			opts.ensure_installed =
 				require("astrocore").list_insert_unique(opts.ensure_installed, {
-					-- "lua_ls",
+					"lua_ls",
 				})
 		end,
 	},
@@ -18,8 +18,7 @@ return {
 		opts = function(_, opts)
 			opts.ensure_installed =
 				require("astrocore").list_insert_unique(opts.ensure_installed, {
-					-- "prettier",
-					-- "stylua",
+					"stylua",
 				})
 		end,
 	},

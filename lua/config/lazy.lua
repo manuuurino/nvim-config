@@ -8,8 +8,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_loaded, lazy = pcall(require, "lazy") -- validate that lazy is available
 if not lazy_loaded then
-  -- stylua: ignore
-  vim.api.nvim_echo({ { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
+	-- stylua: ignore
+	vim.api.nvim_echo({ { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
 	vim.fn.getchar()
 	vim.cmd.quit()
 end
@@ -44,7 +44,6 @@ lazy.setup({
 
 		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
-		-- { import = "plugins.astrocommunity" },
 
 		spec("plugins.astrocommunity.code-runner.sniprun"),
 		spec("plugins.astrocommunity.color.headlines-nvim"),
