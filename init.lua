@@ -59,6 +59,12 @@ return {
 			-- "pyright"
 		},
 
+		mappings = {
+			n = {
+				["gy"] = false,
+			},
+		},
+
 		---@param client lsp.Client
 		---@param bufnr number
 		on_attach = function(client, bufnr)
