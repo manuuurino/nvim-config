@@ -1,18 +1,22 @@
 ---@type LazySpec
 return {
 	"echasnovski/mini.operators",
-	keys = {
-		{ "<leader>oe", desc = "Evaluate" },
-		{ "<leader>ox", desc = "Exchange" },
-		{ "<leader>om", desc = "Multiply" },
-		{ "<leader>or", desc = "Replace" },
-		{ "<leader>os", desc = "Sort" },
+	event = "User AstroFile",
+	dependencies = {
+		"AstroNvim/astrocore",
+		-- HACK: this overrides the neo-tree mapping
+		opts = function(_, opts)
+			local maps = opts.mappings
+			maps.n["<Leader>o"] = {
+				name = "Text edit operators",
+			}
+		end,
 	},
 	opts = {
-		evaluate = { prefix = "<leader>oe" },
-		exchange = { prefix = "<leader>ox" },
-		multiply = { prefix = "<leader>om" },
-		replace = { prefix = "<leader>or" },
-		sort = { prefix = "<leader>os" },
+		evaluate = { prefix = "<Leader>oe" },
+		exchange = { prefix = "<Leader>ox" },
+		multiply = { prefix = "<Leader>om" },
+		replace = { prefix = "<Leader>or" },
+		sort = { prefix = "<Leader>os" },
 	},
 }
