@@ -93,6 +93,7 @@ lazy.setup({
 
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
 		-- TODO: could replace neo-tree and oil with this https://github.com/kevinhwang91/rnvimr
+		-- TODO: rework the snippets
 
 		spec("plugins.user.actions-preview"),
 		spec("plugins.user.chatgpt"),
