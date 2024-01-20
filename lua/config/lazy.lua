@@ -37,7 +37,6 @@ lazy.setup({
 
 		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
-		-- { import = "plugins.astrocommunity" },
 
 		spec("plugins.astrocommunity.code-runner.sniprun"),
 		spec("plugins.astrocommunity.color.headlines-nvim"),
