@@ -6,8 +6,9 @@ the [user configuration template](https://github.com/AstroNvim/template).
 
 ## Preview
 
-<!-- TODO: add images
-![Dasboard](./assets/dashboard.png) ![Overview](./assets/overview.png) -->
+![Dasboard](./assets/presentation_dashboard.png)
+
+![Overview](./assets/presentation_editing.png)
 
 <!-- TODO: requirements
 ## Requirements
