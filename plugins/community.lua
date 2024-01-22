@@ -213,7 +213,7 @@ add({
 	},
 	{ import = "astrocommunity.editing-support.refactoring-nvim" },
 	{
-		"thepirmage/refactoring.nvim",
+		"ThePrimeagen/refactoring.nvim",
 		init = function(_)
 			set_mappings({
 				n = {
