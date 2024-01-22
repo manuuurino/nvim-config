@@ -85,7 +85,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.programming-language-support.csv-vim"),
 		spec("plugins.astrocommunity.programming-language-support.nvim-jqx"),
 		spec("plugins.astrocommunity.project.nvim-spectre"),
-		spec("plugins.astrocommunity.project.project"),
+		spec("plugins.astrocommunity.project.project-nvim"),
 		spec("plugins.astrocommunity.register.nvim-neoclip-lua"),
 		spec("plugins.astrocommunity.scrolling.nvim-scrollbar"),
 		spec("plugins.astrocommunity.split-and-window.windows-nvim"),

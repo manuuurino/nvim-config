@@ -2,7 +2,9 @@
 return {
 	{ import = "astrocommunity.project.project-nvim" },
 	{
-		"ahmedkhalf/project.nvim",
+		-- NOTE: this is a fork, the community plugin uses this.
+		"jay-babu/project.nvim",
+		-- "ahmedkhalf/project.nvim",
 		dependencies = {
 			"AstroNvim/astrocore",
 			---@param opts AstroCoreOpts
