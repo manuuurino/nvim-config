@@ -291,7 +291,9 @@ add({
 	{ import = "astrocommunity.project.nvim-spectre" },
 	{ import = "astrocommunity.project.project-nvim" },
 	{
-		"ahmedkhalf/project.nvim",
+		-- NOTE: this is a fork, the community plugin uses this.
+		"jay-babu/project.nvim",
+		-- "ahmedkhalf/project.nvim",
 		init = function()
 			set_mappings({
 				n = {
