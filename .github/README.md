@@ -5,7 +5,8 @@ the user configuration template.
 
 ## Preview
 
-![Dasboard](./assets/dashboard.png) ![Overview](./assets/overview.png)
+![Dasboard](./assets/dashboard.png)
+![Overview](./assets/editing.png)
 
 <!-- TODO: requirements
 ## Requirements
