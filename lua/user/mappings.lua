@@ -29,7 +29,7 @@ return {
 						vim.cmd.edit(vim.fn.stdpath("config"))
 						vim.cmd.cd("%:p:h")
 					end,
-					desc = "Open AstroVim User Config",
+					desc = "Open AstroNvim User Config",
 				},
 
 				-- credits: https://github.com/ThePrimeagen/init.lua/blob/97c039bb88d8bbbcc9b1e3d0dc716a2ba202c6d2/lua/theprimeagen/remap.lua
