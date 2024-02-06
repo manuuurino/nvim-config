@@ -28,7 +28,7 @@ lazy.setup({
 		spec("plugins.astronvim.alpha-nvim"),
 		spec("plugins.astronvim.astrotheme"),
 		spec("plugins.astronvim.gitsigns"),
-		spec("plugins.astronvim.mini-indentscope"),
+		spec("plugins.astronvim.indent-blankline"),
 		spec("plugins.astronvim.neo-tree"),
 		spec("plugins.astronvim.nvim-cmp"),
 		spec("plugins.astronvim.nvim-treesitter"),
