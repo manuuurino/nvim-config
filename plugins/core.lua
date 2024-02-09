@@ -8,6 +8,7 @@ local extend_tbl = astronvim_utils.extend_tbl
 ---@type LazySpec
 local plugins = {
 	{ "AstroNvim/astrotheme", event = "VeryLazy" },
+	{ "max397574/better-escape.nvim", enabled = false },
 	-- replacing null-ls with none-ls
 	{ "jose-elias-alvarez/null-ls.nvim", enabled = false },
 	{
