@@ -51,6 +51,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.debugging.nvim-dap-virtual-text"),
 		spec("plugins.astrocommunity.debugging.persistent-breakpoints-nvim"),
 		spec("plugins.astrocommunity.diagnostics.trouble-nvim"),
+		spec("plugins.astrocommunity.editing-support.bigfile-nvim"),
 		spec("plugins.astrocommunity.editing-support.conform-nvim"),
 		spec("plugins.astrocommunity.editing-support.mini-splitjoin"),
 		spec("plugins.astrocommunity.editing-support.nvim-treesitter-endwise"),
