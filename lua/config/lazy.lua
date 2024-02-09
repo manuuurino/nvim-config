@@ -34,6 +34,7 @@ lazy.setup({
 		spec("plugins.astronvim.nvim-treesitter"),
 		spec("plugins.astronvim.nvim-ufo"),
 		spec("plugins.astronvim.telescope"),
+		spec("plugins.astronvim.disable.better-escape"),
 
 		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
