@@ -1,5 +1,3 @@
--- TODO: customize statusbar, show stats? and diable lsp status, bcs noice; also show current venv
-
 ---@type LazySpec
 return {
 	{
