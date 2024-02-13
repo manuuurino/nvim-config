@@ -12,9 +12,9 @@ return {
 
 		---@diagnostic disable-next-line: inject-field
 		config.sources = {
-			null_ls.builtins.formatting.deno_fmt.with({
-				disabled_filetypes = { "markdown" },
-			}),
+			-- null_ls.builtins.formatting.deno_fmt.with({
+			-- 	disabled_filetypes = { "markdown" },
+			-- }),
 		}
 		return config
 	end,
