@@ -17,6 +17,8 @@ end
 -- inspired by https://github.com/LunarVim/Launch.nvim/blob/0235c4b5f2d44c2e2fe025dc996dd79c68c73c84/init.lua
 local spec = require("util.helper").spec
 
+local is_tty = require("util.checks").is_tty
+
 lazy.setup({
 	spec = {
 		{
@@ -26,7 +28,7 @@ lazy.setup({
 			opts = { -- AstroNvim options must be set here with the `import` key
 				mapleader = " ", -- This ensures the leader key must be configured before Lazy is set up
 				maplocalleader = ",", -- This ensures the localleader key must be configured before Lazy is set up
-				icons_enabled = true, -- Set to false to disable icons (if no Nerd Font is available)
+				icons_enabled = not is_tty(), -- Set to false to disable icons (if no Nerd Font is available)
 				pin_plugins = nil, -- Default will pin plugins when tracking `version` of AstroNvim, set to true/false to override
 			},
 		},

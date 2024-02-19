@@ -1,5 +1,3 @@
-local is_tty = require("util.checks").is_tty
-
 ---@type LazySpec
 return {
 	"AstroNvim/astrocore",
@@ -20,10 +18,6 @@ return {
 				spelllang = { "en_us", "de_de" },
 			},
 			g = {
-				-- global options from astronvim:
-				mapleader = " ",
-				icons_enabled = not is_tty(), -- disable icons in the UI
-
 				-- global options for this config
 				codeium_native_plugin = false, -- the native plugin doesnt support virtual text yet
 			},
