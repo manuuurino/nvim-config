@@ -126,7 +126,9 @@ lazy.setup({
 		spec("user.astroui"),
 		spec("user.mappings"),
 		spec("user.mason"),
+		spec("user.neovide"),
 		spec("user.none-ls"),
+		spec("user.options"),
 		spec("user.treesitter"),
 
 		spec("user.highlights.astodark"),
