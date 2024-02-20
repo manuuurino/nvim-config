@@ -65,6 +65,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.editing-support.vim-move"),
 		spec("plugins.astrocommunity.file-explorer.oil-nvim"),
 		spec("plugins.astrocommunity.git.blame-nvim"),
+		spec("plugins.astrocommunity.git.diffview-nvim"),
 		spec("plugins.astrocommunity.lsp.inc-rename-nvim"),
 		spec("plugins.astrocommunity.lsp.lsp-inlayhints-nvim"),
 		-- spec("plugins.astrocommunity.lsp.nvim-lint"),
