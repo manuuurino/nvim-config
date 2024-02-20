@@ -247,6 +247,7 @@ add({
 			},
 		},
 	},
+	{ import = "astrocommunity.git.diffview-nvim" },
 })
 
 add({
