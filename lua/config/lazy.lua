@@ -24,6 +24,7 @@ lazy.setup({
 
 		-- TODO: Remove branch v4 on release
 		{ "AstroNvim/astrocommunity", branch = "v4" },
+		-- { dir = "~/Dev/contribute/AstroNvim/astrocommunity" },
 
 		spec("plugins.astronvim.alpha-nvim"),
 		spec("plugins.astronvim.astrotheme"),
