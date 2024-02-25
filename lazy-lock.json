@@ -8,7 +8,7 @@
   "alpha-nvim": { "branch": "main", "commit": "1356b9ef31b985d541d94314f2cf73c61124bf1d" },
   "animation.nvim": { "branch": "main", "commit": "fb77091ab72ec9971aee0562e7081182527aaa6a" },
   "ansible-vim": { "branch": "master", "commit": "afc739e505053a6143a1fc6cedac6fb4d7a1d4db" },
-  "astrocommunity": { "branch": "v4", "commit": "41d9ac05278b14b685346b0609f2a00e52fc7e86" },
+  "astrocommunity": { "branch": "v4", "commit": "00252af25d6137af45f50e0058aad25249132ba5" },
   "astrocore": { "branch": "main", "commit": "d8581526b156a5b6ed6fea57badf589cd649bb52" },
   "astrolsp": { "branch": "main", "commit": "e38839c09ccce4bc81078709c4accfeac0c656c9" },
   "astrotheme": { "branch": "main", "commit": "d96b532d2f629e0d9b55368a38debc776c3a9d32" },
