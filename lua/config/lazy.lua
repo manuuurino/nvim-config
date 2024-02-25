@@ -36,7 +36,10 @@ lazy.setup({
 		spec("plugins.astronvim.nvim-ufo"),
 		spec("plugins.astronvim.telescope"),
 		spec("plugins.astronvim.disable.better-escape"),
+		-- NOTE: already disabled by mason-tool-installer-nvim, conform-nvim and nvim-lint
+		-- spec("plugins.astronvim.disable.mason-lspconfig"),
 		-- spec("plugins.astronvim.disable.mason-null-ls"),
+		-- spec("plugins.astronvim.disable.mason-nvim-dap"),
 		-- spec("plugins.astronvim.disable.none-ls"),
 
 		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
@@ -55,7 +58,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.debugging.persistent-breakpoints-nvim"),
 		spec("plugins.astrocommunity.diagnostics.trouble-nvim"),
 		spec("plugins.astrocommunity.editing-support.bigfile-nvim"),
-		-- spec("plugins.astrocommunity.editing-support.conform-nvim"),
+		spec("plugins.astrocommunity.editing-support.conform-nvim"),
 		spec("plugins.astrocommunity.editing-support.mini-splitjoin"),
 		spec("plugins.astrocommunity.editing-support.nvim-treesitter-endwise"),
 		spec("plugins.astrocommunity.editing-support.rainbow-delimiters-nvim"),
@@ -68,7 +71,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.git.diffview-nvim"),
 		spec("plugins.astrocommunity.lsp.inc-rename-nvim"),
 		spec("plugins.astrocommunity.lsp.lsp-inlayhints-nvim"),
-		-- spec("plugins.astrocommunity.lsp.nvim-lint"),
+		spec("plugins.astrocommunity.lsp.nvim-lint"),
 		spec("plugins.astrocommunity.markdown-and-latex.peek-nvim"),
 		spec("plugins.astrocommunity.motion.flash-nvim"),
 		spec("plugins.astrocommunity.motion.mini-surround"),
@@ -97,6 +100,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.register.nvim-neoclip-lua"),
 		spec("plugins.astrocommunity.scrolling.nvim-scrollbar"),
 		spec("plugins.astrocommunity.split-and-window.windows-nvim"),
+		spec("plugins.astrocommunity.utility.mason-tool-installer-nvim"),
 		spec("plugins.astrocommunity.utility.noice-nvim"),
 
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
