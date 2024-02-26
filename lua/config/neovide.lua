@@ -5,4 +5,4 @@ if not g.neovide then return end
 
 o.guifont = "SauceCodePro Nerd Font:h11"
 
-g.neovide_scale_factor = 1.0
+g.neovide_scale_factor = 0.9
