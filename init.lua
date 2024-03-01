@@ -1,5 +1,5 @@
-require("config.options")
-require("config.neovide")
+pcall(require, "config.options")
+pcall(require, "config.neovide")
 
 -- bootstrap lazy.nvim, AstroNvim, and user plugins
 require("config.lazy")
