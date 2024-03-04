@@ -15,6 +15,7 @@ return {
 				"passwd",
 				"rasi",
 				"scss",
+				"fish",
 			}
 		)
 	end,
