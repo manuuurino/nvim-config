@@ -29,15 +29,11 @@ return {
 				end
 
 				local fold_more = function()
-					local count = vim.v.count
-					if count == 0 then count = 1 end
-					change_buf_foldlevel_by(-count)
+					change_buf_foldlevel_by(-vim.v.count1)
 				end
 
 				local fold_less = function()
-					local count = vim.v.count
-					if count == 0 then count = 1 end
-					change_buf_foldlevel_by(count)
+					change_buf_foldlevel_by(vim.v.count1)
 				end
 
 				local fold_set_level = function()
