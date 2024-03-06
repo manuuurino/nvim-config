@@ -98,6 +98,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.programming-language-support.nvim-jqx"),
 		spec("plugins.astrocommunity.project.nvim-spectre"),
 		spec("plugins.astrocommunity.project.project-nvim"),
+		spec("plugins.astrocommunity.recipes.neovide"),
 		spec("plugins.astrocommunity.register.nvim-neoclip-lua"),
 		spec("plugins.astrocommunity.scrolling.nvim-scrollbar"),
 		spec("plugins.astrocommunity.split-and-window.windows-nvim"),
@@ -123,7 +124,6 @@ lazy.setup({
 		spec("user.astroui"),
 		spec("user.mappings"),
 		spec("user.mason"),
-		spec("user.neovide"),
 		spec("user.none-ls"),
 		spec("user.treesitter"),
 
