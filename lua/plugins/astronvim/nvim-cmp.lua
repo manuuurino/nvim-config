@@ -58,6 +58,7 @@ return {
 						priority = 100,
 					},
 					{
+						-- FIXME: make it work for all/most filetypes
 						name = "buffer",
 						keyword_length = 2,
 					},
