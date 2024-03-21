@@ -2,7 +2,7 @@
 
 ---@type LazySpec[]
 local community_plugins = {
-	"AstroNvim/astrocommunity",
+	{ "Astronvim/astrocommunity", version = "^6" },
 }
 
 ---@param plugins LazySpec[]
