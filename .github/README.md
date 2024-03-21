@@ -1,5 +1,7 @@
 # AstroNvim
 
+> This config is deprecated, use the [AstroNvim v4](https://github.com/manuuurino/nvim-config/tree/astronvim-v4/main) instead.
+
 My [AstroNvim](https://github.com/AstroNvim/AstroNvim) configuration based on
 the user configuration template.
 
