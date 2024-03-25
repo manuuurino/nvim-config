@@ -39,7 +39,7 @@ return {
 				["Q"] = { "nop" },
 
 				-- yank to system clipboard
-				["gy"] = { '"+y', desc = "Yank to system clipboard" },
+				["<Leader>y"] = { '"+y', desc = "Yank to system clipboard" },
 				["gp"] = { '"+p', desc = "Paste from system clipboard" },
 				["gP"] = { '"+P', desc = "Paste from system clipboard" },
 
@@ -59,7 +59,7 @@ return {
 				["-"] = { "g<C-x>", desc = "Descrement number" },
 			},
 			x = {
-				["gy"] = { '"+y', desc = "Yank to system clipboard" },
+				["<Leader>y"] = { '"+y', desc = "Yank to system clipboard" },
 				["gp"] = { '"+p', desc = "Paste from system clipboard" },
 				["gP"] = { '"+P', desc = "Paste from system clipboard" },
 
