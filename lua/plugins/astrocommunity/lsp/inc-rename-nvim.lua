@@ -5,6 +5,7 @@ return {
 		"smjonas/inc-rename.nvim",
 		dependencies = {
 			"folke/noice.nvim",
+			optional = true,
 			---@type NoiceConfig
 			opts = {
 				cmdline = {

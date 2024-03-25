@@ -1,6 +1,5 @@
 local checks = require("util.checks")
 local has = checks.has
-local is_on_alpine = checks.is_on_alpine
 
 ---@type LazySpec
 return {
@@ -8,5 +7,10 @@ return {
 	{
 		import = "astrocommunity.pack.yaml",
 		cond = has("npm"),
+	},
+	{
+		"b0o/SchemaStore.nvim",
+		event = "User AstroFile",
+		ft = { "yaml", "json" },
 	},
 }

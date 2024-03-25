@@ -1,8 +1,6 @@
 ---@type LazySpec
 return {
 	"folke/todo-comments.nvim",
-	event = "User AstroFile",
-	cmd = { "TodoTrouble", "TodoTelescope", "TodoLocList", "TodoQuickFix" },
 	dependencies = {
 		"AstroNvim/astroui",
 		{
@@ -11,11 +9,6 @@ return {
 			opts = function(_, opts)
 				local maps_n = opts.mappings.n
 				local is_available = require("astrocore").is_available
-
-				maps_n["<Leader>fT"] = {
-					"<cmd>TodoTelescope<cr>",
-					desc = "Todo telescope",
-				}
 
 				if is_available("trouble-nvim") then
 					maps_n["<Leader>xt"] = {

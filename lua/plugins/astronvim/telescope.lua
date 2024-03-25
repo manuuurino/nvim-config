@@ -1,36 +1,6 @@
-local prefix_git = "<Leader>g"
-
-local mappings = {
-	n = {
-		[prefix_git .. "w"] = {
-			function()
-				require("telescope").extensions.git_worktree.git_worktrees()
-			end,
-			desc = "Switch git worktree",
-		},
-		[prefix_git .. "W"] = {
-			function()
-				require("telescope").extensions.git_worktree.create_git_worktree()
-			end,
-			desc = "Create new git worktree",
-		},
-	},
-}
-
 ---@type LazySpec
 return {
 	"nvim-telescope/telescope.nvim",
-	dependencies = {
-		"LinArcX/telescope-env.nvim",
-		"ThePrimeagen/git-worktree.nvim",
-		{
-			"AstroNvim/astrocore",
-			---@type AstroCoreOpts
-			opts = {
-				mappings = mappings,
-			},
-		},
-	},
 	opts = {
 		defaults = {
 			sorting_strategy = "descending",
@@ -48,8 +18,4 @@ return {
 			},
 		},
 	},
-	init = function(_)
-		require("telescope").load_extension("env")
-		require("telescope").load_extension("git_worktree")
-	end,
 }

@@ -1,3 +1,5 @@
+if not vim.fn.has("wsl") then return end
+
 local g = vim.g
 
 g.clipboard:append({
