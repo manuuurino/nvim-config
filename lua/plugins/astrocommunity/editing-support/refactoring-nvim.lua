@@ -1,3 +1,14 @@
+local prefix = "<Leader>r"
+
+local mappings = {
+	n = {
+		[prefix] = { name = "Refactor" },
+	},
+	x = {
+		[prefix] = { name = "Refactor" },
+	},
+}
+
 ---@type LazySpec
 return {
 	{ import = "astrocommunity.editing-support.refactoring-nvim" },
@@ -5,17 +16,10 @@ return {
 		"ThePrimeagen/refactoring.nvim",
 		dependencies = {
 			"AstroNvim/astrocore",
-			---@param opts AstroCoreOpts
-			opts = function(_, opts)
-				local key_mappings = {
-					["<Leader>r"] = { name = "Refactor" },
-				}
-
-				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {
-					n = key_mappings,
-					x = key_mappings,
-				})
-			end,
+			---@type AstroCoreOpts
+			opts = {
+				mappings = mappings,
+			},
 		},
 	},
 }

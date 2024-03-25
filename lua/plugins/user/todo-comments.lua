@@ -9,26 +9,20 @@ return {
 			"AstroNvim/astrocore",
 			---@param opts AstroCoreOpts
 			opts = function(_, opts)
+				local maps_n = opts.mappings.n
 				local is_available = require("astrocore").is_available
 
-				local key_mappings = {
-					["<Leader>fT"] = {
-						"<cmd>TodoTelescope<cr>",
-						desc = "Todo telescope",
-					},
+				maps_n["<Leader>fT"] = {
+					"<cmd>TodoTelescope<cr>",
+					desc = "Todo telescope",
 				}
 
 				if is_available("trouble-nvim") then
-					key_mappings["<Leader>xt"] = {
+					maps_n["<Leader>xt"] = {
 						"<cmd>TodoTrouble<cr>",
 						desc = "Todo trouble",
 					}
 				end
-
-				---@diagnostic disable-next-line: inject-field
-				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {
-					n = key_mappings,
-				})
 			end,
 		},
 	},

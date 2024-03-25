@@ -1,3 +1,14 @@
+local prefix = "<Leader>f"
+
+local mappings = {
+	n = {
+		[prefix .. "p"] = {
+			"<cmd>Telescope projects<CR>",
+			desc = "Open Projects",
+		},
+	},
+}
+
 ---@type LazySpec
 return {
 	{ import = "astrocommunity.project.project-nvim" },
@@ -7,22 +18,10 @@ return {
 		-- "ahmedkhalf/project.nvim",
 		dependencies = {
 			"AstroNvim/astrocore",
-			---@param opts AstroCoreOpts
-			opts = function(_, opts)
-				local prefix = "<Leader>f"
-
-				local key_mappings = {
-					[prefix .. "p"] = {
-						"<cmd>Telescope projects<CR>",
-						desc = "Open Projects",
-					},
-				}
-
-				---@diagnostic disable-next-line: inject-field
-				opts.mappings = vim.tbl_deep_extend("force", opts.mappings, {
-					n = key_mappings,
-				})
-			end,
+			---@type AstroCoreOpts
+			opts = {
+				mappings = mappings,
+			},
 		},
 	},
 }

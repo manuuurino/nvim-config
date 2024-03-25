@@ -1,22 +1,30 @@
+-- NOTE: this override the default AstroNvim keybinding for opening neo-tree
+local prefix = "<Leader>o"
+
+local mappings = {
+	n = {
+		[prefix] = {
+			name = "Text edit operators",
+		},
+	},
+}
+
 ---@type LazySpec
 return {
 	"echasnovski/mini.operators",
 	event = "User AstroFile",
 	dependencies = {
 		"AstroNvim/astrocore",
-		-- HACK: this overrides the neo-tree mapping
-		opts = function(_, opts)
-			local maps = opts.mappings
-			maps.n["<Leader>o"] = {
-				name = "Text edit operators",
-			}
-		end,
+		---@type AstroCoreOpts
+		opts = {
+			mappings = mappings,
+		},
 	},
 	opts = {
-		evaluate = { prefix = "<Leader>oe" },
-		exchange = { prefix = "<Leader>ox" },
-		multiply = { prefix = "<Leader>om" },
-		replace = { prefix = "<Leader>or" },
-		sort = { prefix = "<Leader>os" },
+		evaluate = { prefix = prefix .. "e" },
+		exchange = { prefix = prefix .. "x" },
+		multiply = { prefix = prefix .. "m" },
+		replace = { prefix = prefix .. "r" },
+		sort = { prefix = prefix .. "s" },
 	},
 }

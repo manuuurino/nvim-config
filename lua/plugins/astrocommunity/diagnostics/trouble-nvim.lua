@@ -3,9 +3,7 @@ return {
 	{ import = "astrocommunity.diagnostics.trouble-nvim" },
 	{
 		"folke/trouble.nvim",
-		dependencies = {
-			"AstroNvim/astroui",
-		},
+		dependencies = "AstroNvim/astroui",
 		---@param opts TroubleOptions
 		---@diagnostic disable: inject-field
 		opts = function(_, opts)

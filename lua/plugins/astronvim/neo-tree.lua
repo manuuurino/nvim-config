@@ -5,12 +5,12 @@ return {
 		"AstroNvim/astroui",
 		{
 			"AstroNvim/astrocore",
-			---@param opts AstroUIOpts
-			opts = function(_, opts)
-				---@diagnostic disable-next-line: undefined-field
-				local maps = opts.mappings
-				maps.n["<Leader>o"] = false
-			end,
+			---@type AstroUIOpts
+			opts = {
+				n = {
+					["<Leader>o"] = false,
+				},
+			},
 		},
 	},
 	opts = function(_, opts)

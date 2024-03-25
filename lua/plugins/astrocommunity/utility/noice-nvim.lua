@@ -1,3 +1,32 @@
+local keymaps = {
+	["<c-f>"] = {
+		function()
+			if not require("noice.lsp").scroll(4 * vim.count1()) then
+				return "<c-f>"
+			end
+		end,
+		desc = "Scroll through lsp hover doc forwards",
+		expr = true,
+		silent = true,
+	},
+	["<c-b>"] = {
+		function()
+			if not require("noice.lsp").scroll(-4 * vim.count1()) then
+				return "<c-b>"
+			end
+		end,
+		desc = "Scroll through lsp hover doc backwards",
+		expr = true,
+		silent = true,
+	},
+}
+
+local mappings = {
+	n = keymaps,
+	i = keymaps,
+	s = keymaps,
+}
+
 ---@type LazySpec
 return {
 	{ import = "astrocommunity.utility.noice-nvim" },
@@ -19,38 +48,10 @@ return {
 			},
 			{
 				"AstroNvim/astrocore",
-				---@param opts AstroCoreOpts
-				opts = function(_, opts)
-					local keymaps = {
-						["<c-f>"] = {
-							function()
-								if not require("noice.lsp").scroll(4) then
-									return "<c-f>"
-								end
-							end,
-							desc = "Scroll through lsp hover doc forwards",
-							expr = true,
-							silent = true,
-						},
-						["<c-b>"] = {
-							function()
-								if not require("noice.lsp").scroll(-4) then
-									return "<c-b>"
-								end
-							end,
-							desc = "Scroll through lsp hover doc backwards",
-							expr = true,
-							silent = true,
-						},
-					}
-
-					opts.mappings =
-						vim.tbl_deep_extend("force", opts.mappings, {
-							n = keymaps,
-							i = keymaps,
-							s = keymaps,
-						})
-				end,
+				---@type AstroCoreOpts
+				opts = {
+					mappings = mappings,
+				},
 			},
 		},
 		---@type NoiceConfig
