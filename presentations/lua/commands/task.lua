@@ -37,11 +37,13 @@ local Task = {
 }
 
 ---@return Task
+---@param start_delay number?
 ---@param default_delay number?
-function Task.new(default_delay)
+function Task.new(start_delay, default_delay)
 	local obj = {}
 	setmetatable(obj, Task)
 	Task.__index = Task
+	Task.start_delay = start_delay or 0
 	Task.default_delay = default_delay or 0
 
 	return obj
@@ -62,7 +64,9 @@ function Task:add(callback, description, delay)
 end
 
 function Task:run()
-	chainExecuteAsync(self.tasks)
+	vim.defer_fn(function()
+		chainExecuteAsync(self.tasks)
+	end, self.start_delay)
 end
 
 return Task

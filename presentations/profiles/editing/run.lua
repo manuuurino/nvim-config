@@ -7,7 +7,7 @@ local delay = 350
 local wait_for_lsp = 15000
 local wait_for_cmp = 1000
 
-task.new(delay)
+task.new(0, delay)
 	:add(function()
 		vim.cmd.edit(vim.fn.stdpath("config"))
 		vim.cmd.cd("%:p:h")
