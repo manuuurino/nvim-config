@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 WORKING_DIR="$(realpath "$(dirname "$0")")"
-LUA_DIR="$(realpath "$WORKING_DIR/../lua")"
-PROFILES_DIR="$(realpath "$WORKING_DIR/../profiles")"
+PRESENTATION_DIR="$(realpath "$WORKING_DIR/../presentations")"
+LUA_DIR="$(realpath "$PRESENTATION_DIR/lua")"
+PROFILES_DIR="$(realpath "$PRESENTATION_DIR/profiles")"
 LUA_FILE_BOOTSTRAP="$LUA_DIR/bootstrap.lua"
 
 profile="dashboard"
