@@ -9,6 +9,10 @@ local wait_for_cmp = 1000
 
 task.new(delay)
 	:add(function()
+		vim.cmd.edit(vim.fn.stdpath("config"))
+		vim.cmd.cd("%:p:h")
+	end, "open editor config")
+	:add(function()
 		vim.cmd("edit lua/plugins/astronvim/alpha-nvim.lua")
 	end, "open files and split window")
 	:add(function()
