@@ -3,6 +3,7 @@ return {
 	{ import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
 	{
 		"HiPhish/rainbow-delimiters.nvim",
+		-- TODO: resolve this in astrocommunity
 		event = "User AstroFile",
 		---@type rainbow_delimiters.config
 		opts = {
