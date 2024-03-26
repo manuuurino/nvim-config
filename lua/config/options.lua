@@ -14,8 +14,6 @@ o.foldcolumn = "auto:3" -- show at least 3 fold lines
 o.spell = true
 o.spelllang = { "en_us", "de_de" }
 
-o.editorconfig = true
-
 -- global options for neovim
 g.mapleader = " "
 g.maplocalleader = ","
