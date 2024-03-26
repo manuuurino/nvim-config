@@ -7,7 +7,7 @@ return {
 	opts = {
 		features = {
 			large_buf = { size = 1024 * 500, lines = 10000 },
-			autopairs = true,
+			autopairs = false,
 			cmp = true,
 			diagnostics_mode = 3,
 			highlighturl = true,
