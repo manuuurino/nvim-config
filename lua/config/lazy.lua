@@ -148,6 +148,7 @@ lazy.setup({
 				"tarPlugin",
 				"tohtml",
 				"zipPlugin",
+				"tutor",
 			},
 		},
 	},
