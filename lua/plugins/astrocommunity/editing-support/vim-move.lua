@@ -4,6 +4,9 @@ return {
 	{
 		"matze/vim-move",
 		-- TODO: resolve this in astrocommunity
-		event = "User AstroFile",
+		event = function()
+			---@diagnostic disable-next-line: return-type-mismatch
+			return "User AstroFile"
+		end,
 	},
 }

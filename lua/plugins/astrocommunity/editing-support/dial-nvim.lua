@@ -24,6 +24,7 @@ return {
 	{ import = "astrocommunity.editing-support.dial-nvim" },
 	{
 		"monaqa/dial.nvim",
+		event = "User AstroFile",
 		dependencies = {
 			"AstroNvim/astrocore",
 			---@type AstroCoreOpts

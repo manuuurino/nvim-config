@@ -4,7 +4,10 @@ return {
 	{
 		"HiPhish/rainbow-delimiters.nvim",
 		-- TODO: resolve this in astrocommunity
-		event = "User AstroFile",
+		event = function()
+			---@diagnostic disable-next-line: return-type-mismatch
+			return "User AstroFile"
+		end,
 		---@type rainbow_delimiters.config
 		opts = {
 			highlight = {
