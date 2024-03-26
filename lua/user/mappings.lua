@@ -53,19 +53,11 @@ return {
 					end,
 					desc = "Set CWD",
 				},
-
-				-- better increment/decrement
-				["+"] = { "g<C-a>", desc = "Increment number" },
-				["-"] = { "g<C-x>", desc = "Descrement number" },
 			},
 			x = {
 				["<Leader>y"] = { '"+y', desc = "Yank to system clipboard" },
 				["gp"] = { '"+p', desc = "Paste from system clipboard" },
 				["gP"] = { '"+P', desc = "Paste from system clipboard" },
-
-				-- better increment/decrement
-				["+"] = { "g<C-a>", desc = "Increment number" },
-				["-"] = { "g<C-x>", desc = "Descrement number" },
 			},
 		},
 	},

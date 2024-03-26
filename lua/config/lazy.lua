@@ -63,6 +63,7 @@ lazy.setup({
 		spec("plugins.astrocommunity.diagnostics.trouble-nvim"),
 		spec("plugins.astrocommunity.editing-support.bigfile-nvim"),
 		spec("plugins.astrocommunity.editing-support.conform-nvim"),
+		spec("plugins.astrocommunity.editing-support.dial-nvim"),
 		spec("plugins.astrocommunity.editing-support.mini-splitjoin"),
 		spec("plugins.astrocommunity.editing-support.nvim-treesitter-endwise"),
 		spec("plugins.astrocommunity.editing-support.rainbow-delimiters-nvim"),
