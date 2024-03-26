@@ -12,6 +12,8 @@ return {
 				FoldSeparator = "│",
 				FoldedSymbol = "",
 
+				EmptyDiffChar = "╱",
+
 				CharTab = "——→",
 				CharSpace = "·",
 
@@ -49,6 +51,8 @@ return {
 				FoldSeparator = "│",
 				FoldedSymbol = "...",
 
+				EmptyDiffChar = "/",
+
 				CharTab = "──→",
 				CharSpace = "·",
 
@@ -80,6 +84,7 @@ return {
 			})
 
 			o.fillchars:append({
+				diff = get_icon("EmptyDiffChar"),
 				foldopen = get_icon("FoldOpened"),
 				foldsep = get_icon("FoldSeparator"),
 				foldclose = get_icon("FoldClosed"),
