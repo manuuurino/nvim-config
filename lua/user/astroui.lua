@@ -66,8 +66,11 @@ return {
 				text_icons = text_icons,
 			})
 		end,
-		init = function(_)
-			local get_icon = require("astroui").get_icon
+		config = function(_, opts)
+			local astroui = require("astroui")
+			astroui.setup(opts)
+
+			local get_icon = astroui.get_icon
 			local o = vim.opt
 
 			o.listchars:append({
