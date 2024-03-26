@@ -1,3 +1,5 @@
+local prefix = "z"
+
 ---@type LazySpec
 return {
 	"kevinhwang91/nvim-ufo",
@@ -61,15 +63,15 @@ return {
 					},
 					mappings = {
 						n = {
-							["zm"] = {
+							[prefix .. "m"] = {
 								fold_more,
 								desc = "fold more",
 							},
-							["zr"] = {
+							[prefix .. "r"] = {
 								fold_less,
 								desc = "Fold less",
 							},
-							["zS"] = {
+							[prefix .. "S"] = {
 								fold_set_level,
 								desc = "UFO: Set Foldlevel",
 							},
