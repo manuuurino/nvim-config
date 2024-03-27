@@ -53,6 +53,12 @@ return {
 					end,
 					desc = "Set CWD",
 				},
+
+				-- credits: https://github.com/LazyVim/LazyVim/blob/2a8bfccc3ef4020a30654b3dee1ffac51e4f64f3/lua/lazyvim/config/keymaps.lua#L42
+				["<esc>"] = {
+					"<cmd>noh<cr><esc>",
+					desc = "Escape and Clear hlsearch",
+				},
 			},
 			x = {
 				["<Leader>y"] = { '"+y', desc = "Yank to system clipboard" },

@@ -30,5 +30,9 @@ return {
 				foldcolumn = o.foldcolumn,
 			},
 		},
+		on_keys = {
+			-- pressing any other key than searching will disable hlsearch
+			auto_hlsearch = false,
+		},
 	},
 }
