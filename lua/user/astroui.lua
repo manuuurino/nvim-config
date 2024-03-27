@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
-	{
+	"AstroNvim/astrocore",
+	dependencies = {
 		"AstroNvim/astroui",
 		---@param opts AstroUIOpts
 		opts = function(_, opts)
@@ -70,25 +71,31 @@ return {
 				text_icons = text_icons,
 			})
 		end,
-		config = function(_, opts)
-			local astroui = require("astroui")
-			astroui.setup(opts)
+	},
+	---@param opts AstroCoreOpts
+	opts = function(_, opts)
+		local astroui = require("astroui")
+		local get_icon = astroui.get_icon
 
-			local get_icon = astroui.get_icon
-			local o = vim.opt
-
-			o.listchars:append({
+		local opt = {
+			listchars = {
 				tab = get_icon("CharTab"),
 				space = get_icon("CharSpace"),
 				trail = get_icon("CharSpace"),
-			})
+			},
 
-			o.fillchars:append({
+			fillchars = {
 				diff = get_icon("EmptyDiffChar"),
 				foldopen = get_icon("FoldOpened"),
 				foldsep = get_icon("FoldSeparator"),
 				foldclose = get_icon("FoldClosed"),
-			})
-		end,
-	},
+			},
+		}
+
+		return vim.tbl_deep_extend("force", opts, {
+			options = {
+				opt = opt,
+			},
+		})
+	end,
 }
