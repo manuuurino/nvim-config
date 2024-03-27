@@ -1,8 +1,8 @@
-if not vim.fn.has("wsl") then return end
+if vim.fn.has("wsl") == 0 then return end
 
 local g = vim.g
 
-g.clipboard:append({
+g.clipboard = {
 	name = "WslClipboard",
 	copy = {
 		["+"] = "clip.exe",
@@ -13,4 +13,4 @@ g.clipboard:append({
 		["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
 	},
 	cache_enabled = 0,
-})
+}
