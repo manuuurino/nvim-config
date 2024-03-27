@@ -22,8 +22,8 @@ git worktree add --checkout astronvim-v4-main astronvim-v4/main
 ### adding the remotes
 
 ```bash
-git remote add remote-template-astronvim-v3 https://github.com/AstroNvim/user_example.git
-git remote add remote-template-astronvim-v4 https://github.com/AstroNvim/template.git
+git remote add upstream-template-astronvim-v3 https://github.com/AstroNvim/user_example.git
+git remote add upstream-template-astronvim-v4 https://github.com/AstroNvim/template.git
 git remote add local-nvim-config "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim"
 git remote add local-nvim-config-user "${XDG_CONFIG_HOME:-${HOME}/.config}/nvim/lua/user"
 ```
