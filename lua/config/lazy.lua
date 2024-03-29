@@ -124,6 +124,10 @@ require("lazy").setup({
 		spec("user.highlights.kanagawa"),
 	},
 	install = { colorscheme = { "astrodark", "habamax" } },
+	ui = {
+		backdrop = 80,
+		border = "rounded",
+	},
 	performance = {
 		rtp = {
 			disabled_plugins = {
