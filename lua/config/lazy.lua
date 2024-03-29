@@ -108,6 +108,7 @@ require("lazy").setup({
 		spec("plugins.user.mini-operators"),
 		spec("plugins.user.nvim-treesitter-context"),
 		spec("plugins.user.undotree"),
+		spec("plugins.user.pack.fish"),
 
 		spec("user.colorscheme"),
 		spec("user.astrocore"),
