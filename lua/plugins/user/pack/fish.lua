@@ -18,12 +18,11 @@ return {
 		optional = true,
 		opts = function(_, opts)
 			local nls = require("null-ls")
-			if type(opts.sources) == "table" then
-				opts.sources = vim.list_extend(opts.sources, {
-					nls.builtins.formatting.fish_indent,
-					nls.builtins.diagnostics.fish,
-				})
-			end
+			opts.sources = vim.list_extend(opts.sources or {}, {
+				nls.builtins.formatting.fish_indent,
+				nls.builtins.diagnostics.fish,
+			})
+			return opts
 		end,
 	},
 	{
