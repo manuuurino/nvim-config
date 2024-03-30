@@ -11,11 +11,10 @@ return {
 		-- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 
 		---@diagnostic disable-next-line: inject-field
-		config.sources = {
+		config.sources = vim.list_extend(config.sources or {}, {
 			-- null_ls.builtins.formatting.deno_fmt.with({
 			-- 	disabled_filetypes = { "markdown" },
 			-- }),
-		}
-		return config
+		})
 	end,
 }
