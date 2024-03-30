@@ -5,7 +5,7 @@ return {
 	---@param opts AstroUIOpts
 	opts = function(_, opts)
 		local is_available = require("astrocore").is_available
-		opts.colorscheme = is_available("kanagawa.nvim") and "kanagawa"
+		opts.colorscheme = is_available("catppuccin") and "catppuccin-mocha"
 			or "astrodark"
 	end,
 }
