@@ -113,6 +113,7 @@ require("lazy").setup({
 		spec("plugins.user.dial-nvim"),
 		spec("plugins.user.garbage-day"),
 		spec("plugins.user.mini-operators"),
+		spec("plugins.user.nvim-context-vt"),
 		spec("plugins.user.nvim-treesitter-context"),
 		spec("plugins.user.undotree"),
 		spec("plugins.user.pack.fish"),
