@@ -97,7 +97,6 @@ require("lazy").setup({
 		spec("plugins.astrocommunity.recipes.telescope-nvchad-theme"),
 		spec("plugins.astrocommunity.register.nvim-neoclip-lua"),
 		spec("plugins.astrocommunity.scrolling.nvim-scrollbar"),
-		spec("plugins.astrocommunity.split-and-window.windows-nvim"),
 		spec("plugins.astrocommunity.utility.mason-tool-installer-nvim"),
 		spec("plugins.astrocommunity.utility.noice-nvim"),
 
