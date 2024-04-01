@@ -4,10 +4,14 @@ local spec = require("util.helper").spec
 require("lazy").setup({
 	spec = {
 		-- TODO: change `branch="v4"` to `version="^4"` on release
-		{ "AstroNvim/AstroNvim", branch = "v4", import = "astronvim.plugins" },
+		{
+			"AstroNvim/AstroNvim",
+			version = "^v4",
+			import = "astronvim.plugins",
+		},
 
 		-- TODO: Remove branch v4 on release
-		{ "AstroNvim/astrocommunity", branch = "v4" },
+		{ "AstroNvim/astrocommunity" },
 		-- { dir = "~/Dev/contribute/AstroNvim/astrocommunity" },
 
 		spec("plugins.astronvim.alpha-nvim"),
@@ -97,9 +101,11 @@ require("lazy").setup({
 		spec("plugins.astrocommunity.utility.mason-tool-installer-nvim"),
 		spec("plugins.astrocommunity.utility.noice-nvim"),
 
-		---- TODO: might wanna install https://github.com/mg979/vim-visual-multi
-		---- TODO: could replace neo-tree and oil with this https://github.com/kevinhwang91/rnvimr
-		---- TODO: rework the snippets
+		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
+		-- TODO: could replace neo-tree and oil with this https://github.com/kevinhwang91/rnvimr
+		-- TODO: rework the snippets
+		-- TODO: markdown like lazyvim
+		-- TODO: completion backdrop transparent
 
 		spec("plugins.user.actions-preview"),
 		spec("plugins.user.chatgpt"),
