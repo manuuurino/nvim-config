@@ -27,11 +27,11 @@ require("lazy").setup({
 		spec("plugins.astronvim.telescope"),
 		spec("plugins.astronvim.todo-comments"),
 		spec("plugins.astronvim.disable.better-escape"),
-		-- NOTE: already disabled by mason-tool-installer-nvim, conform-nvim and nvim-lint
 		-- spec("plugins.astronvim.disable.mason-lspconfig"),
-		-- spec("plugins.astronvim.disable.mason-null-ls"),
 		-- spec("plugins.astronvim.disable.mason-nvim-dap"),
-		-- spec("plugins.astronvim.disable.none-ls"),
+		-- NOTE: because of conform-nvim and nvim-lint, we disable these
+		spec("plugins.astronvim.disable.mason-null-ls"),
+		spec("plugins.astronvim.disable.none-ls"),
 
 		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
