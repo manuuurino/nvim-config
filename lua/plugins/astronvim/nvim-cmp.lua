@@ -75,6 +75,14 @@ return {
 				--   max_view_entries = 50,
 				-- },
 			},
+			window = {
+				completion = {
+					border = "single",
+				},
+				documentation = {
+					border = "single",
+				},
+			},
 			experimental = {
 				-- NOTE: codeium.nvim doesnt have ghost text, but codeium.vim does, so i use it here
 				ghost_text = is_available("codeium.nvim"),
