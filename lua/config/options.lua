@@ -10,6 +10,8 @@ o.expandtab = false -- use tabs instead of spaces
 o.clipboard = "" -- no clipboard sharing
 -- opt.completeopt = "menu,menuone,noselect,noinsert"
 o.foldcolumn = "auto:3" -- show at least 3 fold lines
+o.winblend = 10
+o.pumblend = 10
 
 o.spell = true
 o.spelllang = { "en_us", "de_de" }

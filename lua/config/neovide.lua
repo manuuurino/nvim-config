@@ -6,3 +6,5 @@ if not g.neovide then return end
 o.guifont = "SauceCodePro Nerd Font:h10"
 
 g.neovide_scale_factor = 1
+o.winblend = 20
+o.pumblend = 20
