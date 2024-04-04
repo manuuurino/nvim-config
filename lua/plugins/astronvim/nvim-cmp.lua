@@ -38,24 +38,20 @@ return {
 					end,
 					priority = 500,
 				},
+			}, {
+				{
+					name = "path",
+				},
 				{
 					name = "emoji",
-					priority = 400,
 				},
 				{
 					name = "nerdfont",
-					priority = 350,
-				},
-				{
-					name = "path",
-					priority = 250,
 				},
 				{
 					name = "calc",
-					priority = 100,
 				},
 				{
-					-- FIXME: make it work for all/most filetypes
 					name = "buffer",
 					keyword_length = 2,
 				},
