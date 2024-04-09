@@ -95,6 +95,7 @@ require("lazy").setup({
 		astrocommunity("project", "project-nvim"),
 		astrocommunity("recipes", "neovide"),
 		astrocommunity("recipes", "telescope-nvchad-theme"),
+		astrocommunity("recipes", "vscode-icons"),
 		astrocommunity("register", "nvim-neoclip-lua"),
 		astrocommunity("scrolling", "nvim-scrollbar"),
 		astrocommunity("utility", "mason-tool-installer-nvim"),
