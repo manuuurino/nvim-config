@@ -81,7 +81,6 @@ return {
 			end,
 		},
 	},
-	cond = not vim.g.vscode,
 	---@param opts UfoConfig
 	opts = function(_, opts)
 		local get_icon = require("astroui").get_icon
