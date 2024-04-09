@@ -1,6 +1,6 @@
 ---@type LazySpec
 return {
 	"zeioth/garbage-day.nvim",
-	dependencies = "neovim/nvim-lspconfig",
+	-- TODO: resolve this in astrocommunity
 	event = "User AstroLspSetup",
 }
