@@ -103,8 +103,11 @@ require("lazy").setup({
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
 		-- TODO: could replace neo-tree and oil with this https://github.com/kevinhwang91/rnvimr
 		-- TODO: rework the snippets
-		-- TODO: markdown like lazyvim
-		-- TODO: completion backdrop transparent
+		-- TODO: markdown preview keymap
+
+		-- apply stuff from lazyvim
+		-- TODO: tabline with a line at the start
+		-- TODO: keymaps
 
 		spec("plugins.user.actions-preview"),
 		spec("plugins.user.chatgpt"),

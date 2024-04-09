@@ -8,3 +8,4 @@ o.guifont = "SauceCodePro Nerd Font:h10"
 g.neovide_scale_factor = 1
 o.winblend = 20
 o.pumblend = 20
+-- TODO: no TERM_PROGRAM env?
