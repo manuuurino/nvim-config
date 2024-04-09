@@ -4,6 +4,6 @@ return {
 	{
 		"lvimuser/lsp-inlayhints.nvim",
 		-- TODO: resolve this in astrocommunity
-		event = "User AstroFile",
+		event = "User AstroLspSetup",
 	},
 }
