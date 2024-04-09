@@ -6,7 +6,7 @@ return {
 		features = {
 			autoformat = true,
 			codelens = true,
-			inlay_hints = false,
+			inlay_hints = true,
 			semantic_tokens = true,
 		},
 		formatting = {
