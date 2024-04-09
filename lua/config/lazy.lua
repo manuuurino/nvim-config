@@ -18,22 +18,22 @@ require("lazy").setup({
 
 		spec("plugins.astronvim.alpha-nvim"),
 		spec("plugins.astronvim.astrotheme"),
-		spec("plugins.astronvim.gitsigns"),
-		spec("plugins.astronvim.heirline"),
-		spec("plugins.astronvim.indent-blankline"),
-		spec("plugins.astronvim.neo-tree"),
+		spec("plugins.astronvim.gitsigns-nvim"),
+		spec("plugins.astronvim.heirline-nvim"),
+		spec("plugins.astronvim.indent-blankline-nvim"),
+		spec("plugins.astronvim.neo-tree-nvim"),
 		spec("plugins.astronvim.nvim-cmp"),
 		spec("plugins.astronvim.nvim-notify"),
 		spec("plugins.astronvim.nvim-treesitter"),
 		spec("plugins.astronvim.nvim-ufo"),
-		spec("plugins.astronvim.telescope"),
-		spec("plugins.astronvim.todo-comments"),
-		spec("plugins.astronvim.disable.better-escape"),
-		-- spec("plugins.astronvim.disable.mason-lspconfig"),
-		-- spec("plugins.astronvim.disable.mason-nvim-dap"),
+		spec("plugins.astronvim.telescope-nvim"),
+		spec("plugins.astronvim.todo-comments-nvim"),
+		spec("plugins.astronvim.disable.better-escape-nvim"),
+		-- spec("plugins.astronvim.disable.mason-lspconfig-nvim"),
+		-- spec("plugins.astronvim.disable.mason-nvim-dap-nvim"),
 		-- NOTE: because of conform-nvim and nvim-lint, we disable these
-		spec("plugins.astronvim.disable.mason-null-ls"),
-		spec("plugins.astronvim.disable.none-ls"),
+		spec("plugins.astronvim.disable.mason-null-ls-nvim"),
+		spec("plugins.astronvim.disable.none-ls-nvim"),
 
 		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
@@ -110,11 +110,12 @@ require("lazy").setup({
 		-- TODO: tabline with a line at the start
 		-- TODO: keymaps
 
-		spec("plugins.user.actions-preview"),
-		spec("plugins.user.chatgpt"),
-		spec("plugins.user.codeium"),
+		spec("plugins.user.actions-preview-nvim"),
+		spec("plugins.user.chatgpt-nvim"),
+		spec("plugins.user.codeium-vim"),
+		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.dial-nvim"),
-		spec("plugins.user.garbage-day"),
+		spec("plugins.user.garbage-day-nvim"),
 		spec("plugins.user.mini-operators"),
 		spec("plugins.user.nvim-context-vt"),
 		spec("plugins.user.nvim-treesitter-context"),
