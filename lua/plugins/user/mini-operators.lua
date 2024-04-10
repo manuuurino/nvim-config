@@ -7,6 +7,11 @@ local mappings = {
 			name = "Text edit operators",
 		},
 	},
+	v = {
+		[prefix] = {
+			name = "Text edit operators",
+		},
+	},
 }
 
 ---@type LazySpec
