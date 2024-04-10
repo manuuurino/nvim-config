@@ -63,6 +63,7 @@ require("lazy").setup({
 		astrocommunity("file-explorer", "oil-nvim"),
 		astrocommunity("git", "blame-nvim"),
 		astrocommunity("git", "diffview-nvim"),
+		astrocommunity("lsp", "garbage-day-nvim"),
 		astrocommunity("lsp", "inc-rename-nvim"),
 		-- NOTE: disabled; archived and cost some load time
 		-- astrocommunity("lsp", "lsp-inlayhints-nvim"),
@@ -117,7 +118,6 @@ require("lazy").setup({
 		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.dial-nvim"),
-		spec("plugins.user.garbage-day-nvim"),
 		spec("plugins.user.mini-operators"),
 		spec("plugins.user.undotree"),
 		spec("plugins.user.pack.fish"),
