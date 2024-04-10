@@ -27,12 +27,17 @@ return {
 			},
 			filesystem = {
 				filtered_items = {
+					visible = true,
 					always_show = {
 						".config",
 						".zshrc",
 						".env.zsh",
 						".zshenv",
 						".gitignore",
+						".github",
+					},
+					hide_by_name = {
+						"lazy-lock.json",
 					},
 				},
 			},
