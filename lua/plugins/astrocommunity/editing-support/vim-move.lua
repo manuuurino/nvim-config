@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.editing-support.vim-move" },
+	import = "astrocommunity.editing-support.vim-move",
 }

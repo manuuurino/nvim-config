@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.recipes.telescope-nvchad-theme" },
+	import = "astrocommunity.recipes.telescope-nvchad-theme",
 }

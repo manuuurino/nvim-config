@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.project.nvim-spectre" },
+	import = "astrocommunity.project.nvim-spectre",
 }

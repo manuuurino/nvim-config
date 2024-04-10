@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.file-explorer.oil-nvim" },
+	import = "astrocommunity.file-explorer.oil-nvim",
 }

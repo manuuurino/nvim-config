@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.editing-support.undotree" },
+	import = "astrocommunity.editing-support.undotree",
 }

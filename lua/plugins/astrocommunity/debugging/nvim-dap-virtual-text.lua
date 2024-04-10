@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.debugging.nvim-dap-virtual-text" },
+	import = "astrocommunity.debugging.nvim-dap-virtual-text",
 }

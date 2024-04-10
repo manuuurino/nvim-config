@@ -1,10 +1,7 @@
-local checks = require("util.checks")
-local has = checks.has
+local has = require("util.checks").has
 
 ---@type LazySpec
 return {
-	{
-		import = "astrocommunity.pack.html-css",
-		cond = has("npm"),
-	},
+	import = "astrocommunity.pack.html-css",
+	cond = has("npm"),
 }

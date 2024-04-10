@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.pack.sql" },
+	import = "astrocommunity.pack.sql",
 }

@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.motion.mini-surround" },
+	import = "astrocommunity.motion.mini-surround",
 }

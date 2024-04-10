@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.lsp.nvim-lint" },
+	import = "astrocommunity.lsp.nvim-lint",
 }

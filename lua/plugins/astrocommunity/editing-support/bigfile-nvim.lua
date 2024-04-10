@@ -1,4 +1,4 @@
 ---@type LazySpec
 return {
-	{ import = "astrocommunity.editing-support.bigfile-nvim" },
+	import = "astrocommunity.editing-support.bigfile-nvim",
 }
