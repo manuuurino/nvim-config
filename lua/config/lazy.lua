@@ -80,6 +80,7 @@ require("lazy").setup({
 		-- astrocommunity("pack", "cpp"),
 		-- astrocommunity("pack", "cs"),
 		astrocommunity("pack", "docker"),
+		astrocommunity("pack", "fish"),
 		-- astrocommunity("pack", "html-css"),
 		-- astrocommunity("pack", "java"),
 		astrocommunity("pack", "json"),
@@ -120,7 +121,6 @@ require("lazy").setup({
 		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.dial-nvim"),
 		spec("plugins.user.mini-operators"),
-		spec("plugins.user.pack.fish"),
 
 		spec("user.colorscheme"),
 		spec("user.astrocore"),
