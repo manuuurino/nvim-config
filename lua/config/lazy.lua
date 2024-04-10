@@ -59,6 +59,7 @@ require("lazy").setup({
 		astrocommunity("editing-support", "refactoring-nvim"),
 		astrocommunity("editing-support", "suda-vim"),
 		astrocommunity("editing-support", "true-zen-nvim"),
+		astrocommunity("editing-support", "undotree"),
 		astrocommunity("editing-support", "vim-move"),
 		astrocommunity("file-explorer", "oil-nvim"),
 		astrocommunity("git", "blame-nvim"),
@@ -119,7 +120,6 @@ require("lazy").setup({
 		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.dial-nvim"),
 		spec("plugins.user.mini-operators"),
-		spec("plugins.user.undotree"),
 		spec("plugins.user.pack.fish"),
 
 		spec("user.colorscheme"),
