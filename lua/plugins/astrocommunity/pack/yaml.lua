@@ -8,10 +8,4 @@ return {
 		import = "astrocommunity.pack.yaml",
 		cond = has("npm"),
 	},
-	{
-		"b0o/SchemaStore.nvim",
-		-- TODO: resolve this in astrocommunity
-		event = "User AstroFile",
-		ft = { "yaml", "json" },
-	},
 }
