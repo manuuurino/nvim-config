@@ -52,6 +52,7 @@ require("lazy").setup({
 		astrocommunity("editing-support", "bigfile-nvim"),
 		astrocommunity("editing-support", "conform-nvim"),
 		astrocommunity("editing-support", "mini-splitjoin"),
+		astrocommunity("editing-support", "nvim-treesitter-context"),
 		astrocommunity("editing-support", "nvim-treesitter-endwise"),
 		astrocommunity("editing-support", "rainbow-delimiters-nvim"),
 		astrocommunity("editing-support", "refactoring-nvim"),
@@ -118,7 +119,6 @@ require("lazy").setup({
 		spec("plugins.user.garbage-day-nvim"),
 		spec("plugins.user.mini-operators"),
 		spec("plugins.user.nvim-context-vt"),
-		spec("plugins.user.nvim-treesitter-context"),
 		spec("plugins.user.undotree"),
 		spec("plugins.user.pack.fish"),
 
