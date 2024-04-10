@@ -63,6 +63,7 @@ require("lazy").setup({
 		astrocommunity("file-explorer", "oil-nvim"),
 		astrocommunity("git", "blame-nvim"),
 		astrocommunity("git", "diffview-nvim"),
+		astrocommunity("lsp", "actions-preview-nvim"),
 		astrocommunity("lsp", "garbage-day-nvim"),
 		astrocommunity("lsp", "inc-rename-nvim"),
 		-- NOTE: disabled; archived and cost some load time
@@ -113,7 +114,6 @@ require("lazy").setup({
 		-- TODO: tabline with a line at the start
 		-- TODO: keymaps
 
-		spec("plugins.user.actions-preview-nvim"),
 		spec("plugins.user.chatgpt-nvim"),
 		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.codeium-nvim"),
