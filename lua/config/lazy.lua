@@ -74,6 +74,7 @@ require("lazy").setup({
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
 		astrocommunity("motion", "mini-surround"),
+		-- astrocommunity("note-taking", "obsidian-nvim"), -- TODO: try it later
 		-- astrocommunity("pack", "angular"),
 		-- astrocommunity("pack", "ansible"),
 		astrocommunity("pack", "bash"),
