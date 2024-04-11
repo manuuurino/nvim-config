@@ -121,6 +121,7 @@ require("lazy").setup({
 		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.dial-nvim"),
 		spec("plugins.user.mini-operators"),
+		spec("plugins.user.twilight-nvim"),
 
 		spec("user.colorscheme"),
 		spec("user.astrocore"),
