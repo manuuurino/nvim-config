@@ -1,7 +1,7 @@
 -- inspired by https://github.com/LunarVim/Launch.nvim/blob/0235c4b5f2d44c2e2fe025dc996dd79c68c73c84/init.lua
-local helper = require("util.helper")
-local spec = helper.spec
-local astrocommunity = helper.astrocommunity
+local spec_util = require("util.spec")
+local spec = spec_util.spec
+local astrocommunity = spec_util.astrocommunity
 
 require("lazy").setup({
 	spec = {
