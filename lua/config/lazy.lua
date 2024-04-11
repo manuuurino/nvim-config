@@ -39,6 +39,7 @@ require("lazy").setup({
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
 
 		astrocommunity("code-runner", "sniprun"),
+		astrocommunity("color", "nvim-highlight-colors"),
 		astrocommunity("colorsheme", "catppuccin"),
 		astrocommunity("colorsheme", "dracula-nvim"),
 		astrocommunity("colorsheme", "gruvbox-nvim"),
