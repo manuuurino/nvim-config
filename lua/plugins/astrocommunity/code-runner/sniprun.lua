@@ -1,4 +1,4 @@
-local prefix = "<Leader>R"
+local prefix = "<Leader>lr"
 
 local mappings = {
 	n = {
