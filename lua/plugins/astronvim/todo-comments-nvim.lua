@@ -10,10 +10,15 @@ return {
 				local maps_n = opts.mappings.n
 				local is_available = require("astrocore").is_available
 
-				if is_available("trouble-nvim") then
+				-- TODO: remove this once this PR is merged: https://github.com/AstroNvim/astrocommunity/pull/879
+				if is_available("trouble.nvim") then
 					maps_n["<Leader>xt"] = {
 						"<cmd>TodoTrouble<cr>",
-						desc = "Todo trouble",
+						desc = "Todo (Trouble)",
+					}
+					maps_n["<Leader>xT"] = {
+						"<cmd>TodoTrouble keywords=TODO,FIX,FIXME<cr>",
+						desc = "Todo/Fix/Fixme (Trouble)",
 					}
 				end
 			end,
