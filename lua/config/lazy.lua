@@ -117,7 +117,6 @@ require("lazy").setup({
 
 		-- apply stuff from lazyvim
 		-- TODO: tabline with a line at the start
-		-- TODO: keymaps
 
 		spec("plugins.user.chatgpt-nvim"),
 		spec("plugins.user.codeium-vim"),
