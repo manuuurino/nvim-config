@@ -33,6 +33,8 @@ return {
 				TestIcon = "⏲",
 
 				CmpKindCodeium = "",
+
+				File = "󰱽",
 			}
 
 			--[[

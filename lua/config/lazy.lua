@@ -130,6 +130,7 @@ require("lazy").setup({
 		spec("user.astrolsp"),
 		spec("user.astroui"),
 		spec("user.mappings"),
+		spec("user.adopt-lazyvim-mappings"),
 		spec("user.mason"),
 		spec("user.none-ls"),
 		spec("user.treesitter"),
