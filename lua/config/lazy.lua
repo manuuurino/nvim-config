@@ -52,6 +52,7 @@ require("lazy").setup({
 		astrocommunity("diagnostics", "trouble-nvim"),
 		astrocommunity("editing-support", "bigfile-nvim"),
 		astrocommunity("editing-support", "conform-nvim"),
+		astrocommunity("editing-support", "mini-operators"),
 		astrocommunity("editing-support", "mini-splitjoin"),
 		astrocommunity("editing-support", "nvim-context-vt"),
 		astrocommunity("editing-support", "nvim-treesitter-context"),
@@ -122,7 +123,6 @@ require("lazy").setup({
 		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.dial-nvim"),
-		spec("plugins.user.mini-operators"),
 		spec("plugins.user.twilight-nvim"),
 
 		spec("user.colorscheme"),
