@@ -113,7 +113,6 @@ require("lazy").setup({
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
 		-- TODO: could replace neo-tree and oil with this https://github.com/kevinhwang91/rnvimr
 		-- TODO: rework the snippets
-		-- TODO: markdown preview keymap
 
 		-- apply stuff from lazyvim
 		-- TODO: tabline with a line at the start
