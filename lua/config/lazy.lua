@@ -128,11 +128,14 @@ require("lazy").setup({
 		spec("user.astrocore"),
 		spec("user.astrolsp"),
 		spec("user.astroui"),
-		spec("user.mappings"),
 		spec("user.adopt-lazyvim-mappings"),
+		spec("user.mappings"),
 		spec("user.mason"),
 		spec("user.none-ls"),
 		spec("user.treesitter"),
+
+		-- NOTE: recommended to load this (for this config specific)
+		spec("user.cleanup"),
 
 		spec("user.highlights.industry"),
 		spec("user.highlights.kanagawa"),

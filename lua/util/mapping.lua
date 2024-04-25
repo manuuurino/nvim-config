@@ -60,4 +60,19 @@ function M.swap_binding(mappings, from_binding, to_binding, modes)
 	end
 end
 
+---@param mappings AstroCoreMappings|AstroLSPMapping
+---@param variables string[]
+---@param modes string[]
+function M.remove_options_from_mappings(mappings, variables, modes)
+	for _, variable in ipairs(variables) do
+		for _, mode in ipairs(modes) do
+			for _, mapping in pairs(mappings[mode]) do
+				if type(mapping) == "table" and mapping[variable] then
+					mapping[variable] = nil
+				end
+			end
+		end
+	end
+end
+
 return M
