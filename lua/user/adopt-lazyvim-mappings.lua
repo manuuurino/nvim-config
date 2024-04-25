@@ -67,6 +67,7 @@ local function insert_lazyvim_mappings(mappings)
 	v[">"] = ">gv"
 end
 
+---@param mappings AstroCoreMappings
 local function move_session_group_into_quit(mappings)
 	util_mapping.move_bindings_by_pattern(
 		mappings,
@@ -76,17 +77,20 @@ local function move_session_group_into_quit(mappings)
 	)
 end
 
+---@param mappings AstroCoreMappings
 local function remove_unneeded_mappings(mappings)
 	local n = mappings.n
 	n["<Leader>Q"] = false
 	n["<Leader>ft"] = false
 end
 
+---@param mappings AstroCoreMappings
 local function reorganize_file_or_find_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>fa", "<Leader>fc", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>n", "<Leader>fn", { "n" })
 end
 
+---@param mappings AstroCoreMappings
 local function reorganize_search_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>f'", "<Leader>sm", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>f/", "<Leader>sb", { "n" })
@@ -110,10 +114,7 @@ local function reorganize_search_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>fT", "<Leader>st", { "n" })
 end
 
-local function reorganize_bindings(mappings)
-	util_mapping.move_binding(mappings, "<Leader>fa", "<Leader>fc", { "n" })
-end
-
+---@param mappings AstroCoreMappings
 local function rename_bindings(mappings)
 	for key, mapping in pairs(mappings.n) do
 		-- removes the "Find " prefix and capitalizes the first letter
@@ -122,6 +123,7 @@ local function rename_bindings(mappings)
 				local desc = mapping.desc
 				desc = desc:gsub("Find ", "")
 				desc = desc:sub(1, 1):upper() .. desc:sub(2)
+				---@diagnostic disable-next-line: inject-field
 				mapping.desc = desc
 			end
 		end
@@ -140,7 +142,6 @@ return {
 			remove_unneeded_mappings(mappings)
 			reorganize_search_group(mappings)
 			reorganize_file_or_find_group(mappings)
-			reorganize_bindings(mappings)
 			rename_bindings(mappings)
 			insert_lazyvim_mappings(mappings)
 		end,
