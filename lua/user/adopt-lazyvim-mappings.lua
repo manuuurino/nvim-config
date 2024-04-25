@@ -84,6 +84,7 @@ end
 
 local function reorganize_file_or_find_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>fa", "<Leader>fc", { "n" })
+	util_mapping.move_binding(mappings, "<Leader>n", "<Leader>fn", { "n" })
 end
 
 local function reorganize_search_group(mappings)
