@@ -87,6 +87,7 @@ end
 ---@param mappings AstroCoreMappings
 local function reorganize_file_or_find_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>fa", "<Leader>fc", { "n" })
+	util_mapping.move_binding(mappings, "<Leader>fo", "<Leader>fr", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>n", "<Leader>fn", { "n" })
 end
 
@@ -100,7 +101,6 @@ local function reorganize_search_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>fk", "<Leader>sk", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fm", "<Leader>sM", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fn", "<Leader>sn", { "n" })
-	util_mapping.move_binding(mappings, "<Leader>fo", "<Leader>sr", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fr", '<Leader>s"', { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fw", "<Leader>sw", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fW", "<Leader>sW", { "n" })
