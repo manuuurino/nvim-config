@@ -104,13 +104,6 @@ local function reorganize_search_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>fr", '<Leader>s"', { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fw", "<Leader>sw", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fW", "<Leader>sW", { "n" })
-	util_mapping.move_binding(
-		mappings,
-		"<Leader>f<CR>",
-		-- NOTE: lazyvim uses `<Leader>sr` here, but i dont like it
-		"<Leader>s<CR>",
-		{ "n" }
-	)
 	util_mapping.move_binding(mappings, "<Leader>fT", "<Leader>st", { "n" })
 end
 
