@@ -20,6 +20,14 @@ local function insert_lazyvim_mappings(mappings)
 	n["<Leader>f"] = {
 		name = get_icon("File", 1, true) .. "File / Find",
 	}
+	n["<Leader>fR"] = {
+		function()
+			require("telescope.builtin").oldfiles({
+				cwd_only = true,
+			})
+		end,
+		desc = "Recent (cwd)",
+	}
 
 	n["<Leader>s"] = {
 		name = get_icon("Search", 1, true) .. "Search",
