@@ -29,7 +29,7 @@ return {
 		cond = has("deno"),
 	},
 	{
-		"npxbr/peek.nvim",
+		"toppair/peek.nvim",
 		dependencies = {
 			"AstroNvim/astrocore",
 			---@type AstroCoreOpts
