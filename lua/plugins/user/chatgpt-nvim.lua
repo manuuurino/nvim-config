@@ -85,7 +85,7 @@ return {
 		"ChatGPTEditWithInstructions",
 		"ChatGPTRun",
 	},
-	cond = vim.env["OPENAI_API_KEY"] ~= nil,
+	enabled = vim.env["OPENAI_API_KEY"] ~= nil,
 	opts = {
 		-- NOTE: plugin has a bug, this below doesnt work yet
 		-- api_key_cmd = (
