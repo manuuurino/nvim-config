@@ -142,6 +142,13 @@ local function rebind_lazyvim_specific_mappings(mappings)
 	end
 end
 
+---@param mappings AstroCoreMappings
+local function change_mapping_descriptions(mappings)
+	util_mapping.set_options_from_mappings(mappings, "<Leader>fr", { "n" }, {
+		desc = "Recent",
+	})
+end
+
 ---@type LazySpec
 return {
 	{
@@ -157,6 +164,7 @@ return {
 			rename_bindings(mappings)
 			insert_lazyvim_mappings(mappings)
 			rebind_lazyvim_specific_mappings(mappings)
+			change_mapping_descriptions(mappings)
 		end,
 	},
 	{

@@ -75,4 +75,17 @@ function M.remove_options_from_mappings(mappings, variables, modes)
 	end
 end
 
+---@param mappings AstroCoreMappings|AstroLSPMapping
+---@param bind string
+---@param opts AstroCoreMapping|AstroCoreMapping
+---@param modes string[]
+function M.set_options_from_mappings(mappings, bind, modes, opts)
+	for _, mode in ipairs(modes) do
+		local mapping = mappings[mode][bind]
+		if type(mapping) == "table" then
+			mappings[mode][bind] = vim.tbl_extend("force", mapping, opts)
+		end
+	end
+end
+
 return M
