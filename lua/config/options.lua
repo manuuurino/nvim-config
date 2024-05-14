@@ -14,6 +14,7 @@ o.winblend = 10
 o.pumblend = 10
 o.scrolloff = 8
 o.sidescrolloff = 8
+o.swapfile = false
 
 o.spell = true
 o.spelllang = { "en_us", "de_de" }
