@@ -5,14 +5,12 @@ local spec, spec_if, astrocommunity =
 
 require("lazy").setup({
 	spec = {
-		-- TODO: change `branch="v4"` to `version="^4"` on release
 		{
 			"AstroNvim/AstroNvim",
 			version = "^v4",
 			import = "astronvim.plugins",
 		},
 
-		-- TODO: Remove branch v4 on release
 		{ "AstroNvim/astrocommunity" },
 		-- { dir = "~/Dev/contribute/AstroNvim/astrocommunity" },
 
@@ -75,7 +73,6 @@ require("lazy").setup({
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
 		astrocommunity("motion", "mini-surround"),
-		-- astrocommunity("note-taking", "obsidian-nvim"), -- TODO: try it later
 		-- astrocommunity("pack", "angular"),
 		-- astrocommunity("pack", "ansible"),
 		astrocommunity("pack", "bash"),
@@ -111,11 +108,7 @@ require("lazy").setup({
 		astrocommunity("utility", "noice-nvim"),
 
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
-		-- TODO: could replace neo-tree and oil with this https://github.com/kevinhwang91/rnvimr
 		-- TODO: rework the snippets
-
-		-- apply stuff from lazyvim
-		-- TODO: tabline with a line at the start
 
 		spec("plugins.user.chatgpt-nvim"),
 		spec("plugins.user.codeium-vim"),
