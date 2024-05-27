@@ -1,6 +1,6 @@
 local has = require("util.checks").has
 
-local prefix = "<Leader>l"
+local prefix = vim.g.adopt_lazyvim_mappings and "<Leader>l" or "<Leader>m"
 
 ---@type AstroCoreMappings
 local mappings = {
@@ -17,7 +17,6 @@ local mappings = {
 				end
 			end,
 			desc = "Toggle Markdown Preview",
-			lazyvim_mapping_profile_mapping = "<Leader>fm",
 		},
 	},
 }

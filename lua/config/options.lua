@@ -27,4 +27,6 @@ g.maplocalleader = ","
 g.icons_enabled = not is_tty() -- disable icons in the UI
 
 -- global options for this config
-g.codeium_native_plugin = false -- the native plugin doesnt support virtual text yet
+-- NOTE: added vim.g so that the lua lsp knows about it
+vim.g.codeium_native_plugin = false -- the native plugin doesnt support virtual text yet
+vim.g.adopt_lazyvim_mappings = true

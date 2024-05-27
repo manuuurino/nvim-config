@@ -132,25 +132,6 @@ local function rename_bindings(mappings)
 end
 
 ---@param mappings AstroCoreMappings
-local function rebind_lazyvim_specific_mappings(mappings)
-	for mode, mappings_mode in pairs(mappings) do
-		for key, mapping in pairs(mappings_mode) do
-			if
-				mapping
-				and type(mapping) == "table"
-				---@diagnostic disable-next-line: undefined-field
-				and mapping.lazyvim_mapping_profile_mapping
-			then
-				---@diagnostic disable-next-line: undefined-field
-				mappings[mode][mapping.lazyvim_mapping_profile_mapping] =
-					mapping
-				mappings[mode][key] = nil
-			end
-		end
-	end
-end
-
----@param mappings AstroCoreMappings
 local function change_mapping_descriptions(mappings)
 	util_mapping.set_options_from_mappings(mappings, "<Leader>fr", { "n" }, {
 		desc = "Recent",
@@ -171,7 +152,6 @@ return {
 			reorganize_file_or_find_group(mappings)
 			rename_bindings(mappings)
 			insert_lazyvim_mappings(mappings)
-			rebind_lazyvim_specific_mappings(mappings)
 			change_mapping_descriptions(mappings)
 		end,
 	},

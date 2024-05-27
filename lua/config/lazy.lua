@@ -1,7 +1,7 @@
 -- inspired by https://github.com/LunarVim/Launch.nvim/blob/0235c4b5f2d44c2e2fe025dc996dd79c68c73c84/init.lua
 local spec_util = require("util.spec")
-local spec = spec_util.spec
-local astrocommunity = spec_util.astrocommunity
+local spec, spec_if, astrocommunity =
+	spec_util.spec, spec_util.spec_if, spec_util.astrocommunity
 
 require("lazy").setup({
 	spec = {
@@ -127,14 +127,11 @@ require("lazy").setup({
 		spec("user.astrocore"),
 		spec("user.astrolsp"),
 		spec("user.astroui"),
-		spec("user.adopt-lazyvim-mappings"),
+		spec_if("user.adopt-lazyvim-mappings", vim.g.adopt_lazyvim_mappings),
 		spec("user.mappings"),
 		spec("user.mason"),
 		spec("user.none-ls"),
 		spec("user.treesitter"),
-
-		-- NOTE: recommended to load this (for this config specific)
-		spec("user.cleanup"),
 
 		spec("user.highlights.industry"),
 		spec("user.highlights.kanagawa"),

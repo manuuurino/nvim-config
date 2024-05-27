@@ -6,6 +6,13 @@ function M.spec(path)
 	return { import = path }
 end
 
+---@param path string
+---@param condition boolean
+---@return LazySpec
+function M.spec_if(path, condition)
+	return condition and M.spec(path) or {}
+end
+
 --- Loads a plugin from 'astrocommunity' or a local override based on category and plugin name which lies in 'plugins'.
 --- Constructs a module path and tries to load it. If the import is unavailable, it returns the attempted import.
 ---
