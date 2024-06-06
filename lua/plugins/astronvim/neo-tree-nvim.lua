@@ -5,12 +5,15 @@ return {
 		"AstroNvim/astroui",
 		{
 			"AstroNvim/astrocore",
-			---@param opts AstroCoreOpts
-			-- HACK: AstroNvim uses a function to setup the opts, so we need to use it here too
-			opts = function(_, opts)
+			---@type AstroCoreOpts
+			opts = {
 				-- disable AstroNvim Toggle Explorer Focus
-				opts.mappings.n["<Leader>o"] = false
-			end,
+				mappings = {
+					n = {
+						["<Leader>o"] = false,
+					},
+				},
+			},
 		},
 	},
 	opts = function(_, opts)
