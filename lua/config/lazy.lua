@@ -77,6 +77,7 @@ require("lazy").setup({
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
 		astrocommunity("motion", "mini-surround"),
+		astrocommunity("neovim-lua-development", "lazydev-nvim"),
 		-- astrocommunity("pack", "angular"),
 		-- astrocommunity("pack", "ansible"),
 		astrocommunity("pack", "bash"),
