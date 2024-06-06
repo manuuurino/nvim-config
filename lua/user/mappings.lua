@@ -54,13 +54,22 @@ return {
 					desc = "Set CWD",
 				},
 
-				["<C-q>"] = false,
-				["<C-s>"] = false,
+				-- disable force quit
+				["<C-Q>"] = false,
+				-- disable force save
+				["<C-S>"] = false,
 			},
 			x = {
 				["<Leader>y"] = { '"+y', desc = "Yank to system clipboard" },
 				["gp"] = { '"+p', desc = "Paste from system clipboard" },
 				["gP"] = { '"+P', desc = "Paste from system clipboard" },
+
+				-- disable force save
+				["<C-S>"] = false,
+			},
+			i = {
+				-- disable force save
+				["<C-S>"] = false,
 			},
 		},
 	},
