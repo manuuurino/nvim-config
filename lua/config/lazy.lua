@@ -101,7 +101,8 @@ require("lazy").setup({
 		astrocommunity("pack", "yaml"),
 		astrocommunity("programming-language-support", "csv-vim"),
 		astrocommunity("programming-language-support", "nvim-jqx"),
-		astrocommunity("project", "nvim-spectre"),
+		-- NOTE: disabled for `grug-far-nvim`
+		-- astrocommunity("project", "nvim-spectre"),
 		astrocommunity("project", "project-nvim"),
 		astrocommunity("recipes", "neovide"),
 		astrocommunity("recipes", "telescope-nvchad-theme"),
@@ -122,6 +123,7 @@ require("lazy").setup({
 		spec("plugins.user.semshi"),
 		spec("plugins.user.twilight-nvim"),
 		spec("plugins.user.lsp-signature-nvim"),
+		spec("plugins.user.grug-far-nvim"),
 
 		spec("user.colorscheme"),
 		spec("user.astrocore"),
