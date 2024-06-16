@@ -6,6 +6,11 @@ return {
 		---@param opts AstroUIOpts
 		opts = function(_, opts)
 			local icons = {
+				IndentScopeHorizontalLine = "─",
+				IndentScopeVerticalLine = "│",
+				IndentScopeLeftTop = "┌",
+				IndentScopeLeftBottom = "└",
+				IndentScopeRightArrow = "─",
 				IndentScope = "▏",
 
 				FoldClosed = "",
@@ -47,6 +52,11 @@ return {
 			-- ISO/IEC 8859-10 https://en.wikipedia.org/wiki/ISO/IEC_8859-10#Codepage_layout
 			--]]
 			local text_icons = {
+				IndentScopeHorizontalLine = "─",
+				IndentScopeVerticalLine = "│",
+				IndentScopeLeftTop = "┌",
+				IndentScopeLeftBottom = "└",
+				IndentScopeRightArrow = "─",
 				IndentScope = "│",
 
 				FoldClosed = "▶",

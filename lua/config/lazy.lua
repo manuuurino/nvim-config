@@ -22,7 +22,8 @@ require("lazy").setup({
 		spec("plugins.astronvim.astrotheme"),
 		spec("plugins.astronvim.gitsigns-nvim"),
 		spec("plugins.astronvim.heirline-nvim"),
-		spec("plugins.astronvim.indent-blankline-nvim"),
+		-- NOTE: disabled because of `hlchunk-nvim`
+		-- spec("plugins.astronvim.indent-blankline-nvim"),
 		spec("plugins.astronvim.neo-tree-nvim"),
 		spec("plugins.astronvim.nvim-cmp"),
 		spec("plugins.astronvim.nvim-notify"),
@@ -114,9 +115,10 @@ require("lazy").setup({
 		-- TODO: rework the snippets
 
 		spec("plugins.user.chatgpt-nvim"),
-		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.codeium-nvim"),
+		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.dial-nvim"),
+		spec("plugins.user.hlchunk-nvim"),
 		spec("plugins.user.twilight-nvim"),
 
 		spec("user.colorscheme"),
