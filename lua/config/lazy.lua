@@ -119,6 +119,7 @@ require("lazy").setup({
 		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.dial-nvim"),
 		spec("plugins.user.hlchunk-nvim"),
+		spec("plugins.user.semshi"),
 		spec("plugins.user.twilight-nvim"),
 
 		spec("user.colorscheme"),
