@@ -113,6 +113,12 @@ local function reorganize_search_group(mappings)
 	util_mapping.move_binding(mappings, "<Leader>fw", "<Leader>sw", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fW", "<Leader>sW", { "n" })
 	util_mapping.move_binding(mappings, "<Leader>fT", "<Leader>st", { "n" })
+	util_mapping.move_binding(
+		mappings,
+		"<Leader>fR",
+		"<Leader>sr",
+		{ "n", "x" }
+	)
 end
 
 ---@param mappings AstroCoreMappings
