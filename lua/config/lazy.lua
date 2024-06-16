@@ -121,6 +121,7 @@ require("lazy").setup({
 		spec("plugins.user.hlchunk-nvim"),
 		spec("plugins.user.semshi"),
 		spec("plugins.user.twilight-nvim"),
+		spec("plugins.user.lsp-signature-nvim"),
 
 		spec("user.colorscheme"),
 		spec("user.astrocore"),
