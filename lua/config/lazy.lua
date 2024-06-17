@@ -22,8 +22,8 @@ require("lazy").setup({
 		spec("plugins.astronvim.astrotheme"),
 		spec("plugins.astronvim.gitsigns-nvim"),
 		spec("plugins.astronvim.heirline-nvim"),
-		-- NOTE: disabled because of `hlchunk-nvim`
-		-- spec("plugins.astronvim.indent-blankline-nvim"),
+		-- NOTE: will be disabled when `hlchunk-nvim` is active
+		spec("plugins.astronvim.indent-blankline-nvim"),
 		spec("plugins.astronvim.neo-tree-nvim"),
 		spec("plugins.astronvim.nvim-cmp"),
 		spec("plugins.astronvim.nvim-notify"),
@@ -42,7 +42,9 @@ require("lazy").setup({
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
 
 		astrocommunity("code-runner", "sniprun"),
-		astrocommunity("color", "nvim-highlight-colors"),
+		-- disabled, there is also a bug when using inline it will lag
+		-- https://github.com/brenoprata10/nvim-highlight-colors/issues/80
+		-- astrocommunity("color", "nvim-highlight-colors"),
 		astrocommunity("colorsheme", "catppuccin"),
 		astrocommunity("colorsheme", "dracula-nvim"),
 		astrocommunity("colorsheme", "gruvbox-nvim"),
