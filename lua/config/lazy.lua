@@ -127,6 +127,8 @@ require("lazy").setup({
 		spec("plugins.user.lsp-signature-nvim"),
 		spec("plugins.user.grug-far-nvim"),
 
+		spec("user.lsp.basedpyright"),
+
 		spec("user.colorscheme"),
 		spec("user.astrocore"),
 		spec("user.astrolsp"),
