@@ -134,7 +134,10 @@ require("lazy").setup({
 		spec("user.astrocore"),
 		spec("user.astrolsp"),
 		spec("user.astroui"),
-		spec_if("user.adopt-lazyvim-mappings", vim.g.adopt_lazyvim_mappings),
+		spec_if(
+			spec("user.adopt-lazyvim-mappings"),
+			vim.g.adopt_lazyvim_mappings
+		),
 		spec("user.mappings"),
 		spec("user.mason"),
 		spec("user.none-ls"),

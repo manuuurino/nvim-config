@@ -6,11 +6,11 @@ function M.spec(path)
 	return { import = path }
 end
 
----@param path string
+---@param spec LazySpec
 ---@param condition boolean
 ---@return LazySpec
-function M.spec_if(path, condition)
-	return condition and M.spec(path) or {}
+function M.spec_if(spec, condition)
+	return condition and spec or {}
 end
 
 --- Loads a plugin from 'astrocommunity' or a local override based on category and plugin name which lies in 'plugins'.
