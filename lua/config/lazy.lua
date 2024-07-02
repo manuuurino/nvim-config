@@ -3,6 +3,7 @@ local spec_util = require("util.spec")
 local spec, spec_if, astrocommunity =
 	spec_util.spec, spec_util.spec_if, spec_util.astrocommunity
 
+-- TODO: do some perf shit, i think some pluings slow shit down
 require("lazy").setup({
 	spec = {
 		{
@@ -59,7 +60,7 @@ require("lazy").setup({
 		astrocommunity("editing-support", "conform-nvim"),
 		astrocommunity("editing-support", "mini-operators"),
 		astrocommunity("editing-support", "mini-splitjoin"),
-		astrocommunity("editing-support", "nvim-context-vt"),
+		-- astrocommunity("editing-support", "nvim-context-vt"),
 		astrocommunity("editing-support", "nvim-treesitter-context"),
 		astrocommunity("editing-support", "nvim-treesitter-endwise"),
 		astrocommunity("editing-support", "rainbow-delimiters-nvim"),
