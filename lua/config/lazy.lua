@@ -56,6 +56,7 @@ require("lazy").setup({
 		astrocommunity("colorsheme", "monokai-pro-nvim"),
 		astrocommunity("colorsheme", "onedarkpro-nvim"),
 		astrocommunity("colorsheme", "oxocarbon-nvim"),
+		astrocommunity("debugging", "nvim-bqf"),
 		astrocommunity("debugging", "nvim-dap-virtual-text"),
 		astrocommunity("debugging", "persistent-breakpoints-nvim"),
 		astrocommunity("diagnostics", "trouble-nvim"),
