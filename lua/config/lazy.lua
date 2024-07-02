@@ -132,7 +132,6 @@ require("lazy").setup({
 		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
 		-- TODO: rework the snippets
 
-		spec("plugins.user.chatgpt-nvim"),
 		spec("plugins.user.dial-nvim"),
 		-- NOTE: will disable `indent-blankline-nvim`
 		-- spec("plugins.user.hlchunk-nvim"),
