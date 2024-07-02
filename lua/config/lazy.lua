@@ -70,7 +70,7 @@ require("lazy").setup({
 		astrocommunity("editing-support", "rainbow-delimiters-nvim"),
 		astrocommunity("editing-support", "refactoring-nvim"),
 		astrocommunity("editing-support", "suda-vim"),
-		astrocommunity("editing-support", "true-zen-nvim"),
+		astrocommunity("editing-support", "zen-mode-nvim"),
 		astrocommunity("editing-support", "undotree"),
 		astrocommunity("editing-support", "vim-move"),
 		astrocommunity("file-explorer", "oil-nvim"),
