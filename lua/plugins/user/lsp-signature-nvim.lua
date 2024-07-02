@@ -12,6 +12,7 @@ return {
 	},
 	{
 		"folke/noice.nvim",
+		optional = true,
 		---@type NoiceConfig
 		opts = {
 			lsp = {
