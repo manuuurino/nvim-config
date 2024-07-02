@@ -45,10 +45,10 @@ require("lazy").setup({
 		astrocommunity("code-runner", "sniprun"),
 		astrocommunity("color", "nvim-highlight-colors"),
 		astrocommunity("completion", "cmp-calc"),
-		astrocommunity("completion", "cmp-emoji"),
 		astrocommunity("completion", "cmp-cmdline"),
-		astrocommunity("completion", "cmp-under-comparator"),
+		astrocommunity("completion", "cmp-emoji"),
 		-- astrocommunity("completion", "cmp-nerdfont"), -- TODO: https://github.com/AstroNvim/astrocommunity/pull/1074
+		astrocommunity("completion", "cmp-under-comparator"),
 		spec_if(
 			astrocommunity("completion", "codeium-nvim"),
 			vim.g.codeium_native_plugin and is_on_glibc()
