@@ -57,6 +57,7 @@ require("lazy").setup({
 		astrocommunity("debugging", "persistent-breakpoints-nvim"),
 		astrocommunity("diagnostics", "trouble-nvim"),
 		astrocommunity("editing-support", "bigfile-nvim"),
+		astrocommunity("editing-support", "chatgpt-nvim"),
 		astrocommunity("editing-support", "conform-nvim"),
 		astrocommunity("editing-support", "mini-operators"),
 		astrocommunity("editing-support", "mini-splitjoin"),
