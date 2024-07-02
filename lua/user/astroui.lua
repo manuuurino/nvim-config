@@ -40,6 +40,8 @@ return {
 				CmpKindCodeium = "",
 
 				File = "󰱽",
+
+				HighlightColorSymbol = "⬤ ",
 			}
 
 			--[[
