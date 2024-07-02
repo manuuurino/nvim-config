@@ -110,6 +110,7 @@ require("lazy").setup({
 		astrocommunity("programming-language-support", "nvim-jqx"),
 		-- NOTE: disabled for `grug-far-nvim`
 		-- astrocommunity("project", "nvim-spectre"),
+		astrocommunity("recipes", "astrolsp-no-insert-inlay-hints"),
 		astrocommunity("project", "project-nvim"),
 		astrocommunity("recipes", "neovide"),
 		astrocommunity("recipes", "telescope-nvchad-theme"),
