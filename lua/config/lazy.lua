@@ -53,6 +53,10 @@ require("lazy").setup({
 			astrocommunity("completion", "codeium-nvim"),
 			vim.g.codeium_native_plugin and is_on_glibc()
 		),
+		spec_if(
+			astrocommunity("completion", "codeium-vim"),
+			not vim.g.codeium_native_plugin and is_on_glibc()
+		),
 		astrocommunity("colorsheme", "catppuccin"),
 		astrocommunity("colorsheme", "dracula-nvim"),
 		astrocommunity("colorsheme", "gruvbox-nvim"),
@@ -129,7 +133,6 @@ require("lazy").setup({
 		-- TODO: rework the snippets
 
 		spec("plugins.user.chatgpt-nvim"),
-		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.dial-nvim"),
 		-- NOTE: will disable `indent-blankline-nvim`
 		-- spec("plugins.user.hlchunk-nvim"),
