@@ -37,8 +37,6 @@ return {
 				NoteIcon = "",
 				TestIcon = "⏲",
 
-				CmpKindCodeium = "",
-
 				File = "󰱽",
 
 				HighlightColorSymbol = "⬤ ",

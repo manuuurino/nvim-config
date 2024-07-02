@@ -2,6 +2,7 @@
 local spec_util = require("util.spec")
 local spec, spec_if, astrocommunity =
 	spec_util.spec, spec_util.spec_if, spec_util.astrocommunity
+local is_on_glibc = require("util.checks").is_on_glibc
 
 -- TODO: do some perf shit, i think some pluings slow shit down
 require("lazy").setup({
@@ -48,6 +49,10 @@ require("lazy").setup({
 		astrocommunity("completion", "cmp-cmdline"),
 		astrocommunity("completion", "cmp-under-comparator"),
 		-- astrocommunity("completion", "cmp-nerdfont"), -- TODO: https://github.com/AstroNvim/astrocommunity/pull/1074
+		spec_if(
+			astrocommunity("completion", "codeium-nvim"),
+			vim.g.codeium_native_plugin and is_on_glibc()
+		),
 		astrocommunity("colorsheme", "catppuccin"),
 		astrocommunity("colorsheme", "dracula-nvim"),
 		astrocommunity("colorsheme", "gruvbox-nvim"),
@@ -124,7 +129,6 @@ require("lazy").setup({
 		-- TODO: rework the snippets
 
 		spec("plugins.user.chatgpt-nvim"),
-		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.dial-nvim"),
 		-- NOTE: will disable `indent-blankline-nvim`
