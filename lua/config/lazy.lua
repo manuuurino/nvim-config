@@ -46,6 +46,11 @@ require("lazy").setup({
 		-- disabled, there is also a bug when using inline it will lag
 		-- https://github.com/brenoprata10/nvim-highlight-colors/issues/80
 		-- astrocommunity("color", "nvim-highlight-colors"),
+		astrocommunity("completion", "cmp-calc"),
+		astrocommunity("completion", "cmp-emoji"),
+		astrocommunity("completion", "cmp-cmdline"),
+		astrocommunity("completion", "cmp-under-comparator"),
+		-- astrocommunity("completion", "cmp-nerdfont"), -- TODO: https://github.com/AstroNvim/astrocommunity/pull/1074
 		astrocommunity("colorsheme", "catppuccin"),
 		astrocommunity("colorsheme", "dracula-nvim"),
 		astrocommunity("colorsheme", "gruvbox-nvim"),
