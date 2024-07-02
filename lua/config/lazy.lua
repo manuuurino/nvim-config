@@ -78,7 +78,7 @@ require("lazy").setup({
 		astrocommunity("git", "diffview-nvim"),
 		astrocommunity("lsp", "actions-preview-nvim"),
 		astrocommunity("lsp", "garbage-day-nvim"),
-		astrocommunity("lsp", "inc-rename-nvim"),
+		-- astrocommunity("lsp", "inc-rename-nvim"),
 		astrocommunity("lsp", "nvim-lint"),
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
