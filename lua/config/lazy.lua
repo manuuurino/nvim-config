@@ -23,7 +23,6 @@ require("lazy").setup({
 		spec("plugins.astronvim.astrotheme"),
 		spec("plugins.astronvim.gitsigns-nvim"),
 		spec("plugins.astronvim.heirline-nvim"),
-		-- NOTE: will be disabled when `hlchunk-nvim` is active
 		spec("plugins.astronvim.indent-blankline-nvim"),
 		spec("plugins.astronvim.neo-tree-nvim"),
 		spec("plugins.astronvim.nvim-cmp"),
@@ -127,7 +126,8 @@ require("lazy").setup({
 		spec("plugins.user.codeium-nvim"),
 		spec("plugins.user.codeium-vim"),
 		spec("plugins.user.dial-nvim"),
-		spec("plugins.user.hlchunk-nvim"),
+		-- NOTE: will disable `indent-blankline-nvim`
+		-- spec("plugins.user.hlchunk-nvim"),
 		spec("plugins.user.semshi"),
 		spec("plugins.user.twilight-nvim"),
 		spec("plugins.user.lsp-signature-nvim"),
