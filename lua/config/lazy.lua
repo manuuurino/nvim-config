@@ -43,9 +43,7 @@ require("lazy").setup({
 		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
 
 		astrocommunity("code-runner", "sniprun"),
-		-- disabled, there is also a bug when using inline it will lag
-		-- https://github.com/brenoprata10/nvim-highlight-colors/issues/80
-		-- astrocommunity("color", "nvim-highlight-colors"),
+		astrocommunity("color", "nvim-highlight-colors"),
 		astrocommunity("completion", "cmp-calc"),
 		astrocommunity("completion", "cmp-emoji"),
 		astrocommunity("completion", "cmp-cmdline"),
