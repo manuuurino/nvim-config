@@ -88,6 +88,7 @@ require("lazy").setup({
 		astrocommunity("lsp", "actions-preview-nvim"),
 		astrocommunity("lsp", "garbage-day-nvim"),
 		-- astrocommunity("lsp", "inc-rename-nvim"),
+		-- astrocommunity("lsp", "lsp-signature-nvim"),
 		astrocommunity("lsp", "nvim-lint"),
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
@@ -137,7 +138,6 @@ require("lazy").setup({
 		-- spec("plugins.user.hlchunk-nvim"),
 		spec("plugins.user.semshi"),
 		spec("plugins.user.twilight-nvim"),
-		-- spec("plugins.user.lsp-signature-nvim"),
 		spec("plugins.user.grug-far-nvim"),
 
 		spec("user.lsp.basedpyright"),
