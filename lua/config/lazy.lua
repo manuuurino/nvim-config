@@ -47,7 +47,7 @@ require("lazy").setup({
 		astrocommunity("completion", "cmp-calc"),
 		astrocommunity("completion", "cmp-cmdline"),
 		astrocommunity("completion", "cmp-emoji"),
-		-- astrocommunity("completion", "cmp-nerdfont"), -- TODO: https://github.com/AstroNvim/astrocommunity/pull/1074
+		astrocommunity("completion", "cmp-nerdfont"),
 		astrocommunity("completion", "cmp-under-comparator"),
 		spec_if(
 			astrocommunity("completion", "codeium-nvim"),
