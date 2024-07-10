@@ -10,11 +10,6 @@ return {
 		-- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 		-- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 
-		---@diagnostic disable-next-line: inject-field
-		config.sources = vim.list_extend(config.sources or {}, {
-			-- null_ls.builtins.formatting.deno_fmt.with({
-			-- 	disabled_filetypes = { "markdown" },
-			-- }),
-		})
+		opts.sources = require("astrocore").list_insert_unique(opts.sources, {})
 	end,
 }
