@@ -136,7 +136,7 @@ require("lazy").setup({
 		spec("plugins.user.dial-nvim"),
 		-- NOTE: will disable `indent-blankline-nvim`
 		-- spec("plugins.user.hlchunk-nvim"),
-		spec("plugins.user.semshi"),
+		-- spec("plugins.user.semshi"),
 		spec("plugins.user.twilight-nvim"),
 		spec("plugins.user.grug-far-nvim"),
 
