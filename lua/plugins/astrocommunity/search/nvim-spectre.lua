@@ -1,6 +1,6 @@
 ---@type LazySpec
 return {
-	-- from: https://github.com/AstroNvim/astrocommunity/blob/c95fc1b58ffbff4381b7c546e8aa8f913cd33c98/lua/astrocommunity/project/nvim-spectre/init.lua
+	-- from: https://github.com/AstroNvim/astrocommunity/blob/71f26b6a774a0027d356d836e64bec7294f065f2/lua/astrocommunity/search/nvim-spectre/init.lua
 	{
 		"nvim-pack/nvim-spectre",
 		cmd = "Spectre",
@@ -29,6 +29,20 @@ return {
 				end,
 			},
 		},
+		specs = {
+			{
+				"folke/edgy.nvim",
+				optional = true,
+				opts = function(_, opts)
+					if not opts.bottom then opts.bottom = {} end
+					table.insert(opts.bottom, {
+						ft = "spectre_panel",
+						title = "Search/Replace",
+						size = { height = 0.4 },
+					})
+				end,
+			},
+		},
 		opts = function()
 			return {
 				mapping = {
@@ -41,18 +55,6 @@ return {
 					resume_last_search = { map = "l" },
 				},
 			}
-		end,
-	},
-	{
-		"folke/edgy.nvim",
-		optional = true,
-		opts = function(_, opts)
-			if not opts.bottom then opts.bottom = {} end
-			table.insert(opts.bottom, {
-				ft = "spectre_panel",
-				title = "Search/Replace",
-				size = { height = 0.4 },
-			})
 		end,
 	},
 }
