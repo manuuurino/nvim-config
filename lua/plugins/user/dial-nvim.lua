@@ -70,14 +70,6 @@ return {
 			},
 			groups = {
 				global = {
-					augend.case.new({
-						types = {
-							"camelCase",
-							"PascalCase",
-							"snake_case",
-							"SCREAMING_SNAKE_CASE",
-						},
-					}),
 					augend.date.alias["%Y/%m/%d"],
 					augend.date.alias["%H:%M:%S"],
 					augend.date.alias["%H:%M"],
@@ -90,6 +82,14 @@ return {
 					extra_augend.months,
 					extra_augend.ordinal_numbers,
 					extra_augend.weekdays,
+					augend.case.new({
+						types = {
+							"camelCase",
+							"PascalCase",
+							"snake_case",
+							"SCREAMING_SNAKE_CASE",
+						},
+					}),
 				},
 				default = {
 					augend.constant.alias.bool,
