@@ -39,9 +39,6 @@ require("lazy").setup({
 		spec("plugins.astronvim.disable.mason-null-ls-nvim"),
 		spec("plugins.astronvim.disable.none-ls-nvim"),
 
-		-- TODO: seems interesting, does also include vscode tasks https://github.com/stevearc/overseer.nvim
-		-- TODO: neogen and implement like this: https://code.mehalter.com/AstroNvim_user/~files/v4/lua/plugins/neogen.lua
-
 		astrocommunity("code-runner", "sniprun"),
 		astrocommunity("color", "nvim-highlight-colors"),
 		astrocommunity("completion", "cmp-calc"),
@@ -130,7 +127,6 @@ require("lazy").setup({
 		astrocommunity("utility", "noice-nvim"),
 		-- astrocommunity("editing-support", "dial-nvim"),
 
-		-- TODO: might wanna install https://github.com/mg979/vim-visual-multi
 		-- TODO: rework the snippets
 
 		spec("plugins.user.dial-nvim"),
