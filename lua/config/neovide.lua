@@ -12,4 +12,4 @@ o.pumblend = 40
 g.neovide_floating_blur_amount_x = 12.0
 g.neovide_floating_blur_amount_y = 12.0
 
--- TODO: no TERM_PROGRAM env?
+vim.env["TERM_PROGRAM"] = "neovide"
