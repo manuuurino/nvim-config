@@ -1,11 +1,8 @@
-local prefix = "<Leader>lr"
+local prefix = "<Leader>R"
 
 local mappings = {
 	n = {
 		[prefix] = {
-			name = "SnipRun",
-		},
-		[prefix .. "r"] = {
 			function()
 				require("sniprun").run("w")
 			end,
@@ -14,9 +11,6 @@ local mappings = {
 	},
 	v = {
 		[prefix] = {
-			name = "SnipRun",
-		},
-		[prefix .. "r"] = {
 			function()
 				require("sniprun").run("v")
 			end,
