@@ -4,15 +4,11 @@ return {
 	---@type TSConfig
 	opts = {
 		ensure_installed = {
-			"lua",
-			"vim",
 			"make",
 			"gitignore",
 			"git_config",
 			"passwd",
-			"rasi",
-			"scss",
-			"fish",
+			"ssh_config",
 		},
 	},
 }
