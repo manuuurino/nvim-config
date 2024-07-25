@@ -40,7 +40,7 @@ require("lazy").setup({
 		spec("plugins.astronvim.disable.none-ls-nvim"),
 
 		-- astrocommunity("code-runner", "sniprun"),
-		-- astrocommunity("color", "nvim-highlight-colors"),
+		-- astrocommunity("color", "nvim-highlight-colors"), -- NOTE: heavly slows the buffer on many color displays
 		astrocommunity("completion", "cmp-calc"),
 		astrocommunity("completion", "cmp-cmdline"),
 		astrocommunity("completion", "cmp-emoji"),
@@ -71,7 +71,7 @@ require("lazy").setup({
 		astrocommunity("editing-support", "mini-operators"),
 		astrocommunity("editing-support", "mini-splitjoin"),
 		-- astrocommunity("editing-support", "nvim-context-vt"),
-		-- astrocommunity("editing-support", "nvim-treesitter-context"), -- slows kinda the buffer
+		-- astrocommunity("editing-support", "nvim-treesitter-context"), -- NOTE: slows kinda the buffer
 		-- astrocommunity("editing-support", "nvim-treesitter-endwise"),
 		astrocommunity("editing-support", "rainbow-delimiters-nvim"),
 		astrocommunity("editing-support", "refactoring-nvim"),
@@ -114,8 +114,7 @@ require("lazy").setup({
 		astrocommunity("pack", "yaml"),
 		-- astrocommunity("programming-language-support", "csv-vim"),
 		-- astrocommunity("programming-language-support", "nvim-jqx"),
-		-- NOTE: disabled for `grug-far-nvim`
-		-- astrocommunity("search", "nvim-spectre"),
+		-- astrocommunity("search", "nvim-spectre"), -- NOTE: disabled for `grug-far-nvim`
 		astrocommunity("recipes", "astrolsp-no-insert-inlay-hints"),
 		astrocommunity("recipes", "neovide"),
 		astrocommunity("recipes", "telescope-nvchad-theme"),
@@ -130,8 +129,7 @@ require("lazy").setup({
 		-- TODO: rework the snippets
 
 		spec("plugins.user.dial-nvim"),
-		-- NOTE: will disable `indent-blankline-nvim`
-		-- spec("plugins.user.hlchunk-nvim"),
+		-- spec("plugins.user.hlchunk-nvim"), -- NOTE: will disable `indent-blankline-nvim`
 		-- spec("plugins.user.semshi"),
 		spec("plugins.user.twilight-nvim"),
 		-- spec("plugins.user.grug-far-nvim"),
