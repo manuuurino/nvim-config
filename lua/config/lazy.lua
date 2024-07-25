@@ -39,7 +39,7 @@ require("lazy").setup({
 		spec("plugins.astronvim.disable.mason-null-ls-nvim"),
 		spec("plugins.astronvim.disable.none-ls-nvim"),
 
-		astrocommunity("code-runner", "sniprun"),
+		-- astrocommunity("code-runner", "sniprun"),
 		astrocommunity("color", "nvim-highlight-colors"),
 		astrocommunity("completion", "cmp-calc"),
 		astrocommunity("completion", "cmp-cmdline"),
