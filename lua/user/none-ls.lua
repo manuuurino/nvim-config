@@ -3,7 +3,7 @@ return {
 	"nvimtools/none-ls.nvim",
 	optional = true,
 	---@param config NullLsParams
-	opts = function(_, config)
+	opts = function(_, opts)
 		local null_ls = require("null-ls")
 
 		-- Check supported formatters and linters
