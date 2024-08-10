@@ -13,10 +13,7 @@ return {
 				enabled = true,
 			},
 		},
-		---@diagnostic disable: missing-fields
-		config = {
-			clangd = { capabilities = { offsetEncoding = "utf-8" } },
-		},
+		---@diagnostic disable-next-line: missing-fields
 		autocmds = {
 			-- credits: https://github.com/AstroNvim/template/blob/7af067e0ffef9975e8e8054d8455e7662dfb1fa0/lua/plugins/astrolsp.lua#L61-L79
 			lsp_codelens_refresh = {
