@@ -20,8 +20,10 @@ return {
 				nixd = {
 					settings = {
 						nixd = {
-							diagnostics = {
-								suppress = { "sema-escaping-with" },
+							diagnostic = {
+								suppress = {
+									"sema-escaping-with",
+								},
 							},
 						},
 					},
