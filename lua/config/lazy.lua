@@ -3,7 +3,6 @@ local spec_util = require("util.spec")
 local spec, spec_if, astrocommunity =
 	spec_util.spec, spec_util.spec_if, spec_util.astrocommunity
 local is_on_glibc = require("util.checks").is_on_glibc
-
 require("lazy").setup({
 	spec = {
 		{
@@ -62,7 +61,6 @@ require("lazy").setup({
 		-- astrocommunity("colorsheme", "onedarkpro-nvim"),
 		-- astrocommunity("colorsheme", "oxocarbon-nvim"),
 		-- astrocommunity("colorsheme", "tokyonight-nvim"),
-		astrocommunity("debugging", "nvim-bqf"),
 		astrocommunity("debugging", "nvim-dap-virtual-text"),
 		astrocommunity("debugging", "persistent-breakpoints-nvim"),
 		astrocommunity("diagnostics", "trouble-nvim"),
@@ -91,6 +89,7 @@ require("lazy").setup({
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
 		astrocommunity("motion", "mini-surround"),
+		-- TODO: remove the cond for packs
 		-- astrocommunity("pack", "angular"),
 		-- astrocommunity("pack", "ansible"),
 		astrocommunity("pack", "bash"),
@@ -126,6 +125,7 @@ require("lazy").setup({
 		astrocommunity("utility", "mason-tool-installer-nvim"),
 		astrocommunity("utility", "noice-nvim"),
 		-- astrocommunity("editing-support", "dial-nvim"),
+		astrocommunity("quickfix", "nvim-bqf"),
 
 		-- TODO: rework the snippets
 
