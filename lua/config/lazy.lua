@@ -86,6 +86,7 @@ require("lazy").setup({
 		-- astrocommunity("lsp", "inc-rename-nvim"),
 		-- astrocommunity("lsp", "lsp-signature-nvim"),
 		astrocommunity("lsp", "nvim-lint"),
+		astrocommunity("markdown-and-latex", "markview-nvim"),
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
 		astrocommunity("motion", "mini-surround"),
