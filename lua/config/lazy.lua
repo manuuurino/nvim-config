@@ -90,6 +90,7 @@ require("lazy").setup({
 		astrocommunity("markdown-and-latex", "peek-nvim"),
 		astrocommunity("motion", "flash-nvim"),
 		astrocommunity("motion", "mini-surround"),
+		astrocommunity("neovim-lua-development", "helpview-nvim"),
 		-- TODO: remove the cond for packs
 		-- astrocommunity("pack", "angular"),
 		-- astrocommunity("pack", "ansible"),
